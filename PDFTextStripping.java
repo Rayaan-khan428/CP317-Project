@@ -1,43 +1,107 @@
 package t1;
 import java.io.IOException;
 import java.io.File;
+import java.util.List;
+
+import javax.imageio.ImageIO;
+
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.text.PDFTextStripper;
+import org.apache.pdfbox.cos.COSBase;
+import org.apache.pdfbox.cos.COSName;
+import org.apache.pdfbox.pdmodel.graphics.PDXObject;
+import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;
+import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
+import org.apache.pdfbox.contentstream.operator.Operator;
+import org.apache.pdfbox.contentstream.PDFStreamEngine;
+ 
+import java.awt.image.BufferedImage;
 
-public class PDFTextStripping {
+public class PDFTextStripping extends PDFStreamEngine{
 
-	public static void main(String[] args) throws IOException {
-		//Creating a PDFBox object (used to create an empty pdf)
-		PDDocument doc = new PDDocument();
-		
-		//Creating a file object for use with text stripping
-		//Change location to test with different pdfs
-		File file = new File("C:/Users/admin/Downloads/help for project 2-1.pdf"); 
-		//Creating a PDFBox obj (for text stripping)
-        PDDocument doc2 = PDDocument.load(file); 
-        
-//		Adding blank pages to the empty pdf
-//		for (int i=0; i<5; i++) {  
-//		    //Creating a blank page   
-//		    PDPage blankPage = new PDPage();  
-//		  
-//		    //Adding the blank page to the document  
-//		    doc.addPage( blankPage );  
-//		}   
-//		doc.save("C:/Users/admin/Documents/Java Workspace/folder/please.pdf");
-	    
-        //Creating PDFTextStripper obj
+	//Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
+	public int imageNumber = 1;
+	
+	public static void SaveImagesInPdf(PDDocument document, String fileName) throws IOException{
+		try{
+		    document = PDDocument.load(new File(fileName));
+		    PDFTextStripping printer = new PDFTextStripping();
+		    
+		    int pageNum = 0;
+		    
+		    for(PDPage page : document.getPages()){
+			pageNum++;
+			System.out.println( "Processing page: " + pageNum );
+			printer.processPage(page);
+		    }
+		}
+		finally{
+		    if( document != null ){
+			document.close();
+		    }
+		}
+	}
+	
+	/**
+	* @param operator The operation to perform.
+	* @param operands The list of arguments.
+	*
+	* @throws IOException If there is an error processing the operation.
+	*/
+	//dk what this override is doing. It seems to do nothing when I comment it out
+	//leaving it here tho.
+	@Override
+	protected void processOperator( Operator operator, List<COSBase> operands) throws IOException{
+		String operation = operator.getName();
+		//Do is the PDF operator for xobjects (like images)
+		//there are a bunch of PDF operators for things like bolded text, titles, diagrams, etc.
+		if( "Do".equals(operation) ){
+		    COSName objectName = (COSName)operands.get( 0 );
+		    PDXObject xobject = getResources().getXObject( objectName );
+		    if( xobject instanceof PDImageXObject){
+			PDImageXObject image = (PDImageXObject)xobject;
+			
+			// same image to project folder
+			BufferedImage bImage = image.getImage();
+			//you can change the name of the image here
+			ImageIO.write(bImage,"PNG",new File("image_"+imageNumber+".png"));
+			System.out.println("Image saved.");
+			imageNumber++;
+			
+		    }
+		    else if(xobject instanceof PDFormXObject){
+			PDFormXObject form = (PDFormXObject)xobject;
+			showForm(form);
+		    }
+		}
+		else{
+		    super.processOperator( operator, operands);
+		}
+	}
+	
+	public static void ExtractText(PDDocument document, String fileName) throws IOException{
+	        document = PDDocument.load(new File(fileName)); 
+	
+	        //Creating PDFTextStripper obj
 		PDFTextStripper pdfStripper = new PDFTextStripper();  
-		  
-	    //Retrieving text from PDF document  
-	    String text = pdfStripper.getText(doc2);  
-	    System.out.println("Text in PDF\n---------------------------------");  
-	    System.out.println(text);  
-		
-	    //Closing files and pdfbox objs
-	    doc.close();
-		doc2.close();
+			
+		//Retrieving and outputting text from PDF document  
+		String text = pdfStripper.getText(document);
+		System.out.println("Text in PDF\n---------------------------------");  
+		System.out.println(text);  
+	}
+	
+	public static void main(String[] args) throws IOException {
+		PDDocument document = new PDDocument();
+		//You can change the file to test here. Edit this file path.
+	        String fileName = "C:/Users/admin/Downloads/Lizard_Research.pdf";
+	        
+	        //The methods. You can test each one separately if you want
+	        SaveImagesInPdf(document, fileName);
+	        ExtractText(document, fileName);
+	        
+	        document.close();
 	}
 
 }
