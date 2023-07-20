@@ -110,14 +110,12 @@ public class PDFTextStripping extends PDFStreamEngine {
 
         // Get the output folder path (project directory)
         String outputFolder = System.getProperty("user.dir");
-
-        // Create a new folder named "output" to store images and result.txt
         outputFolder += "\\src\\t1";
+        
+        // Create a new folder named "output" to store images and result.txt
         File folder = new File(outputFolder + "/output");
         folder.mkdirs();
         outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
-        
-        
         
         // The methods. You can test each one separately if you want
         SaveImagesInPdf(document, inputFileName, outputFolder);
