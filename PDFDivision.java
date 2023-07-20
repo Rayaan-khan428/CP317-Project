@@ -6,11 +6,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+// Divides into paragraphs (which is acc lines lmfao) for now
+// Will change 
+
 public class PDFDivision {
 
-    public static void divide(String inputFile) {
+    public static void divide(String inputFileLocation) {
         // Input file path from the main function
-        String inputFilePath = inputFile;
+        String inputFilePath = inputFileLocation + "\\result.txt";
+//        System.out.println(inputFileLocation);
+//        System.out.println(inputFilePath);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath))) {
             // Read the text from the input file
@@ -33,7 +38,7 @@ public class PDFDivision {
                 }
 
                 // Save paragraph into "sectionX.txt", where X is the paragraph number (starting from 1)
-                String outputFilePath = "C:/Users/ryanm/CP317/PDFToPPT/src/t1/section" + (i + 1) + ".txt";
+                String outputFilePath = inputFileLocation + "\\section" + (i) + ".txt";
                 try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
                     writer.write(paragraph);
                 } catch (IOException e) {
