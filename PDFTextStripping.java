@@ -44,11 +44,14 @@ public class PDFTextStripping extends PDFStreamEngine{
 	}
 	
 	/**
+ 	* Helper Function for the Image extraction method
+  	*
 	* @param operator The operation to perform.
 	* @param operands The list of arguments.
 	*
 	* @throws IOException If there is an error processing the operation.
 	*/
+	
 	//dk what this override is doing. It seems to do nothing when I comment it out
 	//leaving it here tho.
 	@Override
