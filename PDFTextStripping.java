@@ -62,6 +62,7 @@ public class PDFTextStripping extends PDFStreamEngine{
 		if( "Do".equals(operation) ){
 		    COSName objectName = (COSName)operands.get( 0 );
 		    PDXObject xobject = getResources().getXObject( objectName );
+			
 		    if( xobject instanceof PDImageXObject){
 			PDImageXObject image = (PDImageXObject)xobject;
 			
