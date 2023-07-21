@@ -23,7 +23,7 @@ public class PDFExtract extends PDFStreamEngine {
     public int imageNumber = 1; // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
     private String outputFolder; // New instance variable to hold the output folder path
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         PDDocument document = new PDDocument();
 
@@ -38,6 +38,9 @@ public class PDFExtract extends PDFStreamEngine {
         // The methods. You can test each one separately if you want
         SaveImagesInPdf(document, inputFileName, outputFolder);
         ExtractText(document, inputFileName, outputFolder);
+
+        // summarize
+        summarizer.summarize(summarizer.readTxtFile("file path goes here"));
 
         document.close();
 

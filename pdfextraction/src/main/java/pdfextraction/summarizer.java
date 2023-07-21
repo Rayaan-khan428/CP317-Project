@@ -8,20 +8,12 @@ import static org.asynchttpclient.Dsl.*;
 
 public class summarizer {
 
-        public static void main(String[] args) {
-
-            String response;
-            response = extractKeyword("South America, known for its breathtaking landscapes and rich biodiversity, is a haven for a vast array of lizard species. These reptilian inhabitants contribute significantly to the continent's intricate ecosystems, playing vital ecological roles that influence plant and insect populations, serve as prey for predators, and contribute to overall ecosystem balance. In this comprehensive research, we delve into the fascinating world of South American lizards, exploring the diverse families that call this continent home. Our study focuses on three remarkable lizard species - the Green Iguana (Iguana iguana), the Caiman Lizard (Dracaena guianensis), and the Tepui Lizard (Pristidactylus urichi) - highlighting their unique characteristics, habitats, and ecological significance. Additionally, we delve into the threats these lizards face and examine the conservation efforts in place to protect these captivating reptiles and ensure the preservation of their essential roles within South American ecosystems. Through this exploration, we hope to gain a deeper understanding of the importance of these reptilian inhabitants, encouraging further research and conservation initiatives to safeguard their future and the biodiversity they contribute to the magnificent continent of South America.");
-            System.out.println(response);
-
-        }
-
-    public void summarize() {
+    public static void summarize(String text) throws InterruptedException {
 
         try {
             AsyncHttpClient client = new DefaultAsyncHttpClient();
 
-            String requestBody = "{\"text\":\" text/var here \"}";
+            String requestBody = String.format("{\"text\":\"%s\"}", text);
 
             Request request = client.prepare("POST", "https://api.cohere.ai/v1/summarize")
                     .setHeader("accept", "application/json")
@@ -34,6 +26,7 @@ public class summarizer {
 
             System.out.println("Status Code: " + response.getStatusCode());
             System.out.println("Response Body: " + response.getResponseBody());
+
 
             client.close();
 
@@ -69,7 +62,7 @@ public class summarizer {
 
         return content.toString();
     }
-    public static String extractKeyword(String text) {
+    public static String extractKeyword(String text) throws InterruptedException {
         // Define common stopwords that we want to remove from the text
         Set<String> stopwords = new HashSet<>(Arrays.asList("the", "and", "is", "a", "an", "of", "in", "to"));
 
