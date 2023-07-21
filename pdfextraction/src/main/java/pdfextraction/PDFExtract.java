@@ -24,15 +24,17 @@ public class PDFExtract extends PDFStreamEngine {
     private String outputFolder; // New instance variable to hold the output folder path
 
     public static void main(String[] args) throws IOException {
-        PDDocument document = new PDDocument();
-        String inputFileName = "C:/Users/ryanm/Desktop/CP317/Lizard_Research.pdf"; // Specify the input file path here
 
+        PDDocument document = new PDDocument();
+        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/Lizard_Research.pdf"; // Specify the input file path here
+
+        String outputFolder = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/output";
         // Get the output folder path (project directory)
-        String outputFolder = System.getProperty("user.dir");
-        outputFolder += "\\src\\t1";
+        // String outputFolder = System.getProperty("user.dir");
+        // outputFolder += "\\src\\t1";
 
         // Create a new folder named "output" to store images and result.txt
-        File folder = new File(outputFolder + "/output");
+        File folder = new File(outputFolder + "/outputting");
         folder.mkdirs();
         outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
 
@@ -80,6 +82,30 @@ public class PDFExtract extends PDFStreamEngine {
     }
 
     /**
+     * Extracts text from a PDF document and saves it to a text file in the specified output folder.
+     *
+     * @param document      The PDDocument object representing the PDF document.
+     * @param fileName      The path of the PDF file to extract text from.
+     * @param outputFolder  The path of the folder where the extracted text will be saved as a text file.
+     * @throws IOException  If there's an error reading the PDF file or writing the text file to the output folder.
+     */
+    public static void ExtractText(PDDocument document, String fileName, String outputFolder) throws IOException {
+        document = PDDocument.load(new File(fileName));
+
+        // Creating PDFTextStripper obj
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+
+        // Retrieving and outputting text from PDF document
+        String text = pdfStripper.getText(document);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder + "/result.txt"))) {
+            writer.write(text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
      * Helper Function for the Image extraction method
      * @param operator The operation to perform.
      * @param operands The list of arguments.
@@ -111,30 +137,6 @@ public class PDFExtract extends PDFStreamEngine {
             }
         } else {
             super.processOperator(operator, operands);
-        }
-    }
-
-    /**
-     * Extracts text from a PDF document and saves it to a text file in the specified output folder.
-     *
-     * @param document      The PDDocument object representing the PDF document.
-     * @param fileName      The path of the PDF file to extract text from.
-     * @param outputFolder  The path of the folder where the extracted text will be saved as a text file.
-     * @throws IOException  If there's an error reading the PDF file or writing the text file to the output folder.
-     */
-    public static void ExtractText(PDDocument document, String fileName, String outputFolder) throws IOException {
-        document = PDDocument.load(new File(fileName));
-
-        // Creating PDFTextStripper obj
-        PDFTextStripper pdfStripper = new PDFTextStripper();
-
-        // Retrieving and outputting text from PDF document
-        String text = pdfStripper.getText(document);
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder + "/result.txt"))) {
-            writer.write(text);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
