@@ -26,15 +26,12 @@ public class PDFExtract extends PDFStreamEngine {
     public static void main(String[] args) throws IOException {
 
         PDDocument document = new PDDocument();
-        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/Lizard_Research.pdf"; // Specify the input file path here
 
-        String outputFolder = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/output";
-        // Get the output folder path (project directory)
-        // String outputFolder = System.getProperty("user.dir");
-        // outputFolder += "\\src\\t1";
+        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/sample3.pdf"; // Specify the input file  here
+        String outputFolder = "/Users/rayaankhan/repos/CP317-Project/pdfextraction";
 
         // Create a new folder named "output" to store images and result.txt
-        File folder = new File(outputFolder + "/outputting");
+        File folder = new File(outputFolder + "/results");
         folder.mkdirs();
         outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
 
@@ -44,9 +41,6 @@ public class PDFExtract extends PDFStreamEngine {
 
         document.close();
 
-        // Reference to the folder is passed
-        // Needs Ryan's PDFDivision.java to be imported work
-        //PDFDivision.divide(outputFolder);
     }
 
     /**
