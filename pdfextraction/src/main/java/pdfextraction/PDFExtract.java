@@ -29,22 +29,23 @@ public class PDFExtract extends PDFStreamEngine {
     // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
     private int imageNumber = 1;
     private int pageNum = 0;
-    private ArrayList<Integer> array =  new ArrayList<>();
+    private ArrayList<Integer> array;
     private String outputFolder; // New instance variable to hold the output folder path
     // Constructor to set the output folder path
     
     public PDFExtract(String outputFolder) {
         this.outputFolder = outputFolder;
+        this.array = new ArrayList<>();
     }
     
     public void SaveImagesInPdf(PDDocument document) throws IOException {
     	try {
-            PDFExtract printer = new PDFExtract(this.outputFolder); // Initialize the instance variable
+            //PDFExtract printer = new PDFExtract(this.outputFolder); // Initialize the instance variable
 
             for (PDPage page : document.getPages()) {
                 pageNum++;
                 System.out.println("Processing page: " + pageNum);
-                printer.processPage(page);
+                this.processPage(page);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -77,7 +78,7 @@ public class PDFExtract extends PDFStreamEngine {
                 // you can change the name of the image here
                 ImageIO.write(bImage, "PNG", new File(outputFolder + "/image_" + imageNumber + ".png"));
                 System.out.println("Image saved.");
-                array.add(pageNum);
+                this.addItem(pageNum);
                 imageNumber++;
 
             } else if (xobject instanceof PDFormXObject) {
@@ -89,6 +90,10 @@ public class PDFExtract extends PDFStreamEngine {
         }
     }
     
+    public void addItem(int item) {
+    	array.add(item);
+    }
+    
     public int getNumImages() {
     	return array.size();
     }
@@ -97,7 +102,7 @@ public class PDFExtract extends PDFStreamEngine {
     	if(imageNum > getNumImages()) {
     		return -1;
     	}
-    	return array.get(imageNum);
+    	return array.get(imageNum-1);
     }
     
     public void ExtractText(PDDocument document) throws IOException {
@@ -175,7 +180,4 @@ public class PDFExtract extends PDFStreamEngine {
 		}
     	return true;
     }
-//    public static void main(String[] args) {
-//    	
-//    }
 }
