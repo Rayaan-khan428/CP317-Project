@@ -109,36 +109,63 @@ public class PDFExtract extends PDFStreamEngine {
 
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
-
-        // Retrieving and outputting text from PDF document
-        String text = pdfStripper.getText(document);
-        List<String> paragraphs = detectParagraphs(text);
-          
+        int totalPages = document.getNumberOfPages();
+        String text = "";
+        String text2 = "";
+        List<String> paragraphs;
+        
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
-        	for (String paragraph : paragraphs) {
-        		if(!junkTest(paragraph) && paragraph.length() > 3) {
-        			writer.write(paragraph+"\n");
-        		}
-        	}
+	        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+	            pdfStripper.setStartPage(pageNumber);
+	            pdfStripper.setEndPage(pageNumber);
+	            
+	            text = "***START OF PAGE "+pageNumber+"***";
+	            
+	            text2 = pdfStripper.getText(document);
+	            paragraphs = detectParagraphs(text2);
+  
+            	writer.write(text+"\n");
+            	for (String paragraph : paragraphs) {
+            		if(!junkTest(paragraph) && paragraph.length() > 3) {
+            			writer.write(paragraph+"\n");
+            		}
+            	}
+            	text = "***END OF PAGE "+pageNumber+"***\n";
+            	writer.write(text+"\n"); 
+	        }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
     }
     
     public String onlyText(PDDocument document) throws IOException{
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
         
-        // Retrieving and outputting text from PDF document
-        String text = pdfStripper.getText(document);
-        List<String> paragraphs = detectParagraphs(text);
-        text = "";
-        for (String paragraph : paragraphs) {
-        	if(!junkTest(paragraph) && paragraph.length() > 3) {
-        		text += paragraph+"\n";
-    		}
-        }
+        int totalPages = document.getNumberOfPages();
+        String text = "";
+        String text2 = "";
+        List<String> paragraphs;
         
+        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+            pdfStripper.setStartPage(pageNumber);
+            pdfStripper.setEndPage(pageNumber);
+            
+            text += "***START OF PAGE "+pageNumber+"***";
+            
+            text2 = pdfStripper.getText(document);
+            paragraphs = detectParagraphs(text2);
+         
+        	for (String paragraph : paragraphs) {
+        		if(!junkTest(paragraph) && paragraph.length() > 3) {
+        			text += paragraph+"\n";
+        		}
+        	}
+            
+        	text += "***END OF PAGE "+pageNumber+"***\n";         
+        }
+           
         return text;
     }
     
@@ -174,7 +201,6 @@ public class PDFExtract extends PDFStreamEngine {
 		        numberCount++;
 		    }
 		}
-		System.out.println("letterCount = "+letterCount+"\nnumberCount = "+numberCount+"\n");
 		if(letterCount>=numberCount) {
 			return false;
 		}
