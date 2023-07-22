@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
@@ -24,31 +27,28 @@ import java.awt.image.BufferedImage;
 public class PDFExtract extends PDFStreamEngine {
 
     // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
-    public int imageNumber = 1;
+    private int imageNumber = 1;
+    private int pageNum = 0;
+    private ArrayList<Integer> array =  new ArrayList<>();
     private String outputFolder; // New instance variable to hold the output folder path
-
-    public static void SaveImagesInPdf(PDDocument document, String fileName, String outputFolder) throws IOException {
-        try {
-            document = PDDocument.load(new File(fileName));
-            PDFExtract printer = new PDFExtract(outputFolder); // Initialize the instance variable
-
-            int pageNum = 0;
+    // Constructor to set the output folder path
+    
+    public PDFExtract(String outputFolder) {
+        this.outputFolder = outputFolder;
+    }
+    
+    public void SaveImagesInPdf(PDDocument document) throws IOException {
+    	try {
+            PDFExtract printer = new PDFExtract(this.outputFolder); // Initialize the instance variable
 
             for (PDPage page : document.getPages()) {
                 pageNum++;
                 System.out.println("Processing page: " + pageNum);
                 printer.processPage(page);
             }
-        } finally {
-            if (document != null) {
-                document.close();
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }
-
-    // Constructor to set the output folder path
-    public PDFExtract(String outputFolder) {
-        this.outputFolder = outputFolder;
     }
 
     /**
@@ -77,6 +77,7 @@ public class PDFExtract extends PDFStreamEngine {
                 // you can change the name of the image here
                 ImageIO.write(bImage, "PNG", new File(outputFolder + "/image_" + imageNumber + ".png"));
                 System.out.println("Image saved.");
+                array.add(pageNum);
                 imageNumber++;
 
             } else if (xobject instanceof PDFormXObject) {
@@ -87,44 +88,94 @@ public class PDFExtract extends PDFStreamEngine {
             super.processOperator(operator, operands);
         }
     }
-
-    public static void ExtractText(PDDocument document, String fileName, String outputFolder) throws IOException {
-        document = PDDocument.load(new File(fileName));
+    
+    public int getNumImages() {
+    	return array.size();
+    }
+    
+    public int getPage(int imageNum) {
+    	if(imageNum > getNumImages()) {
+    		return -1;
+    	}
+    	return array.get(imageNum);
+    }
+    
+    public void ExtractText(PDDocument document) throws IOException {
 
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
 
         // Retrieving and outputting text from PDF document
         String text = pdfStripper.getText(document);
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder + "/result.txt"))) {
-            writer.write(text);
+        List<String> paragraphs = detectParagraphs(text);
+          
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
+        	for (String paragraph : paragraphs) {
+        		if(!junkTest(paragraph) && paragraph.length() > 3) {
+        			writer.write(paragraph+"\n");
+        		}
+        	}
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-    public static void main(String[] args) throws IOException {
-        PDDocument document = new PDDocument();
-        String inputFileName = "C:/Users/ryanm/Desktop/CP317/Lizard_Research.pdf"; // Specify the input file path here
-
-        // Get the output folder path (project directory)
-        String outputFolder = System.getProperty("user.dir");
-        outputFolder += "\\src\\t1";
+    
+    public String onlyText(PDDocument document) throws IOException{
+        // Creating PDFTextStripper obj
+        PDFTextStripper pdfStripper = new PDFTextStripper();
         
-        // Create a new folder named "output" to store images and result.txt
-        File folder = new File(outputFolder + "/output");
-        folder.mkdirs();
-        outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
+        // Retrieving and outputting text from PDF document
+        String text = pdfStripper.getText(document);
+        List<String> paragraphs = detectParagraphs(text);
+        text = "";
+        for (String paragraph : paragraphs) {
+        	if(!junkTest(paragraph) && paragraph.length() > 3) {
+        		text += paragraph+"\n";
+    		}
+        }
         
-        // The methods. You can test each one separately if you want
-        SaveImagesInPdf(document, inputFileName, outputFolder);
-        ExtractText(document, inputFileName, outputFolder);
-
-        document.close();
-        
-        // Reference to the folder is passed
-        // Needs Ryan's PDFDivision.java to be imported work
-        //PDFDivision.divide(outputFolder);
+        return text;
     }
+    
+    private static List<String> detectParagraphs(String text) {
+        List<String> paragraphs = new ArrayList<>();
+
+        // Define a regular expression to match paragraph boundaries based on two or more consecutive line breaks.
+        String paragraphPattern = "(?m)(?s)(^.*?)(?:\\r?\\n\\r?\\n|$)";
+
+        Pattern pattern = Pattern.compile(paragraphPattern);
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+            // Trim the paragraph to remove leading and trailing whitespaces or line breaks.
+            String paragraph = matcher.group(1).trim();
+
+            // Add the paragraph to the list.
+            paragraphs.add(paragraph);
+        }
+
+        return paragraphs;
+    }
+    
+    private boolean junkTest(String s) {
+		int letterCount = 0;
+		int numberCount = 0;
+		
+		// Iterate through each character in the input string
+		for (char c : s.toCharArray()) {
+		    if (Character.isLetter(c)) {
+		        letterCount++;
+		    } else if (Character.isDigit(c)) {
+		        numberCount++;
+		    }
+		}
+		System.out.println("letterCount = "+letterCount+"\nnumberCount = "+numberCount+"\n");
+		if(letterCount>=numberCount) {
+			return false;
+		}
+    	return true;
+    }
+//    public static void main(String[] args) {
+//    	
+//    }
 }
