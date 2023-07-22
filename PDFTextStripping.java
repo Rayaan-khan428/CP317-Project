@@ -106,7 +106,7 @@ public class PDFTextStripping extends PDFStreamEngine {
 
     public static void main(String[] args) throws IOException {
         PDDocument document = new PDDocument();
-        String inputFileName = "C:/Users/ryanm/Desktop/CP317/Lizard_Research.pdf"; // Specify the input file path here
+        String inputFileName = "C:/Users/ryanm/Desktop/CP317/Lizard_Research(1).pdf"; // Specify the input file path here
 
         // Get the output folder path (project directory)
         String outputFolder = System.getProperty("user.dir");
