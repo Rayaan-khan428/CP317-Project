@@ -1,5 +1,4 @@
 package pdfextraction;
-
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.File;
@@ -20,13 +19,41 @@ import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.contentstream.PDFStreamEngine;
 
 import java.awt.image.BufferedImage;
-
 public class PDFExtract extends PDFStreamEngine {
-
-    // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
-    public int imageNumber = 1;
+    public int imageNumber = 1; // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
     private String outputFolder; // New instance variable to hold the output folder path
 
+    public static void main(String[] args) throws IOException, InterruptedException {
+
+        PDDocument document = new PDDocument();
+
+        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/sample3.pdf"; // Specify the input file  here
+        String outputFolder = "/Users/rayaankhan/repos/CP317-Project/pdfextraction";
+
+        // Create a new folder named "output" to store images and result.txt
+        File folder = new File(outputFolder + "/results");
+        folder.mkdirs();
+        outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
+
+        // The methods. You can test each one separately if you want
+        SaveImagesInPdf(document, inputFileName, outputFolder);
+        ExtractText(document, inputFileName, outputFolder);
+
+        // summarize
+        summarizer.summarize(summarizer.readTxtFile("file path goes here"));
+
+        document.close();
+
+    }
+
+    /**
+     * Extracts images from a PDF document and saves them to the specified output folder.
+     *
+     * @param document      The PDDocument object representing the PDF document.
+     * @param fileName      The path of the PDF file to extract images from.
+     * @param outputFolder  The path of the folder where extracted images will be saved.
+     * @throws IOException  If there's an error reading the PDF file or writing images to the output folder.
+     */
     public static void SaveImagesInPdf(PDDocument document, String fileName, String outputFolder) throws IOException {
         try {
             document = PDDocument.load(new File(fileName));
@@ -52,11 +79,33 @@ public class PDFExtract extends PDFStreamEngine {
     }
 
     /**
-     * Helper Function for the Image extraction method
+     * Extracts text from a PDF document and saves it to a text file in the specified output folder.
      *
+     * @param document      The PDDocument object representing the PDF document.
+     * @param fileName      The path of the PDF file to extract text from.
+     * @param outputFolder  The path of the folder where the extracted text will be saved as a text file.
+     * @throws IOException  If there's an error reading the PDF file or writing the text file to the output folder.
+     */
+    public static void ExtractText(PDDocument document, String fileName, String outputFolder) throws IOException {
+        document = PDDocument.load(new File(fileName));
+
+        // Creating PDFTextStripper obj
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+
+        // Retrieving and outputting text from PDF document
+        String text = pdfStripper.getText(document);
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder + "/result.txt"))) {
+            writer.write(text);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Helper Function for the Image extraction method
      * @param operator The operation to perform.
      * @param operands The list of arguments.
-     *
      * @throws IOException If there is an error processing the operation.
      */
     @Override
@@ -88,43 +137,4 @@ public class PDFExtract extends PDFStreamEngine {
         }
     }
 
-    public static void ExtractText(PDDocument document, String fileName, String outputFolder) throws IOException {
-        document = PDDocument.load(new File(fileName));
-
-        // Creating PDFTextStripper obj
-        PDFTextStripper pdfStripper = new PDFTextStripper();
-
-        // Retrieving and outputting text from PDF document
-        String text = pdfStripper.getText(document);
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder + "/result.txt"))) {
-            writer.write(text);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void main(String[] args) throws IOException {
-        PDDocument document = new PDDocument();
-        String inputFileName = "C:/Users/ryanm/Desktop/CP317/Lizard_Research.pdf"; // Specify the input file path here
-
-        // Get the output folder path (project directory)
-        String outputFolder = System.getProperty("user.dir");
-        outputFolder += "\\src\\t1";
-        
-        // Create a new folder named "output" to store images and result.txt
-        File folder = new File(outputFolder + "/output");
-        folder.mkdirs();
-        outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
-        
-        // The methods. You can test each one separately if you want
-        SaveImagesInPdf(document, inputFileName, outputFolder);
-        ExtractText(document, inputFileName, outputFolder);
-
-        document.close();
-        
-        // Reference to the folder is passed
-        // Needs Ryan's PDFDivision.java to be imported work
-        //PDFDivision.divide(outputFolder);
-    }
 }
