@@ -18,7 +18,7 @@ PDFDvision.java Notes
 - This ensures there is enough information to summerize for a slide
 
 PDFDivison.java Methods: 
--Divide(String inputFileLocation) -> Divides input file of extracted text into sections numbered counting up from 1 in the format: sectionX with x being the number
+- Divide(String inputFileLocation) -> Divides input file of extracted text into sections numbered counting up from 1 in the format: sectionX with x being the number
 
 Slide.java notes: 
 - Slide class in which each section will be an instance
@@ -26,8 +26,8 @@ Slide.java notes:
 - Also has string Title being the title of the given slide (defualt "temp") *Still needs to be found and set*
 
 Slide.java Methods: 
--Slide(int SlideNum, String Title) -> constructor that sets given values for slide number and title (temp by defualt)
--setTitle(String Title) -> sets a title passed as a parameter for a given slide 
--setSlideNum(int SlideNum) -> sets a slide number passed as a parameter for a given slide 
--getTitle() -> returns the title of the given slide 
--getSlideNum() -> returns the slide number of a given slide 
+- Slide(int SlideNum, String Title) -> constructor that sets given values for slide number and title (temp by defualt)
+- setTitle(String Title) -> sets a title passed as a parameter for a given slide 
+- setSlideNum(int SlideNum) -> sets a slide number passed as a parameter for a given slide 
+- getTitle() -> returns the title of the given slide 
+- getSlideNum() -> returns the slide number of a given slide 
