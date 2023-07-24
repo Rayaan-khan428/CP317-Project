@@ -1,9 +1,13 @@
 package pdfextraction;
+
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
@@ -19,84 +23,30 @@ import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.contentstream.PDFStreamEngine;
 
 import java.awt.image.BufferedImage;
+
 public class PDFExtract extends PDFStreamEngine {
-    public int imageNumber = 1; // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
+
+    // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
+    private int imageNumber = 1;
+    private int pageNum = 0;
+    private ArrayList<Integer> array;
     private String outputFolder; // New instance variable to hold the output folder path
+    // Constructor to set the output folder path
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-
-        PDDocument document = new PDDocument();
-
-        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/sample3.pdf"; // Specify the input file  here
-        String outputFolder = "/Users/rayaankhan/repos/CP317-Project/pdfextraction";
-
-        // Create a new folder named "output" to store images and result.txt
-        File folder = new File(outputFolder + "/results");
-        folder.mkdirs();
-        outputFolder = folder.getAbsolutePath(); // Update outputFolder with the new folder path
-
-        // The methods. You can test each one separately if you want
-        SaveImagesInPdf(document, inputFileName, outputFolder);
-        ExtractText(document, inputFileName, outputFolder);
-
-        // summarize
-        summarizer.summarize(summarizer.readTxtFile("file path goes here"));
-
-        document.close();
-
+    public PDFExtract(String outputFolder) {
+        this.outputFolder = outputFolder;
+        this.array = new ArrayList<>();
     }
 
-    /**
-     * Extracts images from a PDF document and saves them to the specified output folder.
-     *
-     * @param document      The PDDocument object representing the PDF document.
-     * @param fileName      The path of the PDF file to extract images from.
-     * @param outputFolder  The path of the folder where extracted images will be saved.
-     * @throws IOException  If there's an error reading the PDF file or writing images to the output folder.
-     */
-    public static void SaveImagesInPdf(PDDocument document, String fileName, String outputFolder) throws IOException {
+    public void SaveImagesInPdf(PDDocument document) throws IOException {
         try {
-            document = PDDocument.load(new File(fileName));
-            PDFExtract printer = new PDFExtract(outputFolder); // Initialize the instance variable
-
-            int pageNum = 0;
+            //PDFExtract printer = new PDFExtract(this.outputFolder); // Initialize the instance variable
 
             for (PDPage page : document.getPages()) {
                 pageNum++;
                 System.out.println("Processing page: " + pageNum);
-                printer.processPage(page);
+                this.processPage(page);
             }
-        } finally {
-            if (document != null) {
-                document.close();
-            }
-        }
-    }
-
-    // Constructor to set the output folder path
-    public PDFExtract(String outputFolder) {
-        this.outputFolder = outputFolder;
-    }
-
-    /**
-     * Extracts text from a PDF document and saves it to a text file in the specified output folder.
-     *
-     * @param document      The PDDocument object representing the PDF document.
-     * @param fileName      The path of the PDF file to extract text from.
-     * @param outputFolder  The path of the folder where the extracted text will be saved as a text file.
-     * @throws IOException  If there's an error reading the PDF file or writing the text file to the output folder.
-     */
-    public static void ExtractText(PDDocument document, String fileName, String outputFolder) throws IOException {
-        document = PDDocument.load(new File(fileName));
-
-        // Creating PDFTextStripper obj
-        PDFTextStripper pdfStripper = new PDFTextStripper();
-
-        // Retrieving and outputting text from PDF document
-        String text = pdfStripper.getText(document);
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFolder + "/result.txt"))) {
-            writer.write(text);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -104,8 +54,10 @@ public class PDFExtract extends PDFStreamEngine {
 
     /**
      * Helper Function for the Image extraction method
+     *
      * @param operator The operation to perform.
      * @param operands The list of arguments.
+     *
      * @throws IOException If there is an error processing the operation.
      */
     @Override
@@ -126,6 +78,7 @@ public class PDFExtract extends PDFStreamEngine {
                 // you can change the name of the image here
                 ImageIO.write(bImage, "PNG", new File(outputFolder + "/image_" + imageNumber + ".png"));
                 System.out.println("Image saved.");
+                this.addItem(pageNum);
                 imageNumber++;
 
             } else if (xobject instanceof PDFormXObject) {
@@ -137,4 +90,120 @@ public class PDFExtract extends PDFStreamEngine {
         }
     }
 
+    public void addItem(int item) {
+        array.add(item);
+    }
+
+    public int getNumImages() {
+        return array.size();
+    }
+
+    public int getPage(int imageNum) {
+        if(imageNum > getNumImages()) {
+            return -1;
+        }
+        return array.get(imageNum-1);
+    }
+
+    public void ExtractText(PDDocument document) throws IOException {
+
+        // Creating PDFTextStripper obj
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+        int totalPages = document.getNumberOfPages();
+        String text = "";
+        String text2 = "";
+        List<String> paragraphs;
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
+            for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+                pdfStripper.setStartPage(pageNumber);
+                pdfStripper.setEndPage(pageNumber);
+
+                text = "***START OF PAGE "+pageNumber+"***";
+
+                text2 = pdfStripper.getText(document);
+                paragraphs = detectParagraphs(text2);
+
+                writer.write(text+"\n");
+                for (String paragraph : paragraphs) {
+                    if(!junkTest(paragraph) && paragraph.length() > 3) {
+                        writer.write(paragraph+"\n");
+                    }
+                }
+                text = "***END OF PAGE "+pageNumber+"***\n";
+                writer.write(text+"\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public String onlyText(PDDocument document) throws IOException{
+        // Creating PDFTextStripper obj
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+
+        int totalPages = document.getNumberOfPages();
+        String text = "";
+        String text2 = "";
+        List<String> paragraphs;
+
+        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+            pdfStripper.setStartPage(pageNumber);
+            pdfStripper.setEndPage(pageNumber);
+
+            text += "***START OF PAGE "+pageNumber+"***";
+
+            text2 = pdfStripper.getText(document);
+            paragraphs = detectParagraphs(text2);
+
+            for (String paragraph : paragraphs) {
+                if(!junkTest(paragraph) && paragraph.length() > 3) {
+                    text += paragraph+"\n";
+                }
+            }
+
+            text += "***END OF PAGE "+pageNumber+"***\n";
+        }
+
+        return text;
+    }
+
+    private static List<String> detectParagraphs(String text) {
+        List<String> paragraphs = new ArrayList<>();
+
+        // Define a regular expression to match paragraph boundaries based on two or more consecutive line breaks.
+        String paragraphPattern = "(?m)(?s)(^.*?)(?:\\r?\\n\\r?\\n|$)";
+
+        Pattern pattern = Pattern.compile(paragraphPattern);
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+            // Trim the paragraph to remove leading and trailing whitespaces or line breaks.
+            String paragraph = matcher.group(1).trim();
+
+            // Add the paragraph to the list.
+            paragraphs.add(paragraph);
+        }
+
+        return paragraphs;
+    }
+
+    private boolean junkTest(String s) {
+        int letterCount = 0;
+        int numberCount = 0;
+
+        // Iterate through each character in the input string
+        for (char c : s.toCharArray()) {
+            if (Character.isLetter(c)) {
+                letterCount++;
+            } else if (Character.isDigit(c)) {
+                numberCount++;
+            }
+        }
+        if(letterCount>=numberCount) {
+            return false;
+        }
+        return true;
+    }
 }
