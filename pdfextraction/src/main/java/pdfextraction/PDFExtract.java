@@ -23,7 +23,6 @@ import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.contentstream.PDFStreamEngine;
 
 import java.awt.image.BufferedImage;
-
 public class PDFExtract extends PDFStreamEngine {
 
     // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
