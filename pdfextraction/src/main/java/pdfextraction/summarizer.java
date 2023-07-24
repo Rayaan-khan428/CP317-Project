@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import org.asynchttpclient.*;
 import static org.asynchttpclient.Dsl.*;
-
 public class summarizer {
 
     public static void summarize(String text) throws InterruptedException {

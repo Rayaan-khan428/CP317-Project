@@ -6,7 +6,6 @@ import java.io.IOException;
 import org.apache.pdfbox.pdmodel.PDDocument; 
 
 public class Main {
-
 	public static void main(String[] args) throws IOException {
         String inputFileName = "C:/Users/Sebastian/Downloads/sample3.pdf"; // Specify the input file path here
         
