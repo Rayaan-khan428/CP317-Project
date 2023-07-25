@@ -5,71 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/pdfextraction/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/pdfextraction/PDFDivision.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/pdfextraction/PDFExtract.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/pdfextraction/Slide.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/image_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/image_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/image_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/image_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/result.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/pdfextraction/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/pdfextraction/PDFDivision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/pdfextraction/PDFExtract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PDFToPPT/src/pdfextraction/Slide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction\src\t1/output/image_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/image_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction\src\t1/output/image_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction\src\t1/output/image_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction\src\t1/output/result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/image_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PDFToPPT/src/output/image_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/image_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/image_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PDFToPPT/bin/t1/output/section2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PDFToPPT/src/output/section13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/t1/output/section9.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +47,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/rayaankhan/repos/CP317-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -155,7 +91,7 @@
       <workItem from="1690158818695" duration="1771000" />
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
-      <workItem from="1690163171598" duration="10055000" />
+      <workItem from="1690163171598" duration="10119000" />
     </task>
     <servers />
   </component>
