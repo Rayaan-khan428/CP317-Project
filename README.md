@@ -1,9 +1,8 @@
 # CP317-Project
 
 PDFExtract.java Notes:
-- Download pdfextraction2.zip and Import it into Eclipse as an "Archive File"
-- PDFTextStripping class does not require additional JAR library downloads.
-- It is a Maven project which gets its libraries from dependecies in the pom.xml file
+- Extracts text and images from a PDF file
+- Does not work with text-based tables yet
 
 PDFExtract.java Methods:
 - SaveImagesInPdf(PDDocument document) -> Saves extracted images to specified output folder

@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.pdfbox.pdmodel.PDDocument; 
+import org.apache.commons.io.FileUtils;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -35,5 +36,10 @@ public class Main {
         //PDFDivision.divide(outputFolder);
         
         document.close();
+		
+	//To delete the output folder
+        System.out.println("Output folder deleting...");
+        FileUtils.deleteDirectory(new File(outputFolder));
+        System.out.println("Output folder deleted.");
     }
 }
