@@ -1,19 +1,21 @@
 package pdfextraction;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Slide {
 	
 	public int SlideNum;
 	public int PageNum;
 	public String Title; 
-	public String Image;
+	List<Integer> Image = new ArrayList<>();
 
 	
 	// Constructor 
-	public Slide(int SlideNum, int PageNum, String Title, String Image) {
+	public Slide(int SlideNum, int PageNum, String Title) {
 		this.SlideNum = SlideNum;
 		this.PageNum = PageNum;
 		this.Title = Title;
-		this.Image = Image;
 	}
 	
 	// Setters and Getters my fav :)
@@ -22,9 +24,9 @@ public class Slide {
 		this.Title = Title;
 	}
 	
-	public void setImage(String Image) {
-		this.Image = Image;
-	}
+	public void setImage(List<Integer> Image) {
+        this.Image.addAll(Image);
+    }
 	
 	public void setSlideNum(int SlideNum) {
 		this.SlideNum = SlideNum;
@@ -38,7 +40,7 @@ public class Slide {
 		return this.Title;
 	}
 	
-	public String getImage() {
+	public List<Integer> getImage() {
 		return this.Image;
 	}
 	
