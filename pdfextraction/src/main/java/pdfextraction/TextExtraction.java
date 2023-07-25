@@ -23,7 +23,7 @@ import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.contentstream.PDFStreamEngine;
 
 import java.awt.image.BufferedImage;
-public class PDFExtract extends PDFStreamEngine {
+public class TextExtraction extends PDFStreamEngine {
 
     // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
     private int imageNumber = 1;
@@ -32,7 +32,7 @@ public class PDFExtract extends PDFStreamEngine {
     private String outputFolder; // New instance variable to hold the output folder path
     // Constructor to set the output folder path
 
-    public PDFExtract(String outputFolder) {
+    public TextExtraction(String outputFolder) {
         this.outputFolder = outputFolder;
         this.array = new ArrayList<>();
     }
@@ -135,7 +135,7 @@ public class PDFExtract extends PDFStreamEngine {
                 text = "***START OF PAGE "+pageNumber+"***";
 
                 text2 = pdfStripper.getText(document);
-                paragraphs = detectParagraphs(text2);
+                paragraphs = detectLines(text2);
 
                 writer.write(text+"\n");
                 for (String paragraph : paragraphs) {
@@ -160,64 +160,76 @@ public class PDFExtract extends PDFStreamEngine {
      * @throws IOException If an I/O error occurs while reading the document.
      */
     public String onlyText(PDDocument document) throws IOException{
+
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
 
         int totalPages = document.getNumberOfPages();
-        String text = "";
-        String text2 = "";
-        List<String> paragraphs;
+        String startAndEnd = ""; // define start and end page
+        String pageText = ""; // store the actual text
+
+        List<String> paragraphs = new ArrayList<>();
 
         for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+
             pdfStripper.setStartPage(pageNumber);
             pdfStripper.setEndPage(pageNumber);
 
-            text += "***START OF PAGE "+pageNumber+"***";
+            startAndEnd += "***START OF PAGE " + pageNumber + "***\n";
 
-            text2 = pdfStripper.getText(document);
-            paragraphs = detectParagraphs(text2);
+            pageText = pdfStripper.getText(document);
+            paragraphs = detectLines(pageText);
 
             for (String paragraph : paragraphs) {
                 if(!junkTest(paragraph) && paragraph.length() > 3) {
-                    text += paragraph+"\n";
+                    startAndEnd += paragraph+"\n";
                 }
             }
 
-            text += "***END OF PAGE "+pageNumber+"***\n";
+//            System.out.println(paragraphs.size());
+//            System.out.println(paragraphs);
+
+            startAndEnd += "***END OF PAGE " + pageNumber + "***\n";
+
         }
 
-        return text;
+        System.out.println(startAndEnd);
+
+        return startAndEnd;
     }
 
     /**
-     * Detects and extracts paragraphs from the input text.
+     * Detects and extracts lines from the input text.
      *
      * @param text The input text from which paragraphs need to be detected.
      * @return A list of paragraphs extracted from the input text.
      */
-    private static List<String> detectParagraphs(String text) {
-        List<String> paragraphs = new ArrayList<>();
+    private static List<String> detectLines(String text) {
 
-        // Define a regular expression to match paragraph boundaries based on two or more consecutive line breaks.
-        String paragraphPattern = "(?m)(?s)(^.*?)(?:\\r?\\n\\r?\\n|$)";
+        // create an Arraylist of Strings, each string represents a line
+        List<String> lines = new ArrayList<>();
 
-        Pattern pattern = Pattern.compile(paragraphPattern);
+        // regex to match paragraph boundaries based on two or more consecutive line breaks.
+        String linePattern = "(?m)(?s)(^.*?)(?:\\r?\\n\\r?\\n|$)";
+
+        Pattern pattern = Pattern.compile(linePattern);
         Matcher matcher = pattern.matcher(text);
 
         while (matcher.find()) {
-            // Trim the paragraph to remove leading and trailing whitespaces or line breaks.
-            String paragraph = matcher.group(1).trim();
 
-            // Add the paragraph to the list.
-            paragraphs.add(paragraph);
+            // Trim the line to remove leading and trailing whitespaces or line breaks.
+            String line = matcher.group(1).trim();
+
+            // Add the line to the list.
+            lines.add(line);
         }
 
-        return paragraphs;
+        return lines;
     }
 
     /**
-     * Checks if the input string contains more letters than numbers.
-     *
+     * Checks if the input string contains more letters than numbers. to filter out non-image tables as we are unable
+     * to extract them (no library in java exists for this)
      * @param s The input string to be tested.
      * @return True if the input string contains more letters than numbers, otherwise false.
      */

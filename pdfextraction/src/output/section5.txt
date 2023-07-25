@@ -1,0 +1,69 @@
+ARCHITECHTURE AND INFRASTRUCTURE OF CLOUD
+COMPUTING
+The architecture and infrastructure of cloud computing are designed to provide scalable,
+flexible, and cost-effective solutions for businesses and individuals. To support these goals, cloud
+computing offers different service models, including Infrastructure as a Service (IaaS), Platform
+as a Service (PaaS), and Software as a Service (SaaS).
+A. Infrastructure as a Service (IaaS):
+IaaS provides virtualized computing resources over the internet. Users can access and
+manage virtual machines, storage, networks, and other fundamental computing resources from a
+cloud service provider (CSP). It offers a high level of flexibility and control, allowing users to
+scale their infrastructure up or down based on their individual/organizational needs.
+The responsibility for managing and maintaining the infrastructure lies with the CSP,
+allowing you to focus on tasks such as software installation, configuration, and management, as
+well as ensuring the security of your data (Google, n.d. -c).
+B. Platform as a Service (PaaS):
+***END OF PAGE 4***
+
+***START OF PAGE 5***
+PaaS provides a platform for developing, testing, and deploying applications. Similar to
+IaaS models, in PaaS, the service provider takes care of delivering and managing the underlying
+infrastructure. While you are responsible for coding, handling data, and managing your
+applications, the burden of managing and maintaining the platform itself is alleviated.
+PaaS solutions are specific to application and software development and typically include:
+• Cloud infrastructure: Data centers, storage, network equipment, and servers
+• Middleware software: Operating systems, frameworks, development kits (SDK),
+libraries, and more
+• User interface: A graphical user interface (GUI), a command line interface (CLI), an API
+interface, and in some cases, all three (Google, n.d. -e).
+C. Software as a Service (SaaS):
+Through SaaS, software applications are hosted and delivered over the internet. Users can
+access and use software applications without the need for local installation or management which
+provides convenience, accessibility, and comes with automatic software updates. Some key
+features of SaaS include:
+• Application Accessibility: SaaS applications are accessible through web browsers or
+dedicated client applications, allowing users to access them from various devices and
+locations.
+• Multi-Tenancy: SaaS applications support multiple users or organizations sharing the
+same software instance while maintaining data separation and security.
+• Subscription-based Model: SaaS typically operates on a subscription-based pricing
+model, where users pay for the software on a recurring basis (SalesForce, n.d.).
+D. Virtualization and its role in cloud computing:
+Virtualization plays a fundamental role in enabling the service models of previously
+mentioned above. Through virtualization, the cloud service provider can efficiently allocate and
+manage resources, dynamically scale up or down based on demand, and ensure the isolation and
+security of user environments. It is the foundation that enables the scalability, flexibility, and
+agility that cloud computing is known for (AWS, n.d.).
+Virtualization uses specialized software, called a hypervisor, to create several cloud
+instances or virtual machines on one physical computer. From the user’s perspective, the virtual
+machine operates like a typical server. CPUs, Random Access Memory (RAM), and storage
+appear the same as on a physical server. You can also configure and update the guest operating
+systems and their applications as necessary without affecting the host operating system (AWS,
+n.d.).
+The hypervisor is installed on the physical machine, serving as a mediator between the
+virtual machines and the underlying hardware or host operating system. It operates as a software
+layer that facilitates the allocation of physical resources to multiple virtual machines. By
+coordinating access to the physical environment, the hypervisor ensures that each virtual
+machine has its dedicated portion of resources.
+For example, if the virtual machine requires computing resources, such as computer
+processing power, the request first goes to the hypervisor. The hypervisor then passes the request
+to the underlying hardware, which performs the task (AWS, n.d.).
+The following are the two main types of hypervisors.
+***END OF PAGE 5***
+
+***START OF PAGE 6***
+• Type 1 hypervisors: Also called a bare-metal hypervisor, runs directly on the computer
+hardware and interacts directly with the physical resources.
+• Type 2 hypervisors: Runs as an application on computer hardware with an existing
+operating system. This type of hypervisor is used when running multiple operating
+systems on a single machine.

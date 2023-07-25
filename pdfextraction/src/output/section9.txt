@@ -1,0 +1,2 @@
+load balancing: process of distributing network traffic efficiently among back-end
+services.

@@ -1,0 +1,79 @@
+runtimes%2C%20including%20Docker.
+Boezeman, J., & Officer, C. T. (n.d.). ClearScale accomplishes ambitious AWS migration and
+Modernization Project for acoustic. ClearScale. https://www.clearscale.com/case-
+studies/acoustic-case-study
+Davis, N. (2023, March 30). Cloud computing sustainability: How green is the cloud?. LinkedIn.
+https://www.linkedin.com/pulse/cloud-computing-sustainability-how-green-neal-davis
+Donnelly, C. (2017, October 10). GE opens up on how its move to the AWS Public Cloud Is
+Progressing: Computer Weekly. ComputerWeekly.com.
+https://www.computerweekly.com/news/450427890/GE-on-how-its-move-to-the-AWS-public-
+cloud-is-progressing
+GeeksforGeeks. (2022, January 17). Issues in cloud computing. GeeksforGeeks.
+https://www.geeksforgeeks.org/issues-in-cloud-computing/
+GeeksforGeeks. (2023a, February 9). 7 privacy challenges in cloud computing. GeeksforGeeks.
+https://www.geeksforgeeks.org/7-privacy-challenges-in-cloud-computing/
+GeeksforGeeks. (2023b, May 3). Cloud deployment models. GeeksforGeeks.
+https://www.geeksforgeeks.org/cloud-deployment-models/
+***END OF PAGE 13***
+
+***START OF PAGE 14***
+Google. (2022, September 27). Device connect for Fitbit, powered by Google Cloud | Google
+Cloud Blog. Google. https://cloud.google.com/blog/topics/healthcare-life-sciences/device-
+connect-for-fitbit-powered-by-google-cloud
+Google. (n.d.-a). Advantages of Cloud Computing  |  google cloud. Google.
+https://cloud.google.com/learn/advantages-of-cloud-computing
+Google. (n.d.-b). What is a cloud database?  |  google cloud. Google.
+https://cloud.google.com/learn/what-is-a-cloud-database
+Google. (n.d.-c). What is iaas (infrastructure as a service)?  |  google cloud. Google.
+https://cloud.google.com/learn/what-is-iaas
+Google. (n.d.-d). What is machine learning?  |  google cloud. Google.
+https://cloud.google.com/learn/what-is-machine-learning
+Google. (n.d.-e). What is Paas?  |  google cloud. Google. https://cloud.google.com/learn/what-is-
+paas
+The importance of cloud computing in business [2023]. KnowledgeHut. (n.d.).
+https://www.knowledgehut.com/blog/cloud-computing/importance-of-cloud-computing
+Kaur, J. (2023, May 16). Edge computing vs cloud computing: 8 key differences. Real Time Data
+and AI Company. https://www.xenonstack.com/blog/edge-computing-vs-cloud-computing
+Khatri, R. (2022, July 23). Legal issues surrounding cloud computing. OpenGrowth.
+https://www.opengrowth.com/resources/legal-issues-surrounding-cloud-computing
+Koshkin, D. (2021, March 25). Cloud deployment models: Advantages & disadvantages. SaM
+Solutions. https://sam-solutions.us/advantages-and-disadvantages-of-cloud-deployment-models/
+Kubernetes. Docker. (2023, February 21). https://www.docker.com/products/kubernetes/
+Novkovic, G. (2017, August 11). Five characteristics of cloud computing. Control Engineering.
+https://www.controleng.com/articles/five-characteristics-of-cloud-computing/
+Ooteghem, K. V. (2022, November 17). What is reliability in cloud computing?. Parallels
+Remote Application Server Blog - Application virtualization, mobility and VDI.
+https://www.parallels.com/blogs/ras/reliability-in-cloud-computing/
+Pedamkar, P. (2023, March 23). History of cloud computing: Brief overview of cloud computing.
+EDUCBA. https://www.educba.com/history-of-cloud-computing/
+Regalado, A. (2020, February 11). Who coined “cloud computing”? MIT Technology Review.
+https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/
+***END OF PAGE 14***
+
+***START OF PAGE 15***
+Serverless Computing and Applications: Microsoft Azure. Serverless computing and applications
+| Microsoft Azure. (n.d.). https://azure.microsoft.com/en-ca/resources/cloud-computing-
+dictionary/what-is-serverless-computing
+Stone, W. (2022, October 17). 8 surprising ways cloud computing is Changing Education. Cloud
+Academy. https://cloudacademy.com/blog/surprising-ways-cloud-computing-is-changing-
+education/
+The University. (1978). What is Virtualization. Amazon. https://aws.amazon.com/what-
+is/virtualization/
+Vavra, C. (2022, September 15). Five characteristics of cloud computing. Control Engineering.
+https://www.controleng.com/articles/five-characteristics-of-cloud-computing/
+Virtualization Technology & Virtual Machine Software: What is virtualization? VMware. (2023,
+April 13). https://www.vmware.com/in/solutions/virtualization.html
+What is cloud computing?. IBM. (n.d.-a). https://www.ibm.com/topics/cloud-computing
+What is edge computing. IBM. (n.d.-b). https://www.ibm.com/cloud/what-is-edge-computing
+What is Faas (function-as-a-service)?. IBM. (n.d.-c). https://www.ibm.com/topics/faas
+What is Saas? - software as a Service. Salesforce. (n.d.). https://www.salesforce.com/in/saas/
+What is serverless computing?. IBM. (n.d.-d). https://www.ibm.com/topics/serverless
+Yehuda, Y. (2022, September 16). Top 7 cloud databases. DBmaestro.
+https://www.dbmaestro.com/blog/database-automation/top-7-cloud-databases
+Zercoe, C. (2022, February 23). Benefits of cloud computing for Government. GovOS.
+https://govos.com/blog/why-every-local-government-should-be-leveraging-the-
+cloud/#:~:text=Cloud%20computing%20enables%20local%20governments,well%20as%20data
+%20storage%20requirements.
+Zhang, M. (2023, March 6). Top 10 cloud service providers globally in 2023. Dgtl Infra.
+https://dgtlinfra.com/top-10-cloud-service-providers-2022/
+***END OF PAGE 15***

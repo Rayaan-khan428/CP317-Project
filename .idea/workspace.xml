@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pdfextraction/sample_reports/Cloud Computing Research Paper Group 2.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/results/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/results/content.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Paragraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Paragraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PDFDivision.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PDFExtract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/summarizer.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +58,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "experimental",
     "last_opened_file_path": "/Users/rayaankhan/repos/CP317-Project",
@@ -60,10 +72,17 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "JSON"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pdfextraction/sample_reports" />
+      <recent name="$PROJECT_DIR$/pdfextraction/results" />
       <recent name="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction" />
     </key>
   </component>
@@ -93,7 +112,7 @@
       <workItem from="1690158818695" duration="1771000" />
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
-      <workItem from="1690163171598" duration="11093000" />
+      <workItem from="1690163171598" duration="19546000" />
     </task>
     <servers />
   </component>
@@ -110,5 +129,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

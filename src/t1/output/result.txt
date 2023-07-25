@@ -1,0 +1,488 @@
+***START OF PAGE 1***
+Journal of Saudi Chemical Society (2010) 14, 1–7King Saud University
+Journal of Saudi Chemical Society
+www.ksu.edu.sa
+www.sciencedirect.comDetermination of zinc by square-wave adsorptive stripping
+voltammetry using alizarin as a chelating agentAhmad H. Alghamdi *Department of Chemistry, College of Science, King Saud University, P.O. Box 2455, Riyadh 11451, Saudi ArabiaReceived 23 May 2009; accepted 12 July 2009
+Available online 24 December 2009*
+doKEYWORDS
+Square-wave technique;
+Adsorptive stripping
+voltammetry;
+Zinc determination;
+Alizarin;
+Coffee analysisTel.: +966 14676001; fax: +
+mail address: ahalgamdy@g
+view under responsibility of
+Production and h966 1467
+mail.com
+Univers
+King Sau
+osting by EAbstract The adsorptive collection of zinc(II) complex with alizarin ligand, coupled with the
+square-wave voltammetric technique at the hanging mercury drop electrode, yields a very sensitive
+electroanalytical procedure for the determination of zinc. The optimized experimental conditions
+include: supporting electrolyte (carbonate buffer), pH (11), alizarin concentration (1 · 106!
+mol l1), accumulation time (60 s), accumulation potential (0.1 V), scan rate (700 mV s1), pulse
+amplitude (0.06 V) and SW frequency (80 Hz). The monitored stripping voltammetric current was
+linear over the range of 5 · 108 – 4 · 107 mol l1 and the detection limit was 1 · 108 mol l1. The
+relative standard deviation was calculated as 1.3% (n= 10) for 1 · 108 mol l1 Zn(II) and the
+obtained electrochemical signal was stabile for up to 60 min. Possible interferences by either co-
+existing metal ions or other chelating agents were also investigated. The applicability of the
+proposed SW-AdSV method to the analysis of foodstuff was assessed by the determination of zinc
+content in instant coffee samples. The accuracy of the obtained voltammetric analytical results was
+validated by comparing with that obtained by atomic absorption spectrometric method and con-
+ducting the necessary statistical evaluation.
+ª 2009 King Saud University. All rights reserved.1. Introduction
+Square-wave adsorptive stripping voltammetry (SW-AdSV)
+has received increasing attention as a stripping voltammetric
+technique for ultra-trace quantitative analysis because it can5992.
+ity. All rights reserved. Peer-
+d University.
+lsevierbe used to perform an electroanalytical measurement faster
+than conventional differential pulse voltammetry and with
+higher sensitivity. The unique features and problems of this
+outstanding electrochemical method are reported in several
+monographs (Brainina and Neyman, 1993; Wang, 1994;
+Dewald, 1996). SW-AdSV procedure is well suited for the
+determination of ultra-trace amounts of inorganic ions
+through the adsorbed complexes. The applications of this
+advanced electrochemical method to the determination of var-
+ious metal ions have been reviewed elsewhere (Brainina et al.,
+2000; Abu Zuhri and Wolfgang, 1998; Zaitsev et al., 1999).
+In adsorptive stripping voltammetric approach, the metal
+ion of interest is absorbed on the working electrode by means
+of a non-electrolytic process prior to the voltammetric scan. By
+this electroanalytical technique, the analytes are determined as
+***END OF PAGE 1***
+
+***START OF PAGE 2***
+2 A.H. Alghamdicomplexes with different organic ligands adsorbed on the elec-
+trode surface. Over the years a large number of chelating
+agents of various classes were used for the determination of
+more than sixty elements in almost all groups of periodic sys-
+tem of elements (Zaitsev et al., 1999). Dimethylglyoxime
+(DMG), 8-hydroxyquinoline (Oxine), nioxime, catechol, cup-
+ferron, tropolone and solochrome violet RS are some selected
+examples of such very popular chelating agents. Alizarin is a
+natural dye and chelating agent, which has been used success-
+fully in the stripping voltammetric determination of some met-
+als including Mo (Tyszczuk and Korolczuk, 2008), Al(III)
+(Wang et al., 1987), In(III) (Zhao et al., 1996).
+The determination of trace concentration levels of zinc is of
+interest in different fields such as environmental surveillance,
+food control and occupational hazards (Venugopal and Luc-
+key, 1978; Underwoodm, 1977). Because of the industrial sig-
+nificant of zinc and as well as its environmental concern, a
+sensitive and yet simple analytical method for its trace determi-
+nation is required. Accordingly, adsorptive stripping voltam-
+metry has been effectively employed for the determination of
+zinc ions in various real samples after its prior complexation
+with some organic surface-active substances such as Morin
+(Shams et al., 2004), 2-quinolinethiol (Paneli and Voulgaropo-
+ulos, 1994, tetramethylene dithiocarbamate (TMDC) Hernan-
+dez-Brito et al., 1993, ammonium pyrrolidine dithiocarbamate
+(APDC) Ornella et al., 1995; Van, 1985, propyl gallate (Young
+et al., 2003), carbidopa (Gholivand et al., 2007) and xylenol or-
+ange (Colston and Robinson, 1997).
+The present work examines the reliability and validity of
+SW-AdSV electrochemical method for the determination of
+trace amounts of zinc in food samples via the application of
+alizarin as a chelating agent.2. Experimental
+2.1. Apparatus
+All square-wave adsorptive stripping measurements were car-
+ried out with 797 AV computrace (Metrohn, Herisau, Switzer-
+land) in connection with Dell computer and controlled by (VA
+computrace 2.0) control software. Stripping voltammograms
+were obtained via a Hewlett–Packard laser jet printer. A con-
+ventional three electrode system was used in the hanging mer-
+cury drop electrode (HMDE) mode. This three electrode
+system was completed by means of a platinum auxiliary elec-
+trode and an Ag/AgCl (3 M KCl) reference electrode. Atomic
+absorption spectrometric determination of zinc metal was
+achieved by Perkin–Elmer Flame Atomizer (Model 2280).
+The pH was measured with Metrohn 744 pH meter. Oxford
+adjustable micropipette (Ireland) was used to pipette microliter
+volumes standard solutions.
+2.2. Reagents
+All chemicals used were of analytical reagent grade and were
+used without further purification. Stock solution of Zn(II) of
+1 · 102 mol1 was prepared by dissolving the appropriate
+amount of nitrate salts (BDH, UK) in distilled water in 100-
+ml volumetric flasks. A 1 · 102 mol1 stock solution of aliza-
+rin (BDH, UK) was prepared by dissolving an accurately
+weighed amount of pure substances. Standard solutions of zincmetal ions or ligands with lower concentration were prepared
+daily by diluting the stock solutions with distilled water.
+Britton–Robinson supporting buffer (pH  2, 0.04 mol l1 in
+each constituent) was prepared by dissolving 2.47 g of boric
+acid (Winlab, UK) in 500 ml distilled water containing 2.3 ml
+of glacial acetic acid (BDH, UK) and then adding 2.7 ml of
+ortho-phosphoric acid (Riedal-deHaen, Germany) and dilut-
+ing to 1 l with distilled water. The carbonate buffer was 0.1
+mol l1 in both sodium hydrogen carbonate (Winlab, UK)
+and disodium carbonate (BDH, UK), while phosphate buffer
+was prepared from 0.1 mol l1 in both phosphoric acid (Rie-
+dal-deHaen, Germany) and sodium dihydrogen phosphate
+(Winlab, UK). The acetate buffer was prepared from 0.02 M
+in both sodium acetate (Winlab, UK) and acetic acid (BDH,
+UK). Five different brands of popular instant coffee samples
+were purchased from city of Riyadh markets.
+2.3. Procedure
+The general procedure adopted for obtaining square-wave
+adsorptive stripping voltammograms was as follows: a 20 ml
+aliquot of an appropriate buffer at desired pH was pipetted
+in a clean and dry voltammetric cell and the required standard
+solutions of the alizarin chelating agent and zinc metal ion
+were added. The test solutions were purged with nitrogen for
+5 min initially, while the solution was stirred. The accumula-
+tion potential of 0.1 V versus Ag/AgCl was applied to a
+new mercury drop while the solution was stirred for 60 s (un-
+less otherwise stated). Following the preconcentration period,
+the stripping was stopped and after 10 s had elapsed, cathodic
+scans were carried out over the range from 0.0 to 1.3 V. For
+the analysed foodstuff samples (instant coffee) a pretreatment
+conventional wet digestion method utilizing acid mixture
+was applied. All measurements were obtained at room
+temperature.3. Results and discussion
+3.1. Preliminary observations
+For test solution (acetate buffer pH 3) containing 5 · 106
+mol l1 Zn(II), preliminary stripping voltammetric measure-
+ments should that zinc ions exhibited a very weak and nearly
+flatted electrochemical peak at Ep = 958 mV (versus Ag/
+AgCl reference electrode) as can be seen from Fig. 1 (line A).
+However, the addition of 3 · 107 mol l1 alizarin to the previ-
+ous acetate supporting electrolyte solution provided a well-de-
+fined (line B) cathodic peak at 952 mV. In fact, the zinc ions
+exhibited a good affinity towards alizarin molecules forming a
+very stable alizarin–Zn(II) complex which is strongly adsorbed
+onto the HMDE surface. This obtained well-developed strip-
+ping voltammetric peak was found to response perfectly to
+the extra addition of either 5 · 107 mol l1 alizarin or 5 · 10
+7 mol l1 Zn(II) (lines C and D, respectively), which probably
+reflect the formation and adsorption of the suggested complex.
+The observed SW-AdSV peak is most probably due to the
+cathodic reduction of Zn(II) in the adsorbed complex with
+alizarin and the electrochemical mechanism of the reduction
+process of alizarin–Zn(II) complex is illustrated in Fig. 2.
+Clearly, this proposed electrochemical reduction mecha-
+nism suggested an irreversible reductive process for zinc ions
+***END OF PAGE 2***
+
+***START OF PAGE 3***
+Figure 3 Cyclic voltammogram for the formed complex between
+1 · 107 mol l1 Zn(II) and 5 · 107 mol l1 alizarin in pH 3
+acetate buffer at 50 mV s1 scan rate.
+Figure 1 Square-wave adsorptive stripping voltammetric scan of
+Zn(II) in the presence of alizarin: A = acetate buffer pH 3 + 5 ·
+107 mol l1 Zn(II), B = A + 3 · 107 mol l1 alizarin, C =
+A + B + 5 · 107 mol l1 alizarin and D= A+ B + C+ 5 ·
+107 mol l1 Zn(II).
+Determination of zinc by square-wave adsorptive stripping voltammetry using alizarin as a chelating agent 3in the adsorbed complex, an assumption which was confirmed
+by cyclic voltammetric measurement of 1 · 107 mol l1 Zn(II)
+ions and 5 · 107 mol l1 alizarin chelating agent in pH 3 ace-
+tate buffer at 50 mV s1 scan rate. As can be noticed from
+Fig. 3, which exhibits the cyclic voltammogram of alizarin–
+Zn(II) complex, the absence of the anodic peak at the reverse
+scan for the stripping voltammetric peak at 831 mV con-
+firmed the irreversible nature of the evaluated reduction pro-
+cess. The first electrochemical peak observed at 655 mV in
+the given cyclic voltammogram is more probably resulted from
+the cathodic reduction of the electroactive anthraquinone moi-
+ety in the alizarin free molecules. Furthermore, when repetitive
+cyclic voltammetric measurements for alizarin complex with
+Zn(II) were carried out, a well-developed SW-AdSV peak
+was observed at 841 mV for the first cathodic scan, however,O
+O         OH
++2 e-
+Figure 2 Mechanism of the electrochemical redsucceeding cathodic scans exhibit a gradual decrease in the vol-
+tammetric peak intensity, that seemed to indicate the adsorp-
+tive characteristic of this complex at the surface of the
+employed working electrode. Anyhow, the interfacial accumu-
+lation of this ligand–metal ion complex onto the HMDE sur-
+face can be used as an effective accumulation step in order
+to enhance the electroanalytical determination of zinc ions.
+3.2. Optimum parameters and experimental conditions
+3.2.1. Effect of pH
+The sensitivity of the SW-AdSV approach for the electrochem-
+ical analysis of Zn(II) metal ion via their formed complex with
+alizarin, is strongly dependent upon the pH and nature of sup-
+porting buffer which are the main factors influencing the for-
+mation of the observed complex, its stability, its adsorption
+process and its electrochemical reduction process. Among the
+investigated supporting electrolytes (acetate, phosphate, car-
+bonate and Britton–Robinson buffer) at different pH values,
+the best voltammetric peak resolution and sensitivity have
+been observed when utilizing 0.1 mol l1 carbonate buffer,
+which will be selected for all subsequent experiments.
+The influence of pH value of the used buffer solution on the
+monitored stripping voltammetric peak current and potential
+was also investigated. When the SW-AdSV peak current of
+5 · 107 mol l1 Zn(II) in the presence of 1 · 106 mol l1 aliz-
+arin was measured as a function of pH over the range 7.5–11.5,
+the zinc voltammetric signal was found to increase steadily
+over the examined pH range as can be seen from Fig. 4. How-O
++ Zno
+uction process for alizarin–Zn(II) complex.
+***END OF PAGE 3***
+
+***START OF PAGE 4***
+Figure 4 Effect of pH on SW-AdSV signal of 5 · 107 mol l1 Zn(II) with 1 · 106 mol l1 alizarin in acetate buffer after 90 s
+accumulation time at 0.0 V accumulation potential and 500 mV s1 scan rate.
+4 A.H. Alghamdiever, a sharp peak current decline was observed at pH 11.5,
+thus carbonate buffer solution with pH 11 seems to be the
+appropriate choice to ensure the highest voltammetric peak
+current. In addition, it was observed that the peak potentials
+for Zn/alizarin complex exhibited a shift in the negative direc-
+tion by 149 mV, when pH value was varied over the 7.5–11.5
+pH range.
+3.2.2. Effect of alizarin ligand concentration
+Varying the concentration of alizarin chelating agent also
+plays an important role in the investigated stripping voltam-
+metric procedure. Fig. 5 indicates that an increase of alizarin
+concentration from 1 · 107 to 1 · 106 mol l1 at a constant
+Zn(II) concentration of 1 · 107 mol l1 initiate a steady
+enhancement for the current intensity of the monitored SW-
+AdSV signal. However, addition of higher alizarin concentra-
+tion level (2 · 106 mol l1 – 4 · 106 mol l1) caused leveling
+off of the voltammetric peak height. Accordingly, it seems that
+alizarin concentration of 1 · 106 mol l1 might be adequate
+to ensure maximum stripping voltammetric, hence, for further
+work this chelating agent concentration was selected.0.000000 0.000001 0
+Alizarin C
+Figure 5 Effect of alizarin concentration on the stripping voltammet
+after 90 s accumulation time at 0.0 V accumulation potential and 5003.2.3. Effect of accumulation time and potential
+Fig. 6 illustrates the relationship of the stripping voltammetric
+peak current versus accumulation time for 1 · 107 mol l1
+Zn(II) with 1 · 106 mol l1 alizarin over various adsorption
+times. Variation of the accumulation time over the range 0–
+150 s at a preconcentration potential of 0.0 V showed a grad-
+ual enhancement for Zn(II) SW-AdSV peak current up to
+60 s and decreased with longer preconcentration times. As a
+consequence, accumulation time of 60 s was selected as an
+optimum for further studies.
+When the adsorption of formed alizarin–Zn(II) complex
+was measured as a function of accumulation potential at
+60 s collection time over the range from +0.2 V to 0.8 V, it
+was observed that monitored peak current increased
+slightly when applying 0.1 V as the optimal accumulation
+potential.
+3.2.4. Effect of potential sweep conditions
+The scan rate parameter of the voltammetric technique was
+also varied in order to establish the optimum scan rate for
+the developed SW-AdSV procedure. It was found that the aliz-.000002 0.000003 0.000004
+oncentration (M)
+ric peak current of 5 · 107 mol l1 Zn(II) in pH 11 acetate buffer
+mV s1 scan rate.
+***END OF PAGE 4***
+
+***START OF PAGE 5***
+Scan Rate (mV/s)
+Figure 7 Effect of scan rate on the stripping voltammetric peak height of 1 · 107 mol l1 Zn(II) with 1 · 106 mol l1 alizarin in pH 11
+acetate buffer. Accumulation time: 60 s and accumulation potential: 0.1 V.
+Accumulation Time (s)
+Figure 6 Effect of accumulation time on the SW-AdSV peak current of 1 · 107 mol l1 Zn(II) with 1 · 106 mol l1 alizarin in pH 11
+acetate buffer. Accumulation potential: 0.0 V and scan rate: 500 mV s1.
+Determination of zinc by square-wave adsorptive stripping voltammetry using alizarin as a chelating agent 5arin–Zn(II) SW-AdSV peak height increased gradually, over
+100–1000 mV s1 scan rate range. However, the width and
+the shape of the examined stripping voltammetric peak slightly
+distorted when utilizing scan rate higher than 700 mV s1.
+Consequently, 700 mV s1 scan rate is recommended as an
+optimal for subsequent electroanalytical studies. The depen-
+dence of SW-AdSV peak currents on scan rate is presented
+in Fig. 7.
+Moreover, the impact of varying the square-wave fre-
+quency on the SW-AdSV current intensity was also evalu-
+ated. The effect of this operating variable was studied over
+the range 20–90 Hz and it was concluded that in order to as-
+sure maximum peak current, 80 Hz square-wave frequency
+was the ideal choice for this operational parameter. Addition-
+ally, varying the value of excitation wave pulse amplitude
+also plays an important role for the measured stripping vol-
+tammetric current intensity. Increasing this parameter over
+the range 0.01–0.1 V, resulted in a substantial enhancement
+of the voltammetric peak current up to 0.06 V value and
+gradually decreased thereafter. Hence, for further electro-
+chemical investigation, 0.06 V excitation wave pulse ampli-
+tude value was adopted.3.2.5. Effect of instrumental parameters
+The monitored SW-AdSV peak current can be further maxi-
+mized by optimizing other experimental factors that can affect
+the adsorption accumulation process for the formed alizarin–
+Zn(II) complex. The influence of the surface size of the mer-
+cury drop working electrode on the observed stripping voltam-
+metric response was evaluated. The relationship between the
+measured peak current and the surface area of the drop was
+found to be linear for the surface areas of 0.15–0.60 mm2.
+For optimal sensitivity, 0.60 mm2 drop surface area (drop size
+8) will be used for all next electrochemical measurements. In
+addition, the effect of convection rate was also studied by
+ascending the stirring rate from 100 to 3000 rpm. Although
+3000 rpm stirring rate provided the maximum peak height,
+yet, 2000 rpm stirring speed was chosen as optimum value,
+which provided adequate preconcentration effect without
+affecting the drop stability.
+3.3. Analytical performance
+Once the most ideal and suitable chemical conditions and
+instrumental parameters for the stripping voltammetric deter-
+***END OF PAGE 5***
+
+***START OF PAGE 6***
+Table 1 Optimal conditions for voltammetric SW-AdSV measurement of Zn(II).
+Parameter Studied range Optimal
+Supporting buffer Phosphate, B–R buffer, carbonate, acetate Carbonate buffer
+Alizarin concentration 1 · 107–4 · 106 mol l1 1 · 106 mol l1
+Accumulation time 0–150 s 60 s
+Accumulation potential +0.3 V–(0.8) V 0.1 V
+Scan rate 100–1000 mV s1 700 mV s1
+SW frequency 20–90 Hz 80 Hz
+Pulse amplitude 0.01–0.1 V 0.06 V
+Drop size 2–8 Size 8
+Stirrer speed 100–3000 rpm 2000 rpm
+6 A.H. Alghamdimination of zinc metal ions were established (Table 1), calibra-
+tion plot for this metal ion was recorded to estimate the ana-
+lytical characteristics of the developed SW-AdSV method.
+3.3.1. Calibration graph and detection limit
+The dependence of alizarin–Zn(II) voltammetric peak current
+on the concentration of Zn(II) was obtained when successive
+additions of the standard Zn(II) solution were added to the
+voltammetric cell. As represented in Fig. 8, a proportional
+and linear relationship between Zn(II) and the monitored
+SW-AdSV signal was observed. Least squares analysis of the
+studied concentration range (5 · 108–4 · 107 mol l1)
+yielded the following regression equation:
+ip ðnAÞ ¼ 911þ 5:94 109 C ðmol L1Þ r ¼ 0:996 n ¼ 5
+where ip is the stripping voltammetric peak current in amperes,
+C is the analysed zinc metal ion concentration and r is the cor-
+relation coefficient.
+The effective preconcentration during the adsorption pro-
+cess of the formed complex makes it possible to achieve a very
+low detection limits. For this metal ion analysed via the opti-
+mized SW-AdSV procedure, the detection limit of 1 · 108
+mol l1 was calculated based on the signal-to-noise (S/
+Zn(II) Conc
+Figure 8 Calibration graph for Zn(II) in the presence of 1 · 106 mol
+0.1 V accumulation potential and 700 mV s1 scan rate.3.3.2. Reproducibility and stability
+The high sensitivity of SW-AdSV approach is also accompa-
+nied by good precision of the obtained results. This can be
+attributed to the reproducible HMDE surface area and
+adsorption process for the formed alizarin–Zn(II) complex.
+Under the previously experimental optimized conditions, the
+reproducibility of the measured analytical signals was checked
+from 10 successive measurements of 1 · 107 mol l1 Zn(II) in
+the presence of 1 · 106 mol l1 alizarin. The precision of the
+method in terms of relative standard deviation was 1.3
+RSD%. The stability of 1 · 107 mol l1 Zn(II) solution was
+also investigated and monitored electrochemical signal was
+fond to give nearly a constant voltammetric current intensity
+up to 60 min.
+3.3.3. Interference studies
+The major sources of interferences are likely to be from co-
+exciting metal ions capable of forming complexes with the used
+chelating agent, hence, affecting SW-AdSV response via an
+overlapping peak or competing for adsorptive sites or available
+ligand. The effect of the following ions, which are of great sig-
+nificance in industrial or environmental matrices, was tested at
+the optimal experimental conditions. As a matter of fact, the
+interfering metal ions were added at different concentrations2.50E-007 3.00E-007 3.50E-007 4.00E-007 4.50E-007
+entration (M)
+l1 alizarin in pH 11 acetate buffer after 60 s accumulation time at
+***END OF PAGE 6***
+
+***START OF PAGE 7***
+Table 2 Practical application of SW-AdSV for the determi-
+nation of zinc content in instant coffee samples and comparison
+with the results obtained by AAS technique.
+Instant coffee
+brand
+SW-AdSV
+(ppm)
+(ppm)
+Paired
+t-test value
+Nescafe Red Mug 1 507 ± 4 501 ± 30 t= 0.4
+Nescafe Red Mug 2 707 ± 21 703 ± 40 t= 0.2
+Nescafe Kanjara 719 ± 19 717 ± 43 t= 0.1
+Bon café Classic 652 ± 3 663 ± 26 t= 0.7
+Zidnee Classic 709 ± 34 714 ± 6 t= 0.2
+Determination of zinc by square-wave adsorptive stripping voltammetry using alizarin as a chelating agent 7(1-fold, 5-fold and 20-fold) higher than the concentration of
+Zn(II) (1 · 107 mol l1). Actually, very mild or no significant
+interference was observed upon adding 1-fold or 5-fold con-
+centration of Pb(II), Fe(III), Fe(II), Al(III) and Cd(II). How-
+ever, the presence of Cd(II) at higher concentration (20-fold)
+caused 19.8% decrease in zinc voltammetric peak current.
+On the other hand, the noticeable interference influence was
+observed when Cu(II) and Ni(II) metal ions were present in
+the test solution especially at higher concentration levels (20-
+fold). In fact, the monitored Zn(II) voltammetric peak height
+increased by 34% and 38% of its original height after the addi-
+tion of 20-fold of Cu(II) and Ni(II), respectively.
+Furthermore, the competitive effect of complexing agents
+on the Zn(II) SW-AdSV peak current was modeled by the
+additions of 5 · 107 mol l1 and 1 · 106 mol l1 of some
+other chelating agent such as EDTA, DMG and cupferone
+to the test solution. There was totally no effect for the addition
+of EDTA and DMG chelating agents at these concentration le-
+vel on the stripping voltammetric peak current of Zn(II) metal
+ion. However, a very mild increase in the SW-AdSV peak
+height by 5.7% after the addition of 1 · 106 mol l1 cupfer-
+one ligand.
+3.4. Analytical applications and accuracy
+In order to validate the practical reliability of the optimized
+SW-AdSV method, five different foodstuff samples (namely in-
+stant coffee) were analysed for their zinc contents by the rec-
+ommended voltammetric procedure (Table 1) after
+conventional wet digestion. In fact, zinc concentrations were
+calculated via the standard addition approach in order to min-
+imize the sample matrix interference. Typical analytical results
+correspond to the mean values of four replicate determinations
+are summarized in Table 2. The accuracy of the developed elec-
+troanalytical method was verified by comparing the analytical
+results obtained by SW-AdSV method with that obtained by
+atomic absorption spectrometric (AAS) method for the same
+instant coffee samples. As can be seen from Table 2, the results
+obtained by the developed voltammetric method compared
+favorably with those obtained by the spectroscopic reference
+method. The agreement of the compared result was tested by
+the paired t-test statistical approach (Miller and Miller,1994). The means of both analytical methods were found to
+be not differ significantly, since all the calculated t-test value
+were less than the critical value (2.45) at the 95% confidence
+level (P = 0.05). There is no statistical evidence that the means
+of the proposed voltammetric method differ significantly from
+the means of the reference methods (null hypotheses is
+obtained).Acknowledgements
+This work was supported by College of Science Research Cen-
+ter (Project No. ST/Chem/2007/35) and also was supported by
+King Abdulaziz City for Science and Technology (Project No.
+15/28). The author would like to thank Mr. Monther Abdlka-
+reem for his technical assistance in applying the voltammetric
+method.
+References
+Abu Zuhri, A.Z., Wolfgang, V., 1998. Fresenius J. Anal. Chem. 360,
+Brainina, K.H., Neyman, E., 1993. Electroanalytical Stripping Meth-
+ods. John Wiley and Sons, New York.
+Brainina, K.H., Malakhova, N.A., Stojko, N.Y., 2000. Fresenius J.
+Colston, B.J., Robinson, V.J., 1997. Analyst 122, 1451–1455.
+Dewald, H.D., 1996. Stripping analysis. In: Winefordner, J.D. (Ed.),
+Modern Techniques in Electroanalysis. John Wiley and Sons, New
+York.
+Gholivand, M.B., Ahmadi, F., Sohrabi, A., 2007. Electroanalysis 19,
+Hernandez-Brito, J.J., Perez-Pena, J., Gelado-Caballero, M.D., Col-
+lado-Sanchez, C., 1993. Anal. Chem. Acta 284, 405–411.
+Miller, J.C., Miller, J.N., 1994. Statistics for Analytical Chemistry.
+Ellis Horwood, New York.
+Ornella, A., Maurizio, A., Giovanni, S., Corrado, S., Edoardo, M.,
+Paneli, M.G., Voulgaropoulos, A.N., 1994. Fresenius J. Anal. Chem.
+Shams, E., Babaei, A., Soltaninezhad, M., 2004. Anal. Chem. Acta
+Tyszczuk, K., Korolczuk, M., 2008. Anal. Chem. Acta 624, 232–237.
+Underwoodm, E.J., 1977. Trace Elements in Human and Animal
+Nutrition. Academic Press, New York.
+Van der Berg, C.M.G., 1985. Marine Chem. 16, 121–130.
+B. Venugopal, T.D. Luckey, Metal Toxicity in Mammals, vol. 2,
+Chemical Toxicity of Metals and Metalliods, Plenum Press, New
+York, 1978.
+Wang, J., 1994. Analytical Electrochemistry. VCH Publisher Inc., New
+York.
+Wang, L., Chen, R., Wen, S., Zhu, J., 1987. Anal. Chem. 15, 118–
+Young, L.S., Woo, S.C., Hyun, K.L., Hoon, K.M., 2003. Georgia J.
+Zaitsev, P.M., Salikhdzhanova, R.M.F., Zaitsev, N.K., 1999. Indus.
+Zhao, J.Z., Sun, D.Z., Liu, D.J., 1996. Fenxi Huaxue 24, 101–103.
+***END OF PAGE 7***
+

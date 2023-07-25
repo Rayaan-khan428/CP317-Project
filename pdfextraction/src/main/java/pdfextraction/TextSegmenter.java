@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PDFDivision {
+public class TextSegmenter {
 
 	private static final int MIN_WORDS_PER_SECTION = 50;
 

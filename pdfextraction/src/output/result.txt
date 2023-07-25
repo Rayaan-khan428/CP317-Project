@@ -1,0 +1,617 @@
+***START OF PAGE 1***
+Exploring the Power of Cloud Computing: Innovations and
+Challenges
+Sebastian Balderrama, Rayaan Khan, Erin Manson, Ryan Mood, and Brandon Pham
+ABSTRACT
+On premise software storage has imposed its limitations on the software industry for the entirety
+of its existence; cloud computing has offered a unique solution to many of those issues and has
+completely redefined software storage as we know it. Cloud Computing allows for businesses
+and individuals to store work in the cloud, taking up zero physical space and offering a scalable
+and secure alternative to on premise storage. The remarkable volume of innovation and the
+challenges of software storage will be explored, from cloud computing models, and key players
+in modern cloud computing, to current technologies. We will report details on the vast
+infrastructure of cloud computing and give background information on all aspects that help aid in
+decision making when assessing cloud computing needs. Additionally, technologies such as
+VMware, Docker and Kubernetes will be investigated. All of which will help develop the
+benefits and drawbacks of cloud computing to better understand practical applications and the
+case studies we will discuss. Cloud computing is a major part of the software industry and has
+had a lasting impact on how we ensure the world’s software can run and evolve.
+***END OF PAGE 1***
+
+***START OF PAGE 2***
+1. INTRODUCTION
+Cloud computing as defined by IBM is: “On-demand access, via the internet, to
+computing resources—applications, servers (physical servers and virtual servers), data storage,
+development tools, networking capabilities, and more—hosted at a remote data center managed
+by a cloud services provider (or CSP)” (IBM, n.d. -a). Cloud computing can be scaled more
+easily than on premise storage options and has the ability to lower IT costs by outsourcing
+certain efforts related to the development of personalized infrastructure (IBM, n.d. -a).
+Speed is a large factor in many businesses' decisions to opt for cloud-based storage
+solutions; the speed at which you can scale up or down and integrate software from within the
+cloud is remarkable compared to past techniques. Speed is also a major factor in software
+development, matching the speed at which competitors release new versions and develop their
+equivalent software is of great importance, and utilizing the cloud is one way in which the
+software development cycle can be expedited to help ensure a project does not become obsolete
+before its release.
+A common misconception about cloud computing is that it lacks security when in fact
+cloud based computing is likely more secure than in house equivalents. Cloud computing
+platforms are designed with great expertise and because high volumes of important information
+is stored on the cloud providers recognize the need for thorough security measures. Security
+levels can be made highly complex depending on an individual's needs and robust security
+measures are wrapped around data within the cloud to maintain security as a top priority
+(Alvarez).
+2. OVERVIEW
+Some of the key characteristics of cloud computing include: being an OnDemand service,
+allowing for broad network access, scalability, and heightened security (Novkovic, 2017).
+Software available on the cloud can be accessed anywhere network access, making it highly
+portable and offering flexibility to those who use it. The security and ability to scale up or down
+at a moment’s notice previously discussed, leads into the OnDemand aspect of cloud computing.
+Paid services and needs can be altered simultaneously leaving less room for overpaying for
+services, which makes cloud computing highly adaptable.
+While these characteristics seem to be commonsensical, they were not always the
+industry standard. Companies previously had no choice but to have large centers to store their
+data. The history of cloud computing is rich in innovation, as consumer needs demanded better
+solutions to software storage. Cloud computing can be traced back to as early as 1960 when
+Joseph Carl Robnett Licklider worked on a network research project that strived to connect
+people and data worldwide (Pedamkar, 2023). In the 1990’s companies started to offer Virtual
+Private Network services (VPNs) which remain popular today and truly set the stage for the
+cloud computing take over. By 2006 massive tech companies such as Google and Amazon began
+using the term cloud computing and made their cloud platforms easily accessible (Regalado,
+There are several options for cloud computing models depending on user needs, as well
+as providers for these models. Some key players in the cloud computing scene include but are
+not limited to: Amazon Web Services, Microsoft Azure, Google cloud platform, Alibaba Cloud,
+and Oracle Cloud (Zhang, 2023). A cloud provider may or may not be required for some cloud
+computing models. The main four models we will explore in detail will be Public, Private,
+***END OF PAGE 2***
+
+***START OF PAGE 3***
+Hybrid and Community models. The different models suit a variety of factors which will also be
+explored.
+3. CLOUD DEPLOYMENT MODELS
+Cloud deployment models play a crucial role in shaping the landscape of modern
+computing. As organizations increasingly embrace cloud computing, understanding the various
+deployment models becomes essential for making informed decisions about resource allocation,
+security, and scalability.
+The four primary cloud deployment models are public cloud, private cloud, hybrid cloud,
+and community cloud. Each cloud deployment model has its advantages and considerations, and
+the choice depends on factors such as data sensitivity, compliance requirements, scalability
+needs, budget, and organizational preferences. Many organizations opt for a multi-cloud
+approach, combining different deployment models to create a customized and optimal cloud
+environment.
+A. Public Cloud:
+The public cloud is a cloud computing model that enables widespread accessibility to
+systems and services. It is available to the general public and major industry groups, but it may
+be perceived as less secure due to its openness. In this model, cloud infrastructure services are
+delivered over the internet by third-party providers, and the infrastructure is owned by the
+service provider rather than the consumer. Public cloud hosting allows for easy access to systems
+and services. Providers offer storage backup, retrieval services, and more either for free, through
+subscription models, or based on the number of users.
+Prominent public cloud providers include Amazon Web Services (AWS), Microsoft
+Azure, and Google Cloud Platform (GCP). This cloud model emphasizes scalability, cost-
+effectiveness, and user-friendly payment structures where users pay for the resources they utilize
+on a pay-as-you-go basis, while sacrificing guaranteed high-level security and customizability
+(GeeksForGeeks, n.d. -c)
+B. Private Cloud:
+The private cloud deployment model stands in direct contrast to the public cloud
+deployment model, as it creates an exclusive environment for a single user or customer. In the
+private cloud, there is no need to share hardware resources with other users. It grants access to
+systems and services within a specific organization or defined boundary. This cloud platform is
+implemented in a secure environment protected by robust firewalls and managed by the
+organization's IT department.
+The private cloud provides enhanced control over cloud resources, allowing organizations
+to exercise greater flexibility and customization. It offers similar advantages to the public cloud,
+such as scalability and self-service capabilities, but with the added benefits of increased security
+and tailored management (GeeksForGeeks, n.d. -c). Private clouds can be hosted either on-
+premises within an organization's data center or by a trusted third-party provider, catering to the
+specific needs of organizations with regulatory requirements or sensitive data.
+The drawbacks include limited scalability due to a smaller number of clients and higher
+costs resulting from the provision of personalized facilities.
+C. Hybrid Cloud:
+***END OF PAGE 3***
+
+***START OF PAGE 4***
+Hybrid cloud computing combines the best of both public and private cloud worlds by
+utilizing proprietary software to bridge the two. This approach allows organizations to host their
+applications in a secure environment while also benefiting from the cost savings offered by the
+public cloud. By employing a combination of multiple cloud deployment methods, organizations
+can seamlessly transfer data and applications between different clouds based on their specific
+requirements.
+The hybrid cloud model offers advantages such as flexibility and control, allowing
+businesses to tailor solutions to their specific needs. It also provides cost savings since scalability
+in public clouds means paying only for additional capacity when required. However, managing
+hybrid clouds can be challenging due to the complexity of combining public and private clouds.
+Data transmission in the hybrid cloud occurs through the public cloud, leading to potential
+latency issues (GeeksForGeeks, n.d. -c).
+D. Community Cloud:
+The community cloud is a distributed system that allows a group of organizations to
+access systems and services tailored to their specific needs. It involves integrating the services of
+different clouds to create an infrastructure shared among organizations within a community,
+industry, or business. This shared infrastructure is typically managed either by a third-party
+provider or by a combination of organizations within the community.
+Community clouds are designed to meet the requirements of specific communities, such
+as government agencies, research institutions, or industry consortiums. By sharing costs,
+resources, and infrastructure, community members maintain control over their own data and
+applications while benefiting from collaboration opportunities, resource pooling, and specialized
+services that cater to their unique needs.
+Some disadvantages include limited scalability due to resource sharing among
+organizations based on collaborative interests and restrictions on customization, as modifications
+by one organization can impact others sharing the same data and resources (GeeksForGeeks, n.d.
+-c).
+4. ARCHITECHTURE AND INFRASTRUCTURE OF CLOUD
+COMPUTING
+The architecture and infrastructure of cloud computing are designed to provide scalable,
+flexible, and cost-effective solutions for businesses and individuals. To support these goals, cloud
+computing offers different service models, including Infrastructure as a Service (IaaS), Platform
+as a Service (PaaS), and Software as a Service (SaaS).
+A. Infrastructure as a Service (IaaS):
+IaaS provides virtualized computing resources over the internet. Users can access and
+manage virtual machines, storage, networks, and other fundamental computing resources from a
+cloud service provider (CSP). It offers a high level of flexibility and control, allowing users to
+scale their infrastructure up or down based on their individual/organizational needs.
+The responsibility for managing and maintaining the infrastructure lies with the CSP,
+allowing you to focus on tasks such as software installation, configuration, and management, as
+well as ensuring the security of your data (Google, n.d. -c).
+B. Platform as a Service (PaaS):
+***END OF PAGE 4***
+
+***START OF PAGE 5***
+PaaS provides a platform for developing, testing, and deploying applications. Similar to
+IaaS models, in PaaS, the service provider takes care of delivering and managing the underlying
+infrastructure. While you are responsible for coding, handling data, and managing your
+applications, the burden of managing and maintaining the platform itself is alleviated.
+PaaS solutions are specific to application and software development and typically include:
+• Cloud infrastructure: Data centers, storage, network equipment, and servers
+• Middleware software: Operating systems, frameworks, development kits (SDK),
+libraries, and more
+• User interface: A graphical user interface (GUI), a command line interface (CLI), an API
+interface, and in some cases, all three (Google, n.d. -e).
+C. Software as a Service (SaaS):
+Through SaaS, software applications are hosted and delivered over the internet. Users can
+access and use software applications without the need for local installation or management which
+provides convenience, accessibility, and comes with automatic software updates. Some key
+features of SaaS include:
+• Application Accessibility: SaaS applications are accessible through web browsers or
+dedicated client applications, allowing users to access them from various devices and
+locations.
+• Multi-Tenancy: SaaS applications support multiple users or organizations sharing the
+same software instance while maintaining data separation and security.
+• Subscription-based Model: SaaS typically operates on a subscription-based pricing
+model, where users pay for the software on a recurring basis (SalesForce, n.d.).
+D. Virtualization and its role in cloud computing:
+Virtualization plays a fundamental role in enabling the service models of previously
+mentioned above. Through virtualization, the cloud service provider can efficiently allocate and
+manage resources, dynamically scale up or down based on demand, and ensure the isolation and
+security of user environments. It is the foundation that enables the scalability, flexibility, and
+agility that cloud computing is known for (AWS, n.d.).
+Virtualization uses specialized software, called a hypervisor, to create several cloud
+instances or virtual machines on one physical computer. From the user’s perspective, the virtual
+machine operates like a typical server. CPUs, Random Access Memory (RAM), and storage
+appear the same as on a physical server. You can also configure and update the guest operating
+systems and their applications as necessary without affecting the host operating system (AWS,
+n.d.).
+The hypervisor is installed on the physical machine, serving as a mediator between the
+virtual machines and the underlying hardware or host operating system. It operates as a software
+layer that facilitates the allocation of physical resources to multiple virtual machines. By
+coordinating access to the physical environment, the hypervisor ensures that each virtual
+machine has its dedicated portion of resources.
+For example, if the virtual machine requires computing resources, such as computer
+processing power, the request first goes to the hypervisor. The hypervisor then passes the request
+to the underlying hardware, which performs the task (AWS, n.d.).
+The following are the two main types of hypervisors.
+***END OF PAGE 5***
+
+***START OF PAGE 6***
+• Type 1 hypervisors: Also called a bare-metal hypervisor, runs directly on the computer
+hardware and interacts directly with the physical resources.
+• Type 2 hypervisors: Runs as an application on computer hardware with an existing
+operating system. This type of hypervisor is used when running multiple operating
+systems on a single machine.
+5. BENEFITS AND CHALLENGES OF CLOUD COMPUTING
+A. Benefits of Cloud Computing
+Cloud computing has various functionalities and attributes which make it advantageous,
+providing numerous benefits.
+One of the major benefits of cloud computing is the fact that it provides scalability.
+Scalability in cloud computing refers to the ability of cloud computing to scale the amount of
+resources required for each individual use case, allowing for the demands of services to be met
+without the need to invest in physical infrastructures (Google, n.d.-a). This means that businesses
+which require the use of things such as data storage and databases are able to scale the amount of
+storage they need in a seamless manner.
+Cost-efficiency is an element of cloud computing that is beneficial due to the fact that
+cloud services provide users with the ability to reduce their investments into physical hardware,
+and to only invest into the cloud services which they specifically need (Google, n.d.-a). This
+allows for business to be more cost efficient, as only resources which are used are provided to
+the end user (Google, n.d.-a).
+B. Security and Privacy Concerns
+Privacy and security have been major concerns when regarding the use of cloud
+computing, with various reasons as to why these concerns may exist. The cloud is susceptible to
+attacks, which can result in the loss of personal data, which is why security and privacy are of
+high importance when regarding the use of the cloud.
+The confidentiality of data may be compromised during the use of cloud computer
+software. Instances of data theft during a targeted attack may result in a user’s personal data
+being stolen, resulting in a privacy breach between the user and the provider of the cloud service
+(GeeksforGeeks, 2023a). The occurrence of a privacy breach can result in the mistrust of a user
+for a particular cloud service, and the data of the user to be reachable by users who should not
+have authorization (GeeksforGeeks, 2023a).
+Security issues can occur through the use of multi-tenancy for the cloud operation. Multi-
+tenancy is the use of software systems in such a way where the services used by multiple users
+are all accessed on a single server, resulting in more cost-effective, but less secure operation
+(GeeksforGeeks, 2023a). This can result in security concerns, as it allows for attackers to gain
+access to multiple tenants' data if they are to gain access to the one server (GeeksforGeeks,
+C. Reliability and Availability Issues
+The reliability and availability issues for cloud computing span to problems which can
+affect a wide range of people. In the context of cloud computing, reliability refers to how often
+failures occur, and availability refers to the downtime of the cloud service (Ooteghem, 2022).
+Issues in reliability can occur when cloud services are not accessible, when there are frequent
+***END OF PAGE 6***
+
+***START OF PAGE 7***
+interruptions during use, and if the cloud service is not secure (Ooteghem, 2022). Availability
+issues occur when the cloud services are suffering from service outages, resulting in the
+unavailability of the service to be accessed by users. The lack of availability of a cloud service
+could impact millions of people, as many cloud services are used worldwide on a daily basis,
+affecting average citizens, businesses, or government entities.
+D. Legal and Regulatory Challenges
+Cloud computing can face challenges in the aspects of legality and regulation. Due to the
+nature of cloud computing requiring the transferring and storing of data, the aspect of privacy
+concerns rise. The European Union created the 1995 Data Protection Directive in order to ensure
+the protection of personal data and the transfer of such data, resulting in the transfer of user data
+through international to only be permitted by US businesses granted permission (Khatri, 2022).
+The hosting of cloud computer services and the use of its data has resulted in many regulations
+being put in place, which could result in these cloud services requiring a higher cost by the end
+user in order to comply with the regulations which were put in place (GeeksforGeeks, 2022).
+6. CLOUD COMPUTING TECHNOLOGIES AND TOOLS
+Cloud computing and virtualization are distinct concepts that play crucial roles in modern IT
+infrastructure. While virtualization involves creating virtual computing environments
+independent of physical infrastructure, cloud computing delivers shared computing resources on
+demand through the internet. Cloud computing has revolutionized how organizations leverage
+technology resources, providing scalable and accessible computing capabilities (VMware n.d.).
+Virtualization relies on software to simulate hardware functionality, enabling multiple virtual
+systems or instances of applications to run on a single server. This consolidation improves
+efficiency within organizations and achieves economies of scale. Popular virtualization
+technologies include VMware, Hyper-V, and Xen. For instance, a large corporation operating a
+data center previously had each server running only one operating system and hosting a specific
+application, resulting in underutilization and increased costs. However, by implementing
+virtualization, multiple virtual machines (VMs) can run on a single physical server, greatly
+reducing the number of servers required and saving costs related to hardware purchases, power
+consumption, cooling, and a team to manage it all (VMware n.d.).
+Containerization technologies, such as Docker and Kubernetes, have become widely adopted
+in recent years. Unlike traditional virtualization, containerization creates lightweight and isolated
+containers that package applications and their dependencies. Containers ensure consistent
+behavior across different computing environments and promote scalability, portability, and
+reproducibility, making them well-suited for the cloud computing environment. Developers can
+streamline application deployment, accelerate software development cycles, and achieve
+efficient resource utilization by leveraging containerization technologies. (Kubernetes, n.d.)
+Various management tools have also been developed to effectively manage complex cloud
+infrastructure. These tools automate the deployment, scaling, and management of applications
+and services in cloud environments. Kubernetes, for example, provides a platform for
+orchestration and management, enabling:
+***END OF PAGE 7***
+
+***START OF PAGE 8***
+1. automated scaling: increase and decrease the number of nodes to meet the incoming
+demand or lack of at any given time.
+2. load balancing: process of distributing network traffic efficiently among back-end
+services.
+3. self-healing capabilities: in the event a container fails Kubernetes can automatically
+redeploy the container to its desired state to restore operations.
+Cloud providers also offer their own orchestration and management tools, such as Amazon
+Elastic Kubernetes Service or Google Kubernetes Engine.
+Cloud storage and databases are critical components of cloud computing, allowing
+organizations to store vast amounts of data and access it from anywhere in the world. Industry-
+leading cloud storage options include Google Cloud Storage, Microsoft Azure, and Amazon S3,
+providing secure and reliable storage for different types of data. These cloud databases eliminate
+the need for organizations to maintain and manage their own database infrastructure. By
+leveraging cloud storage and databases, businesses can scale their storage and database needs on
+demand, ensuring optimal performance and cost-efficiency. (DBMastero, n.d.)
+Cloud computing and virtualization are distinct yet interconnected technologies that have
+revolutionized the IT landscape. Cloud computing offers scalable and on-demand access to
+computing resources, while virtualization enables efficient resource utilization within
+organizations. Containerization technologies, management tools like Kubernetes, and reliable
+cloud storage and databases further enhance the capabilities of cloud computing, empowering
+businesses to leverage technology resources effectively and achieve their goals.
+7. CLOUD COMPUTING USE CASES AND APPLICATIONS
+When it comes to business and enterprises, cloud computing offers great leaps in scalable
+and on-demand access to computing resources, cost savings and increased efficiency as spoken
+about in the previous section. However, we will explore some specific use cases/applications.
+1. Infrastructure as a Service (IaaS): cloud provides virtualized infrastructure resources such
+as virtual machines, storage, and networking capabilities. This allows businesses to
+offload the management and maintenance of hardware infrastructure, reducing costs and
+enabling rapid scalability.
+2. Software as a Service (SaaS): Cloud-based software applications provide businesses with
+easy access to a wide range of productivity tools, customer relationship management
+systems and enterprise resource planning solutions. An example of a SaaS Company is
+Slack, a cloud-based messaging service geared towards professionals.
+3. Big Data analytics: In today's world many of the decisions a company makes are driven
+by data. But to leverage data it requires an extreme amount of hardware. By utilizing
+cloud-based analytics platforms organizations can make better decisions for the company
+without having to invest potentially millions in hardware and an in-house team.
+Cloud computing has also permanently changed the way students learn in the 21st century.
+Cloud-based learning management systems (LMS) and virtual classrooms has provided students
+the ability to access course materials, participate in class, and submit assignments from
+anywhere. It has also enabled people in developing countries to get a good level of education,
+***END OF PAGE 8***
+
+***START OF PAGE 9***
+through websites like khan academy or universities own courses that are often free online like
+the infamous Harvard CS50 course (Cloud Academy, n.d.).
+Cloud computing in healthcare plays a vital role in helping patients in a very productive way.
+It has transformed the way patient data is stored, shared, and analyzed. Some key applications of
+cloud computing in healthcare include:
+1. Electronic Health Records (EHR): storing information on the cloud about patients makes
+it accessible for different healthcare professionals, helping to ensure a seamless data
+exchange, helping to improve coordination among departments and effectively reducing
+the risk of medical errors occurring.
+2. Medical imaging and diagnostic: cloud-based medical imaging platforms store and
+process large volumes of medical images, such as X-rays, MRIs, and CT scans. Cloud
+computing enables healthcare providers to share access to medical images securely,
+facilitating collaboration among radiologists and specials for accurate diagnoses and
+treatment planning (Galen Data, n.d.).
+Lastly, cloud computing has a profound impact on the government and public sector, helping
+to save tax-payer money and improve the services offered by the government.
+1. E-Government Services have enabled citizens to access government services and
+information online. This includes online tax filing, permit applications, and voter
+registration. It allows all this to be done from home reducing the load on government
+offices that can now serve people who have needs that cannot be completed online.
+2. Government data storage and sharing has been another sector that has been
+revolutionized due to cloud computing, companies like Amazon work with the US
+Government to ensure that the records of citizens is safely kept, as well as sense military
+info that would originally be transferable only by physical means across the country can
+now be accessed anywhere securely (GovOS, 2022).
+Cloud computing offers a wide range of use cases and applications across various sectors. In
+business and enterprises, cloud computing provides scalable infrastructure, software services,
+data storage, and analytics capabilities. In education, cloud computing enables online learning,
+collaboration, and virtual lab environments. In healthcare, cloud computing facilitates secure
+patient data management, telemedicine, and medical imaging. In the government and public
+sector, cloud computing supports data storage, e-government services, collaboration, and
+emergency response. As technology advances and organizations continue to embrace the benefits
+of cloud computing, its impact will undoubtedly expand, further revolutionizing industries and
+improving services in the digital age.
+8. FUTURE TRENDS AND CHALLENGES
+A. Edge Computing and its Impact on Cloud Computing
+Edge computing is the processing of data as close to the origin source as possible in order
+to reduce latency and provide better bandwidth. The data being processed closer to the creation
+point allows for faster data analysis and lower latencies, resulting in a better user experience
+(IBM, n.d.-b).
+The differences between edge computing and cloud computing is that edge computing
+operates on a time sensitive basis, whereas cloud computing does not, meaning data processed
+***END OF PAGE 9***
+
+***START OF PAGE 10***
+through edge computing is processed at a lower signal latency (Arora, 2023). In cloud
+computing, data is stored and processed in centralized servers, allowing for higher processing
+power (Kaur, 2023). On the other hand, the infrastructure for edge computing is highly
+distributed, and typically processed on site at a low processing power (Kaur, 2023). Cloud
+computing allows for unlimited storage, reduced hardware costs and quick centralized services,
+while edge computing provides lower latency, better bandwidth, real-time computation, and
+better privacy (Kaur, 2023).
+There are challenges to both edge computing and cloud computing. Edge computing may
+suffer from reliability issues due to its decentralized nature, compatibility issues, and security
+issues for data that is processed outside of the edge servers (Kaur, 2023). Cloud computing may
+suffer from large data breaches/data losses due to the information being centralized, long
+downtimes, and a lack of data confidentiality (Kaur, 2023).
+Cloud computing can be seen used in applications such as an app on a smartphone, where
+edge computing can be seen used in things such as self-driving cars, where a reduced latency and
+fast response times are required (Kaur, 2023).
+B. Artificial Intelligence and Machine Learning in the Cloud
+Artificial intelligence and machine learning, a subset of artificial intelligence, are used in
+cloud computing in order to teach systems to solve tasks while improving on the solving of these
+tasks over time through the processing of data (Google, n.d.-d).
+Through the use of data, machine learning processes the data, identifying common
+patterns within the data and making decisions based off of these identified patterns (Google, n.d.-
+d). It allows for systems to learn a program’s tendencies and effectively achieves what is to be
+achieved over time.
+Machine learning is used in a variety of ways, including in services such as fraud
+prevention, digital marketing, security, customer service and sales optimization (Google, n.d.-d).
+C. Serverless computing and Function as a Service (FaaS)
+Serverless computing is the ability to create applications without the need of the creation
+of infrastructure, allowing for cloud services to be the primary infrastructure used to process the
+code (Serverless Computing and Applications | Microsoft Azure, n.d.). Benefits of serverless
+computing include efficient allocation of resources, scalability, quicker services, and the lack of
+need to maintain infrastructure (Serverless Computing and Applications | Microsoft Azure, n.d.).
+Through serverless computing, developers are able to focus on developing front-end code, while
+the back-end code is managed by the provider of the cloud service (IBM, n.d.-d).
+Technologies such as serverless Kubernetes allow for systems that have developers
+provide containers to a platform which is orchestrated in a manner where it is automatically
+scaled when met with spikes and dips in demand (Serverless Computing and Applications |
+Microsoft Azure, n.d.).
+Function as a Service (FaaS) is a service of cloud computing which lets users execute
+code without managing the infrastructure required for these services (IBM, n.d.-c). The
+difference between serverless computing and Function as a Service is the fact that Function as a
+Service is a subset of serverless computing (IBM, n.d.-c). FaaS focuses on the execution of code
+in response to an event, while serverless computing is broader and multi-faceted, focusing on
+things such as storage, databases, APIs, computation, or messaging services that are not visible to
+the end user (IBM, n.d.-c).
+***END OF PAGE 10***
+
+***START OF PAGE 11***
+D. Sustainability and Green Cloud Computing
+Sustainability in cloud computing, otherwise known as green cloud computing, is a term
+used in reference to the environmental impacts in regard to cloud computing. Green cloud
+computing is a set of goals put in place which aim to reduce carbon emissions and energy
+consumption by promoting the increase of biodegradable/recyclable products, reducing the use
+of unsafe materials, and increasing energy efficiency (Davis, 2023).
+The goals of green cloud computing are strived to be achieved through a variety of
+factors. The components which are found in electronics such as computers and phones contain
+materials which are hazardous to the environment; This makes it essential to dispose of
+electronics properly, and to increase the recyclability/biodegradability of future products.
+Energy efficiency can be increased through the optimization of the facilities which hold
+the cloud servers, and the optimization of the infrastructure (Davis, 2023). The facilities are often
+planned in a manner where the location, architecture, and layout of the building are created in
+such a way to be the most energy efficient as possible in order to reduce the heat of the servers,
+going to extents such as to be built underground or in the ocean (Davis, 2023).
+9. CASE STUDIES AND SUCCESS STORIES
+A. Real-World Examples of Organizations Leveraging Cloud Computing
+In recent years, Cloud Computing has become an essential tool for businesses across all
+industries.  Companies have leveraged cloud computing to improve efficiency, reduce costs, and
+increase scalability.  Although there are many examples of companies successfully implementing
+cloud computing, we will look at two highly notable examples.
+General Electric doesn’t seem to be a company that could benefit from cloud computing
+given they are not directly involved in the tech industry.  However, they have done an excellent
+job leading the pack by starting its cloud-first application deployment strategy in 2014
+(Donnelly, 2017).  Through the use of Amazon Web Service (AWS), they have been able to
+refocus IT teams from maintenance and expanding data centers to more meaningful tasks
+including future innovation.
+Fitbit is the perfect company to use a cloud computing model; with their recent switch to
+Google Cloud for Healthcare in 2019, they proved exactly that (Google, 2022).  Given the
+business model of Fitbit, they require a large amount of storage space for user health information
+and security is a high priority.  This switch to cloud services has allowed for easier scalability,
+easy access and shareability for users as well as maintaining its security.
+B. Case Studies of Successful Cloud Migrations and Implementations
+Cloud migration and implementation vary greatly on a case-to-case basis and ultimately
+to be as successful as possible it needs to be tailored to your specific needs.  Now we will view
+some specific case studies of how companies were able to design their own cloud migrations to
+lead to success.  Acoustic is an excellent example of migrating in a way that fits your company's
+needs.
+Acoustic is a marketing technology company that wanted to make the switch to a cloud-
+based model through Amazon Web Service (AWS) but did not want to renew their current
+contract meaning they were left with a 10-month window (Boezeman, n.d.).  With the help of
+ClearScale, they were able to not only transfer everything over to the cloud in this time frame but
+reap massive benefits.  This switch allowed Acoustic to save millions of dollars, modernize and
+optimize its infrastructure as well as allow for faster process time to market.
+***END OF PAGE 11***
+
+***START OF PAGE 12***
+A second large company that was able to benefit from the switch to Cloud Computing
+greatly is Pandora.  Pandora is a worldwide industry-leading jewelry company with unique
+requirements.  Given the large cost of jewelry, a company like Pandora will endure large
+quantities of customers with few purchases per customer.  This means that customers will grow
+to have high expectations as it is a large and meaningful transaction.  In 14 months, they were
+able to decommission 2400 servers and make the full switch to Microsoft Azure’s Cloud service
+(Accenture, 2023).  This switch allowed for a massive save in cost, and an increase in simplicity
+allowing for easier and quicker IT decisions as well as increased agility for consumers.
+10. CONCLUSION
+A. Summary of Key Findings and Insights
+Cloud Computing has forever revolutionized and transformed the way companies and
+users store, access, process and deliver information and services.  It offers a long list of benefits
+dependent on the specific use case but scalability, cost efficiency and flexibility are massive
+benefits for everyone.  However, that is not to say that it comes without its own challenges
+including security, reliability, legal/regulatory constraints and potential privacy issues when
+handling sensitive data.  In this paper, we have explored cloud deployment models, architecture,
+infrastructure, benefits, limitations and current technology and tools.  We were also able to apply
+this to the real world through case studies and examples of companies that have greatly benefited
+from implementing a cloud computing model.  In the course of this paper, we hope to have
+contributed to the understanding and appreciation of cloud computing by exploring the power of
+cloud computing, its innovations as well as its challenges and limitations.
+B. Future Prospects and Recommendations for Further Research
+The topic of Cloud Computing has been widely explored and researched but due to its
+rapidly growing nature, there is always more to be explored.  The first issue I would like to see
+addressed is the lack of longitudinal studies.  Given the relatively young age of cloud services,
+there are very few longitudinal studies available to show its effects over a long period of time.  In
+this case, the longitudinal study can view any variable including cost, efficiency, user satisfaction
+and its changes over a set period of time.  I believe scope and diversity in research is also a large
+issue in the cloud computing space.  As cloud computing grows it is becoming more relevant and
+applicable to more companies.  With this being said, research specifically on how it can now
+benefit companies that aren’t making use of it would allow for a further testament to its
+versatility.  Overall Cloud Computing has proved not only is it here to stay but it is a viable
+option that comes with many benefits for all companies across many different fields.
+C. Final Thoughts on the Importance of Cloud Computing in the Digital Age
+With the evolution of technology, it is now more than ever important for companies to
+continue to plan for the future.  Cloud Computing has proven itself to be more than just a trend
+rather a necessity in the digital age.  It enables organizations of all fields to leverage the power of
+the internet to deliver flexible, reliable and most importantly scalable solutions.  Scalability is
+possibly the largest benefit to it allowing for companies to easily up or downscale with little to
+no downtime.  This scalability can benefit all sizes of companies as they can utilize their exact
+needed resources while having options to rapidly expand with their demands.  With the current
+growth of cloud computing, it is evident that it will continue to grow and improve allowing it to
+better sever a larger quantity and variety of companies and consumers.  It is imperative
+***END OF PAGE 12***
+
+***START OF PAGE 13***
+organizations adopt a strategic approach to migrating and implementing cloud computing as soon
+as possible allowing them to maximize benefits immediately.  By doing so companies will be
+able to reap the benefits of cloud computing and stay ahead of the digital age wave.
+D. REFERENCES
+9 key benefits of cloud computing in Healthcare - Galen Data. (n.d.). https://galendata.com/9-
+benefits-cloud-computing-healthcare/
+Accenture. (2023, March 10). Global Danish jeweler pandora: Going for cloud. Migration to
+Cloud | Pandora Jewelry Case Study. https://www.accenture.com/ca-en/case-
+studies/cloud/pandora
+Afreen, S. (2023, June 6). What is cloud computing architecture: Simplilearn. Simplilearn.com.
+https://www.simplilearn.com/tutorials/cloud-computing-tutorial/cloud-computing-architecture
+Alvarez, L. (2015, September 16). Why every business needs a cloud of clouds. The Economist.
+https://www.economist.com/sponsors/why-every-business-needs-a-cloud-of-clouds
+Arora, S. (2023, June 7). Edge computing vs. cloud computing: Key differences [2023 edition].
+Simplilearn.com. https://www.simplilearn.com/edge-computing-vs-cloud-computing-article
+Atlassian. (n.d.). Kubernetes vs. Docker. Atlassian.
+https://www.atlassian.com/microservices/microservices-architecture/kubernetes-vs-
+docker#:~:text=Docker%20is%20a%20containerization%20platform,numerous%20container%2
+0runtimes%2C%20including%20Docker.
+Boezeman, J., & Officer, C. T. (n.d.). ClearScale accomplishes ambitious AWS migration and
+Modernization Project for acoustic. ClearScale. https://www.clearscale.com/case-
+studies/acoustic-case-study
+Davis, N. (2023, March 30). Cloud computing sustainability: How green is the cloud?. LinkedIn.
+https://www.linkedin.com/pulse/cloud-computing-sustainability-how-green-neal-davis
+Donnelly, C. (2017, October 10). GE opens up on how its move to the AWS Public Cloud Is
+Progressing: Computer Weekly. ComputerWeekly.com.
+https://www.computerweekly.com/news/450427890/GE-on-how-its-move-to-the-AWS-public-
+cloud-is-progressing
+GeeksforGeeks. (2022, January 17). Issues in cloud computing. GeeksforGeeks.
+https://www.geeksforgeeks.org/issues-in-cloud-computing/
+GeeksforGeeks. (2023a, February 9). 7 privacy challenges in cloud computing. GeeksforGeeks.
+https://www.geeksforgeeks.org/7-privacy-challenges-in-cloud-computing/
+GeeksforGeeks. (2023b, May 3). Cloud deployment models. GeeksforGeeks.
+https://www.geeksforgeeks.org/cloud-deployment-models/
+***END OF PAGE 13***
+
+***START OF PAGE 14***
+Google. (2022, September 27). Device connect for Fitbit, powered by Google Cloud | Google
+Cloud Blog. Google. https://cloud.google.com/blog/topics/healthcare-life-sciences/device-
+connect-for-fitbit-powered-by-google-cloud
+Google. (n.d.-a). Advantages of Cloud Computing  |  google cloud. Google.
+https://cloud.google.com/learn/advantages-of-cloud-computing
+Google. (n.d.-b). What is a cloud database?  |  google cloud. Google.
+https://cloud.google.com/learn/what-is-a-cloud-database
+Google. (n.d.-c). What is iaas (infrastructure as a service)?  |  google cloud. Google.
+https://cloud.google.com/learn/what-is-iaas
+Google. (n.d.-d). What is machine learning?  |  google cloud. Google.
+https://cloud.google.com/learn/what-is-machine-learning
+Google. (n.d.-e). What is Paas?  |  google cloud. Google. https://cloud.google.com/learn/what-is-
+paas
+The importance of cloud computing in business [2023]. KnowledgeHut. (n.d.).
+https://www.knowledgehut.com/blog/cloud-computing/importance-of-cloud-computing
+Kaur, J. (2023, May 16). Edge computing vs cloud computing: 8 key differences. Real Time Data
+and AI Company. https://www.xenonstack.com/blog/edge-computing-vs-cloud-computing
+Khatri, R. (2022, July 23). Legal issues surrounding cloud computing. OpenGrowth.
+https://www.opengrowth.com/resources/legal-issues-surrounding-cloud-computing
+Koshkin, D. (2021, March 25). Cloud deployment models: Advantages & disadvantages. SaM
+Solutions. https://sam-solutions.us/advantages-and-disadvantages-of-cloud-deployment-models/
+Kubernetes. Docker. (2023, February 21). https://www.docker.com/products/kubernetes/
+Novkovic, G. (2017, August 11). Five characteristics of cloud computing. Control Engineering.
+https://www.controleng.com/articles/five-characteristics-of-cloud-computing/
+Ooteghem, K. V. (2022, November 17). What is reliability in cloud computing?. Parallels
+Remote Application Server Blog - Application virtualization, mobility and VDI.
+https://www.parallels.com/blogs/ras/reliability-in-cloud-computing/
+Pedamkar, P. (2023, March 23). History of cloud computing: Brief overview of cloud computing.
+EDUCBA. https://www.educba.com/history-of-cloud-computing/
+Regalado, A. (2020, February 11). Who coined “cloud computing”? MIT Technology Review.
+https://www.technologyreview.com/2011/10/31/257406/who-coined-cloud-computing/
+***END OF PAGE 14***
+
+***START OF PAGE 15***
+Serverless Computing and Applications: Microsoft Azure. Serverless computing and applications
+| Microsoft Azure. (n.d.). https://azure.microsoft.com/en-ca/resources/cloud-computing-
+dictionary/what-is-serverless-computing
+Stone, W. (2022, October 17). 8 surprising ways cloud computing is Changing Education. Cloud
+Academy. https://cloudacademy.com/blog/surprising-ways-cloud-computing-is-changing-
+education/
+The University. (1978). What is Virtualization. Amazon. https://aws.amazon.com/what-
+is/virtualization/
+Vavra, C. (2022, September 15). Five characteristics of cloud computing. Control Engineering.
+https://www.controleng.com/articles/five-characteristics-of-cloud-computing/
+Virtualization Technology & Virtual Machine Software: What is virtualization? VMware. (2023,
+April 13). https://www.vmware.com/in/solutions/virtualization.html
+What is cloud computing?. IBM. (n.d.-a). https://www.ibm.com/topics/cloud-computing
+What is edge computing. IBM. (n.d.-b). https://www.ibm.com/cloud/what-is-edge-computing
+What is Faas (function-as-a-service)?. IBM. (n.d.-c). https://www.ibm.com/topics/faas
+What is Saas? - software as a Service. Salesforce. (n.d.). https://www.salesforce.com/in/saas/
+What is serverless computing?. IBM. (n.d.-d). https://www.ibm.com/topics/serverless
+Yehuda, Y. (2022, September 16). Top 7 cloud databases. DBmaestro.
+https://www.dbmaestro.com/blog/database-automation/top-7-cloud-databases
+Zercoe, C. (2022, February 23). Benefits of cloud computing for Government. GovOS.
+https://govos.com/blog/why-every-local-government-should-be-leveraging-the-
+cloud/#:~:text=Cloud%20computing%20enables%20local%20governments,well%20as%20data
+%20storage%20requirements.
+Zhang, M. (2023, March 6). Top 10 cloud service providers globally in 2023. Dgtl Infra.
+https://dgtlinfra.com/top-10-cloud-service-providers-2022/
+***END OF PAGE 15***
+

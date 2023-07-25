@@ -1,0 +1,4 @@
+Software as a Service (SaaS): Cloud-based software applications provide businesses with
+easy access to a wide range of productivity tools, customer relationship management
+systems and enterprise resource planning solutions. An example of a SaaS Company is
+Slack, a cloud-based messaging service geared towards professionals.

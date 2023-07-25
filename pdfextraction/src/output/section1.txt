@@ -1,0 +1,21 @@
+***START OF PAGE 1***
+Exploring the Power of Cloud Computing: Innovations and
+Challenges
+Sebastian Balderrama, Rayaan Khan, Erin Manson, Ryan Mood, and Brandon Pham
+ABSTRACT
+On premise software storage has imposed its limitations on the software industry for the entirety
+of its existence; cloud computing has offered a unique solution to many of those issues and has
+completely redefined software storage as we know it. Cloud Computing allows for businesses
+and individuals to store work in the cloud, taking up zero physical space and offering a scalable
+and secure alternative to on premise storage. The remarkable volume of innovation and the
+challenges of software storage will be explored, from cloud computing models, and key players
+in modern cloud computing, to current technologies. We will report details on the vast
+infrastructure of cloud computing and give background information on all aspects that help aid in
+decision making when assessing cloud computing needs. Additionally, technologies such as
+VMware, Docker and Kubernetes will be investigated. All of which will help develop the
+benefits and drawbacks of cloud computing to better understand practical applications and the
+case studies we will discuss. Cloud computing is a major part of the software industry and has
+had a lasting impact on how we ensure the world’s software can run and evolve.
+***END OF PAGE 1***
+
+***START OF PAGE 2***
