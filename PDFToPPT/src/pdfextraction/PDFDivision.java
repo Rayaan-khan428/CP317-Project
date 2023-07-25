@@ -86,7 +86,7 @@ public class PDFDivision {
                         writer.write(section);
                         
                         // Create slide object and add to array, 0 temp as page num for now 
-                        presentation.add(new Slide(sectionCount, pageCount, firstLine, ""));
+                        presentation.add(new Slide(sectionCount, pageCount, firstLine));
                         
                         sectionCount += 1;
                         
@@ -138,7 +138,7 @@ public class PDFDivision {
                         writer.write(section);
                         
                         // Create slide object and add to array 
-                        presentation.add(new Slide(sectionCount, pageCount, firstLine, ""));
+                        presentation.add(new Slide(sectionCount, pageCount, firstLine));
                         
                         sectionCount += 1;
                     } catch (IOException e) {
@@ -201,7 +201,7 @@ public class PDFDivision {
                         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
                             writer.write(sectionBuilder.toString());
                             // Create slide object and add to array 
-                            presentation.add(new Slide(sectionCount, pageCount, firstLine, ""));
+                            presentation.add(new Slide(sectionCount, pageCount, firstLine));
                             sectionCount += 1;
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -233,42 +233,41 @@ public class PDFDivision {
         matchImages(presentation);
         
 		// Display objects if you want to check titles and such 
-//        for (Slide slide : presentation) {
-//            System.out.println("Slide Num: " + slide.getSlideNum() + ", Page Num: " + slide.getPageNum() + ", Slide Title: " + slide.getTitle());
-//            System.out.println("Image index contained: " + slide.getImage());
-//        }
+        for (Slide slide : presentation) {
+            System.out.println("Slide Num: " + slide.getSlideNum() + ", Page Num: " + slide.getPageNum() + ", Slide Title: " + slide.getTitle());
+            System.out.println("Image index contained: " + slide.getImage());
+        }
     }
     
-    // Update images to match with slides 
-	// Special function to match images to last paragraph on the same page 
-	public static void matchImages(ArrayList<Slide> presentation){
-		// Get array with image locations from healper method in PDFExtract
-		ArrayList<Integer> array = PDFExtract.getImageArray();
-		
-		// Temp is page num, i is slide num, x is image array index
-		int temp = 1;
-		int i = 0;
-		
-		// For loop to look through slides and find where the page numbers change 
-		// Once the page number has changed apply the photo to the paragraph(s)
-		for (Slide slide : presentation) {
-			
-			// Check if page number updated
-			if (slide.PageNum > temp) {
-                	temp += 1;
-                	
-                	for (int x = 0; x < array.size(); x++) {
-                		if (array.get(x) == (temp - 1))
-                			// Add images array location to previous slide (last on page) string 
-                			presentation.get(i - 1).Image += (x) + " ";
-                	}                	
-                }
-			
-			// Increment index number
-			i += 1;
-		}
-		
-	}
-    
+ // Update images to match with slides
+ // Special function to match images to the last paragraph on the same page
+ public static void matchImages(ArrayList<Slide> presentation) {
+     // Get array with image locations from helper method in PDFExtract
+     ArrayList<Integer> array = PDFExtract.getImageArray();
+
+     // Temp is the page num, i is the slide num, x is the image array index
+     int temp = 1;
+     int i = 0;
+
+     // For loop to look through slides and find where the page numbers change
+     // Once the page number has changed apply the photo to the paragraph
+     for (Slide slide : presentation) {
+
+         // Check if the page number updated
+         if (slide.PageNum > temp) {
+             temp += 1;
+
+             for (int x = 0; x < array.size(); x++) {
+                 if (array.get(x) == (temp - 1))
+                     // Add the image array location to the previous slide (last on page) list
+                     presentation.get(i - 1).Image.add(x);
+             }
+         }
+
+         // Increment the index number
+         i += 1;
+     }
+ }
+
 }
 
