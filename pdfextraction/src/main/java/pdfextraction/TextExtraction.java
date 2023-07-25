@@ -22,6 +22,7 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.contentstream.PDFStreamEngine;
 
+
 import java.awt.image.BufferedImage;
 public class TextExtraction extends PDFStreamEngine {
 
@@ -43,7 +44,6 @@ public class TextExtraction extends PDFStreamEngine {
         getNumImages();
         getPage(1);
         ExtractText(document);
-        onlyText(document);
 
     }
 
@@ -58,6 +58,131 @@ public class TextExtraction extends PDFStreamEngine {
             e.printStackTrace();
         }
     }
+
+    public void addItem(int item) {
+        array.add(item);
+    }
+
+    public int getNumImages() {
+        return array.size();
+    }
+
+    public int getPage(int imageNum) {
+        if(imageNum > getNumImages()) {
+            return -1;
+        }
+        return array.get(imageNum-1);
+    }
+
+    /**
+     * Extracts text from a given PDDocument and writes it to a text file.
+     *
+     * @param document The PDDocument from which text needs to be extracted.
+     * @throws IOException If an I/O error occurs while reading the document or writing the output.
+     */
+    public void ExtractText(PDDocument document) throws IOException {
+
+        // Creating PDFTextStripper obj
+        PDFTextStripper pdfStripper = new PDFTextStripper();
+        int totalPages = document.getNumberOfPages();
+
+        String text = "";
+        String text2 = "";
+        List<String> lines;
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
+            for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+                pdfStripper.setStartPage(pageNumber);
+                pdfStripper.setEndPage(pageNumber);
+
+                text = "***START OF PAGE "+pageNumber+"***";
+                text2 = pdfStripper.getText(document); // converts entire pdf to text
+                lines = detectLines(text2); // returns the entire pdf as an ArrayList, each line is an item
+
+                writer.write(text+"\n");
+                for (String line : lines) {
+                    if(!junkTest(line) && line.length() > 3) {
+                        writer.write(line+"\n");
+                    }
+                }
+                text = "***END OF PAGE "+pageNumber+"***\n";
+                writer.write(text+"\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * Detects and extracts lines from the input text.
+     *
+     * @param text The input text from which paragraphs need to be detected.
+     * @return A list of paragraphs extracted from the input text.
+     */
+    private static List<String> detectLines(String text) {
+
+        // create an Arraylist of Strings, each string represents a line
+        List<String> lines = new ArrayList<>();
+
+        // regex to match line boundaries based on two or more consecutive line breaks.
+        String linePattern = "(?m)(?s)(^.*?)(?:\\r?\\n\\r?\\n|$)";
+
+        Pattern pattern = Pattern.compile(linePattern);
+        Matcher matcher = pattern.matcher(text);
+
+        while (matcher.find()) {
+
+            // Trim the line to remove leading and trailing whitespaces or line breaks.
+            String line = matcher.group(1).trim();
+
+            // Add the line to the list.
+            lines.add(line);
+        }
+
+        return lines;
+    }
+
+    /**
+     * After each line has been extracted onlyText returns the concatenated text of all pages as a single string.
+     *
+     * @param document The PDDocument from which text needs to be extracted.
+     * @return The concatenated text of all pages.
+     * @throws IOException If an I/O error occurs while reading the document.
+     */
+//    public String concatenateAll(PDDocument document) throws IOException{
+//
+//        // Creating PDFTextStripper obj
+//        PDFTextStripper pdfStripper = new PDFTextStripper();
+//
+//        int totalPages = document.getNumberOfPages();
+//        String startAndEnd = ""; // define start and end page
+//        String pageText = ""; // store the actual text
+//
+//        List<String> paragraphs = new ArrayList<>();
+//
+//        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+//
+//            pdfStripper.setStartPage(pageNumber);
+//            pdfStripper.setEndPage(pageNumber);
+//
+//            startAndEnd += "***START OF PAGE " + pageNumber + "***\n";
+//
+//            pageText = pdfStripper.getText(document);
+//            paragraphs = detectLines(pageText);
+//
+//            for (String paragraph : paragraphs) {
+//                if(!junkTest(paragraph) && paragraph.length() > 3) {
+//                    startAndEnd += paragraph+"\n";
+//                }
+//            }
+//
+//            startAndEnd += "***END OF PAGE " + pageNumber + "***\n";
+//
+//        }
+//
+//        return startAndEnd;
+//    }
 
     /**
      * Helper Function for the Image extraction method
@@ -95,136 +220,6 @@ public class TextExtraction extends PDFStreamEngine {
         } else {
             super.processOperator(operator, operands);
         }
-    }
-
-    public void addItem(int item) {
-        array.add(item);
-    }
-
-    public int getNumImages() {
-        return array.size();
-    }
-
-    public int getPage(int imageNum) {
-        if(imageNum > getNumImages()) {
-            return -1;
-        }
-        return array.get(imageNum-1);
-    }
-
-    /**
-     * Extracts text from a given PDDocument and writes it to a text file.
-     *
-     * @param document The PDDocument from which text needs to be extracted.
-     * @throws IOException If an I/O error occurs while reading the document or writing the output.
-     */
-    public void ExtractText(PDDocument document) throws IOException {
-
-        // Creating PDFTextStripper obj
-        PDFTextStripper pdfStripper = new PDFTextStripper();
-        int totalPages = document.getNumberOfPages();
-        String text = "";
-        String text2 = "";
-        List<String> paragraphs;
-
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
-            for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
-                pdfStripper.setStartPage(pageNumber);
-                pdfStripper.setEndPage(pageNumber);
-
-                text = "***START OF PAGE "+pageNumber+"***";
-
-                text2 = pdfStripper.getText(document);
-                paragraphs = detectLines(text2);
-
-                writer.write(text+"\n");
-                for (String paragraph : paragraphs) {
-                    if(!junkTest(paragraph) && paragraph.length() > 3) {
-                        writer.write(paragraph+"\n");
-                    }
-                }
-                text = "***END OF PAGE "+pageNumber+"***\n";
-                writer.write(text+"\n");
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    /**
-     * Extracts text from a given PDDocument and returns the concatenated text of all pages as a single string.
-     *
-     * @param document The PDDocument from which text needs to be extracted.
-     * @return The concatenated text of all pages.
-     * @throws IOException If an I/O error occurs while reading the document.
-     */
-    public String onlyText(PDDocument document) throws IOException{
-
-        // Creating PDFTextStripper obj
-        PDFTextStripper pdfStripper = new PDFTextStripper();
-
-        int totalPages = document.getNumberOfPages();
-        String startAndEnd = ""; // define start and end page
-        String pageText = ""; // store the actual text
-
-        List<String> paragraphs = new ArrayList<>();
-
-        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
-
-            pdfStripper.setStartPage(pageNumber);
-            pdfStripper.setEndPage(pageNumber);
-
-            startAndEnd += "***START OF PAGE " + pageNumber + "***\n";
-
-            pageText = pdfStripper.getText(document);
-            paragraphs = detectLines(pageText);
-
-            for (String paragraph : paragraphs) {
-                if(!junkTest(paragraph) && paragraph.length() > 3) {
-                    startAndEnd += paragraph+"\n";
-                }
-            }
-
-//            System.out.println(paragraphs.size());
-//            System.out.println(paragraphs);
-
-            startAndEnd += "***END OF PAGE " + pageNumber + "***\n";
-
-        }
-
-        System.out.println(startAndEnd);
-
-        return startAndEnd;
-    }
-
-    /**
-     * Detects and extracts lines from the input text.
-     *
-     * @param text The input text from which paragraphs need to be detected.
-     * @return A list of paragraphs extracted from the input text.
-     */
-    private static List<String> detectLines(String text) {
-
-        // create an Arraylist of Strings, each string represents a line
-        List<String> lines = new ArrayList<>();
-
-        // regex to match paragraph boundaries based on two or more consecutive line breaks.
-        String linePattern = "(?m)(?s)(^.*?)(?:\\r?\\n\\r?\\n|$)";
-
-        Pattern pattern = Pattern.compile(linePattern);
-        Matcher matcher = pattern.matcher(text);
-
-        while (matcher.find()) {
-
-            // Trim the line to remove leading and trailing whitespaces or line breaks.
-            String line = matcher.group(1).trim();
-
-            // Add the line to the list.
-            lines.add(line);
-        }
-
-        return lines;
     }
 
     /**

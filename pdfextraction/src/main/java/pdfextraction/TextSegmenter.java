@@ -40,7 +40,7 @@ public class TextSegmenter {
             Pattern LetPattern = Pattern.compile("(?m)(?<=\\n)[IVXLCDM]+\\.|(?<=\\n)[A-Z]\\.");
             Matcher LetMatcher = LetPattern.matcher(text.toString());
 
-            // if a line is found with anumber
+            // if a line is found with a number
             if (NumMatcher.find()) {
                 String[] sections = text.toString().split("(?m)(?<=\\n\\n|^)\\d+\\.?\\s*?\\s*");
 
@@ -51,11 +51,6 @@ public class TextSegmenter {
                     if (section.isEmpty()) {
                         continue;
                     }
-
-                    // Update Json
-
-
-
 
                     // Save section into "sectionX.txt", where X is the section number (starting from 1)
                     String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
