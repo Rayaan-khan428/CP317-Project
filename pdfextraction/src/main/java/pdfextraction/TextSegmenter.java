@@ -12,8 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PDFDivision {
-	
-	// Word count if dividing by paragraphs so there is enough info per slide if it divides by paragraph 
+
 	private static final int MIN_WORDS_PER_SECTION = 50;
 
     public static void divide(String inputFileLocation) {
@@ -22,10 +21,11 @@ public class PDFDivision {
     	ArrayList<Slide> presentation = new ArrayList<>();
     	
     	// Get file open and stuff 
-        String inputFilePath = inputFileLocation + "\\result.txt";
+        String inputFilePath = inputFileLocation + "//result.txt";
         int sectionCount = 1;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath))) {
+
             StringBuilder text = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
@@ -36,10 +36,11 @@ public class PDFDivision {
             Pattern NumPattern = Pattern.compile("(?m)(?<=\\n\\n|^)\\d+\\.?\\s*?\\s*");
             Matcher NumMatcher = NumPattern.matcher(text.toString());        
             
-            // Check for letter formatting (romal numerals included)
+            // Check for letter formatting (roman numerals included)
             Pattern LetPattern = Pattern.compile("(?m)(?<=\\n)[IVXLCDM]+\\.|(?<=\\n)[A-Z]\\.");
             Matcher LetMatcher = LetPattern.matcher(text.toString());
 
+            // if a line is found with anumber
             if (NumMatcher.find()) {
                 String[] sections = text.toString().split("(?m)(?<=\\n\\n|^)\\d+\\.?\\s*?\\s*");
 
@@ -51,8 +52,13 @@ public class PDFDivision {
                         continue;
                     }
 
+                    // Update Json
+
+
+
+
                     // Save section into "sectionX.txt", where X is the section number (starting from 1)
-                    String outputFilePath = inputFileLocation + "\\section" + (sectionCount) + ".txt";
+                    String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
                         writer.write(section);
                         
@@ -77,7 +83,7 @@ public class PDFDivision {
                     }
 
                     // Save section into "sectionX.txt", where X is the section number (starting from 1)
-                    String outputFilePath = inputFileLocation + "\\section" + (sectionCount) + ".txt";
+                    String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
                         writer.write(section);
                         
@@ -115,7 +121,7 @@ public class PDFDivision {
                     // Check if the word count in the sectionBuilder meets the minimum requirement
                     if (wordCount >= MIN_WORDS_PER_SECTION) {
                         // Save the section into "sectionX.txt", where X is the section number (starting from 1)
-                        String outputFilePath = inputFileLocation + "\\section" + (sectionCount) + ".txt";
+                        String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
                         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
                             writer.write(sectionBuilder.toString());
                             // Create slide object and add to array 
@@ -133,7 +139,7 @@ public class PDFDivision {
                 
                 // Save the remaining text in sectionBuilder as the last section
                 if (sectionBuilder.length() > 0) {
-                    String outputFilePath = inputFileLocation + "\\section" + sectionCount + ".txt";
+                    String outputFilePath = inputFileLocation + "//section" + sectionCount + ".txt";
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
                         writer.write(sectionBuilder.toString());
                         sectionCount += 1;
