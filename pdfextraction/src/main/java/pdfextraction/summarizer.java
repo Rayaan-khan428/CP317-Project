@@ -63,44 +63,6 @@ public class summarizer {
 
         return content.toString();
     }
-    public static String extractKeyword(String text) throws InterruptedException {
-        // Define common stopwords that we want to remove from the text
-        Set<String> stopwords = new HashSet<>(Arrays.asList("the", "and", "is", "a", "an", "of", "in", "to"));
-
-        // Remove punctuation and convert the text to lowercase
-        String cleanedText = text.replaceAll("[^a-zA-Z ]", "").toLowerCase();
-
-        // Tokenize the text into individual words
-        String[] words = cleanedText.split("\\s+");
-
-        // Create a HashMap to store the frequency of each word
-        Map<String, Integer> wordFrequency = new HashMap<>();
-
-        // Count the frequency of each word
-        for (String word : words) {
-            if (!stopwords.contains(word)) {
-                wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
-            }
-        }
-
-        // Find the most frequent word(s)
-        List<String> mostFrequentWords = new ArrayList<>();
-        int maxFrequency = 0;
-
-        for (Map.Entry<String, Integer> entry : wordFrequency.entrySet()) {
-            int frequency = entry.getValue();
-            if (frequency > maxFrequency) {
-                maxFrequency = frequency;
-                mostFrequentWords.clear();
-                mostFrequentWords.add(entry.getKey());
-            } else if (frequency == maxFrequency) {
-                mostFrequentWords.add(entry.getKey());
-            }
-        }
-
-        // If there are multiple words with the same frequency, concatenate them as key phrases
-        return String.join(", ", mostFrequentWords);
-    }
 
 }
 
