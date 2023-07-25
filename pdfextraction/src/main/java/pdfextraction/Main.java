@@ -2,16 +2,17 @@ package pdfextraction;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.apache.pdfbox.pdmodel.PDDocument; 
 
 public class Main {
 	public static void main(String[] args) throws IOException {
-        String inputFileName = "C:/Users/Sebastian/Downloads/sample3.pdf"; // Specify the input file path here
+        String inputFileName = "/Users/erinmanson/Downloads/Lizard_Research-2.pdf"; // Specify the input file path here
         
         // Get the output folder path (project directory)
         String outputFolder = System.getProperty("user.dir");
-        outputFolder += "\\src\\t1";
+        outputFolder += "//src//t1";
         
         // Create a new folder named "output" to store images and result.txt
         File folder = new File(outputFolder + "/output");
@@ -21,7 +22,6 @@ public class Main {
         PDFExtract pdfExtractor = new PDFExtract(outputFolder);
         PDDocument document = PDDocument.load(new File(inputFileName));
          
-        //System.out.println(outputFolder);
         
 		// The methods. You can test each one separately if you want
         pdfExtractor.SaveImagesInPdf(document);
@@ -32,7 +32,9 @@ public class Main {
         
         // Reference to the folder is passed
         // Needs Ryan's PDFDivision.java to be imported work
-        //PDFDivision.divide(outputFolder);
+        ArrayList<Slide> presentation = PDFDivision.divide(outputFolder);
+
+        PowerPointGenerator.create(outputFolder, presentation);
         
         document.close();
     }
