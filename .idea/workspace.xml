@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/PowerPointGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PDFExtract.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PDFExtract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/summarizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/summarizer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,6 +40,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2SzoYQ4vrR0sCvf5GIO2cXGJZpr" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -82,7 +98,7 @@
       <workItem from="1690158818695" duration="1771000" />
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
-      <workItem from="1690163171598" duration="3356000" />
+      <workItem from="1690163171598" duration="9740000" />
     </task>
     <servers />
   </component>
