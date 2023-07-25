@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/summarizer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "experimental",
     "last_opened_file_path": "/Users/rayaankhan/repos/CP317-Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,6 +58,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,7 +93,7 @@
       <workItem from="1690158818695" duration="1771000" />
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
-      <workItem from="1690163171598" duration="10119000" />
+      <workItem from="1690163171598" duration="11093000" />
     </task>
     <servers />
   </component>

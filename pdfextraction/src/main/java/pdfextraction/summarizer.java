@@ -25,8 +25,6 @@ public class summarizer {
 
             Response response = client.executeRequest(request).get();
 
-            System.out.println("Status Code: " + response.getStatusCode());
-            System.out.println("Response Body: " + response.getResponseBody());
 
             client.close();
 

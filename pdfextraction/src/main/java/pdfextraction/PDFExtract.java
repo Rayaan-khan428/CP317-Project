@@ -39,8 +39,6 @@ public class PDFExtract extends PDFStreamEngine {
 
     public void SaveImagesInPdf(PDDocument document) throws IOException {
         try {
-            //PDFExtract printer = new PDFExtract(this.outputFolder); // Initialize the instance variable
-
             for (PDPage page : document.getPages()) {
                 pageNum++;
                 System.out.println("Processing page: " + pageNum);
@@ -104,6 +102,12 @@ public class PDFExtract extends PDFStreamEngine {
         return array.get(imageNum-1);
     }
 
+    /**
+     * Extracts text from a given PDDocument and writes it to a text file.
+     *
+     * @param document The PDDocument from which text needs to be extracted.
+     * @throws IOException If an I/O error occurs while reading the document or writing the output.
+     */
     public void ExtractText(PDDocument document) throws IOException {
 
         // Creating PDFTextStripper obj
@@ -138,6 +142,13 @@ public class PDFExtract extends PDFStreamEngine {
 
     }
 
+    /**
+     * Extracts text from a given PDDocument and returns the concatenated text of all pages as a single string.
+     *
+     * @param document The PDDocument from which text needs to be extracted.
+     * @return The concatenated text of all pages.
+     * @throws IOException If an I/O error occurs while reading the document.
+     */
     public String onlyText(PDDocument document) throws IOException{
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
@@ -168,6 +179,12 @@ public class PDFExtract extends PDFStreamEngine {
         return text;
     }
 
+    /**
+     * Detects and extracts paragraphs from the input text.
+     *
+     * @param text The input text from which paragraphs need to be detected.
+     * @return A list of paragraphs extracted from the input text.
+     */
     private static List<String> detectParagraphs(String text) {
         List<String> paragraphs = new ArrayList<>();
 
@@ -188,6 +205,12 @@ public class PDFExtract extends PDFStreamEngine {
         return paragraphs;
     }
 
+    /**
+     * Checks if the input string contains more letters than numbers.
+     *
+     * @param s The input string to be tested.
+     * @return True if the input string contains more letters than numbers, otherwise false.
+     */
     private boolean junkTest(String s) {
         int letterCount = 0;
         int numberCount = 0;
