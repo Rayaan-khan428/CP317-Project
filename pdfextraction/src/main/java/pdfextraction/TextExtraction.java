@@ -22,6 +22,12 @@ import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;
 import org.apache.pdfbox.contentstream.operator.Operator;
 import org.apache.pdfbox.contentstream.PDFStreamEngine;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonWriter;
+
 
 import java.awt.image.BufferedImage;
 public class TextExtraction extends PDFStreamEngine {
@@ -86,28 +92,52 @@ public class TextExtraction extends PDFStreamEngine {
         PDFTextStripper pdfStripper = new PDFTextStripper();
         int totalPages = document.getNumberOfPages();
 
+        String sPage = ""; // start page
+        String ePage = ""; // end page
         String text = "";
         String text2 = "";
         List<String> lines;
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
-            for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
-                pdfStripper.setStartPage(pageNumber);
-                pdfStripper.setEndPage(pageNumber);
+        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
 
-                text = "***START OF PAGE "+pageNumber+"***";
-                text2 = pdfStripper.getText(document); // converts entire pdf to text
-                lines = detectLines(text2); // returns the entire pdf as an ArrayList, each line is an item
+            pdfStripper.setStartPage(pageNumber);
+            pdfStripper.setEndPage(pageNumber);
 
-                writer.write(text+"\n");
-                for (String line : lines) {
-                    if(!junkTest(line) && line.length() > 3) {
-                        writer.write(line+"\n");
-                    }
+            sPage = "***START OF PAGE " + pageNumber + "***\n";
+            ePage = "***END OF PAGE " + pageNumber + "***\n";
+
+            text2 = pdfStripper.getText(document); // converts entire pdf to text
+            lines = detectLines(text2); // returns the entire pdf as an ArrayList, each line is an item
+
+            text += sPage;
+            for (String line : lines) {
+                if(!junkTest(line) && line.length() > 3) {
+                    text+= line + "\n";
                 }
-                text = "***END OF PAGE "+pageNumber+"***\n";
-                writer.write(text+"\n");
             }
+            text += ePage + "\n";
+
+        }
+
+        // Create a PdfContent object with the extracted text
+        PdfContent pdfContent = new PdfContent(text);
+
+        // Convert the PdfContent object to JSON using Gson
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        // Configure Gson to preserve new lines and white spaces
+        Gson gsonWithEscapeHtml = new GsonBuilder()
+                .setPrettyPrinting()
+                .disableHtmlEscaping() // This will prevent escaping of new lines and other special characters
+                .create();
+
+        // Convert the PdfContent object to JSON
+        String json = gsonWithEscapeHtml.toJson(pdfContent);
+
+        // Save the JSON string to a file or use it as needed
+        try (FileWriter fileWriter = new FileWriter("output.json")) {
+            fileWriter.write(json);
+            System.out.println("JSON data has been written to 'output.json' successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -118,7 +148,7 @@ public class TextExtraction extends PDFStreamEngine {
      * Detects and extracts lines from the input text.
      *
      * @param text The input text from which paragraphs need to be detected.
-     * @return A list of paragraphs extracted from the input text.
+     * @return A list of lines extracted from the input text.
      */
     private static List<String> detectLines(String text) {
 
