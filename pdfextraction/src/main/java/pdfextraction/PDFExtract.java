@@ -28,10 +28,15 @@ public class PDFExtract extends PDFStreamEngine {
     // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
     private int imageNumber = 1;
     private int pageNum = 0;
+    
+    // Used to store the page number/image number pair
     private ArrayList<Integer> array;
-    private String outputFolder; // New instance variable to hold the output folder path
+    
+    // New instance variable to hold the output folder path
+    private String outputFolder;
+    
     // Constructor to set the output folder path
-
+    // and instantiate the image/page array.
     public PDFExtract(String outputFolder) {
         this.outputFolder = outputFolder;
         this.array = new ArrayList<>();
@@ -39,8 +44,6 @@ public class PDFExtract extends PDFStreamEngine {
 
     public void SaveImagesInPdf(PDDocument document) throws IOException {
         try {
-            //PDFExtract printer = new PDFExtract(this.outputFolder); // Initialize the instance variable
-
             for (PDPage page : document.getPages()) {
                 pageNum++;
                 System.out.println("Processing page: " + pageNum);
@@ -62,19 +65,22 @@ public class PDFExtract extends PDFStreamEngine {
     @Override
     protected void processOperator(Operator operator, List<COSBase> operands) throws IOException {
         String operation = operator.getName();
-        // Do is the PDF operator for xobjects (like images)
-        // there are a bunch of PDF operators for things like bolded text, titles,
-        // diagrams, etc.
+        
+        // Analyzes the operator of every element of a page.
+        // Do is the PDF operator for xobjects (like images).
+        // If the operator is not "Do" then the method proceeds as normal
         if ("Do".equals(operation)) {
             COSName objectName = (COSName) operands.get(0);
             PDXObject xobject = getResources().getXObject(objectName);
 
             if (xobject instanceof PDImageXObject) {
+            	// Casts the xobject to a PDImageXObject
                 PDImageXObject image = (PDImageXObject) xobject;
-
-                // same image to output folder
+                
+                // Gets the image.
                 BufferedImage bImage = image.getImage();
-                // you can change the name of the image here
+                
+                // Saves the image to the output folder.
                 ImageIO.write(bImage, "PNG", new File(outputFolder + "/image_" + imageNumber + ".png"));
                 System.out.println("Image saved.");
                 this.addItem(pageNum);
@@ -88,7 +94,8 @@ public class PDFExtract extends PDFStreamEngine {
             super.processOperator(operator, operands);
         }
     }
-
+    
+    // Adds page number to array
     public void addItem(int item) {
         array.add(item);
     }
@@ -98,33 +105,39 @@ public class PDFExtract extends PDFStreamEngine {
     }
 
     public int getPage(int imageNum) {
-        if(imageNum > getNumImages()) {
+    	// If the image is out of bounds, returns an error
+        if(imageNum > getNumImages() || imageNum < 1) {
             return -1;
         }
         return array.get(imageNum-1);
     }
 
     public void ExtractText(PDDocument document) throws IOException {
-
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
         int totalPages = document.getNumberOfPages();
+        
+        // Initializing text variables and paragraphs list
         String text = "";
         String text2 = "";
         List<String> paragraphs;
-
+        
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(this.outputFolder + "/result.txt"))) {
-            for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
+            // Extracts text one page at a time by setting start and end pages
+        	for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
                 pdfStripper.setStartPage(pageNumber);
                 pdfStripper.setEndPage(pageNumber);
 
                 text = "***START OF PAGE "+pageNumber+"***";
 
                 text2 = pdfStripper.getText(document);
+                // Sends the extracted text to the detectParagraphs method
+                // in order to determine if the paragraph is valid
                 paragraphs = detectParagraphs(text2);
 
                 writer.write(text+"\n");
                 for (String paragraph : paragraphs) {
+                	// Further paragraph validity testing and writing to file
                     if(!junkTest(paragraph) && paragraph.length() > 3) {
                         writer.write(paragraph+"\n");
                     }
@@ -146,7 +159,8 @@ public class PDFExtract extends PDFStreamEngine {
         String text = "";
         String text2 = "";
         List<String> paragraphs;
-
+        
+        // Extracts text one page at a time by setting start and end pages
         for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
             pdfStripper.setStartPage(pageNumber);
             pdfStripper.setEndPage(pageNumber);
@@ -154,8 +168,10 @@ public class PDFExtract extends PDFStreamEngine {
             text += "***START OF PAGE "+pageNumber+"***";
 
             text2 = pdfStripper.getText(document);
+            // Text is sent to detectParagraphs method to verify if the text is valid
             paragraphs = detectParagraphs(text2);
-
+            
+            // More paragraph validity testing and appending to string
             for (String paragraph : paragraphs) {
                 if(!junkTest(paragraph) && paragraph.length() > 3) {
                     text += paragraph+"\n";
@@ -167,7 +183,8 @@ public class PDFExtract extends PDFStreamEngine {
 
         return text;
     }
-
+    
+    // Helps to determine if a paragraph is valid using Regex
     private static List<String> detectParagraphs(String text) {
         List<String> paragraphs = new ArrayList<>();
 
@@ -187,7 +204,10 @@ public class PDFExtract extends PDFStreamEngine {
 
         return paragraphs;
     }
-
+    
+    // Helper method to determine if a paragraph is junk.
+    // If there are more numbers in a string, the paragraph is junk.
+    // Used to cull useless table data.
     private boolean junkTest(String s) {
         int letterCount = 0;
         int numberCount = 0;
