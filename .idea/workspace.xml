@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/PowerPointGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/PowerPointGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Slide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/image_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/image_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/image_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/presentation.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PowerPointGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PowerPointGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Slide.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Slide.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextExtraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextExtraction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSegmenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSegmenter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSummarizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSummarizer.class" afterDir="false" />
-    </list>
+    <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +101,7 @@
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
       <workItem from="1690163171598" duration="44233000" />
-      <workItem from="1690355504272" duration="3218000" />
+      <workItem from="1690355504272" duration="4023000" />
     </task>
     <servers />
   </component>
