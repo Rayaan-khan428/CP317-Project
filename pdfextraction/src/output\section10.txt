@@ -1,0 +1,17 @@
+self-healing capabilities: in the event a container fails Kubernetes can automatically
+redeploy the container to its desired state to restore operations.
+Cloud providers also offer their own orchestration and management tools, such as Amazon
+Elastic Kubernetes Service or Google Kubernetes Engine.
+Cloud storage and databases are critical components of cloud computing, allowing
+organizations to store vast amounts of data and access it from anywhere in the world. Industry-
+leading cloud storage options include Google Cloud Storage, Microsoft Azure, and Amazon S3,
+providing secure and reliable storage for different types of data. These cloud databases eliminate
+the need for organizations to maintain and manage their own database infrastructure. By
+leveraging cloud storage and databases, businesses can scale their storage and database needs on
+demand, ensuring optimal performance and cost-efficiency. (DBMastero, n.d.)
+Cloud computing and virtualization are distinct yet interconnected technologies that have
+revolutionized the IT landscape. Cloud computing offers scalable and on-demand access to
+computing resources, while virtualization enables efficient resource utilization within
+organizations. Containerization technologies, management tools like Kubernetes, and reliable
+cloud storage and databases further enhance the capabilities of cloud computing, empowering
+businesses to leverage technology resources effectively and achieve their goals.

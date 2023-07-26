@@ -1,16 +1,20 @@
-Big Data analytics: In today's world many of the decisions a company makes are driven
-by data. But to leverage data it requires an extreme amount of hardware. By utilizing
-cloud-based analytics platforms organizations can make better decisions for the company
-without having to invest potentially millions in hardware and an in-house team.
-Cloud computing has also permanently changed the way students learn in the 21st century.
-Cloud-based learning management systems (LMS) and virtual classrooms has provided students
-the ability to access course materials, participate in class, and submit assignments from
-anywhere. It has also enabled people in developing countries to get a good level of education,
-***END OF PAGE 8***
-
-***START OF PAGE 9***
-through websites like khan academy or universities own courses that are often free online like
-the infamous Harvard CS50 course (Cloud Academy, n.d.).
-Cloud computing in healthcare plays a vital role in helping patients in a very productive way.
-It has transformed the way patient data is stored, shared, and analyzed. Some key applications of
-cloud computing in healthcare include:
+2 Caiman Lizard (Dracaena guianensis)
+The Caiman Lizard (Dracaena guianensis) is a
+captivating reptile native to the tropical regions of
+South America, particularly found in the Amazon
+Basin and its surrounding areas. This semi-aquatic
+species possesses a unique set of features, making
+it stand out among its lizard counterparts. One of
+its most distinctive characteristics is the serrated
+tail, which aids in swimming and serves as a
+defense mechanism against potential predators.
+The Caiman Lizard is well-adapted to a semi-
+aquatic lifestyle, spending much of its time in and
+around slow-moving rivers and streams. Its diet
+primarily consists of aquatic vegetation, such as
+aquatic plants and fruits that grow near water bodies. As an essential component of riverine
+ecosystems, the Caiman Lizard plays a vital role in controlling aquatic vegetation and
+maintaining the ecological balance. However, like many other reptiles in the region, the Caiman
+Lizard faces threats such as habitat destruction and illegal trade. Consequently, conservation
+efforts are crucial to preserving this fascinating lizard species and its critical role in the delicate
+ecosystems it calls home.

@@ -1,0 +1,4 @@
+Infrastructure as a Service (IaaS): cloud provides virtualized infrastructure resources such
+as virtual machines, storage, and networking capabilities. This allows businesses to
+offload the management and maintenance of hardware infrastructure, reducing costs and
+enabling rapid scalability.

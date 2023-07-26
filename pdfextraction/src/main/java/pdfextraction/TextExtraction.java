@@ -65,21 +65,6 @@ public class TextExtraction extends PDFStreamEngine {
         }
     }
 
-    public void addItem(int item) {
-        array.add(item);
-    }
-
-    public int getNumImages() {
-        return array.size();
-    }
-
-    public int getPage(int imageNum) {
-        if(imageNum > getNumImages()) {
-            return -1;
-        }
-        return array.get(imageNum-1);
-    }
-
     /**
      * Extracts text from a given PDDocument and writes it to a text file.
      *
@@ -171,6 +156,25 @@ public class TextExtraction extends PDFStreamEngine {
         }
 
         return lines;
+    }
+
+    public void addItem(int item) {
+        array.add(item);
+    }
+
+    public int getNumImages() {
+        return array.size();
+    }
+
+    public int getPage(int imageNum) {
+        if(imageNum > getNumImages()) {
+            return -1;
+        }
+        return array.get(imageNum-1);
+    }
+
+    public static ArrayList<Integer> getImageArray() {
+        return array;
     }
 
     /**

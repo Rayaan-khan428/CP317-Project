@@ -1,0 +1,53 @@
+BENEFITS AND CHALLENGES OF CLOUD COMPUTING
+A. Benefits of Cloud Computing
+Cloud computing has various functionalities and attributes which make it advantageous,
+providing numerous benefits.
+One of the major benefits of cloud computing is the fact that it provides scalability.
+Scalability in cloud computing refers to the ability of cloud computing to scale the amount of
+resources required for each individual use case, allowing for the demands of services to be met
+without the need to invest in physical infrastructures (Google, n.d.-a). This means that businesses
+which require the use of things such as data storage and databases are able to scale the amount of
+storage they need in a seamless manner.
+Cost-efficiency is an element of cloud computing that is beneficial due to the fact that
+cloud services provide users with the ability to reduce their investments into physical hardware,
+and to only invest into the cloud services which they specifically need (Google, n.d.-a). This
+allows for business to be more cost efficient, as only resources which are used are provided to
+the end user (Google, n.d.-a).
+B. Security and Privacy Concerns
+Privacy and security have been major concerns when regarding the use of cloud
+computing, with various reasons as to why these concerns may exist. The cloud is susceptible to
+attacks, which can result in the loss of personal data, which is why security and privacy are of
+high importance when regarding the use of the cloud.
+The confidentiality of data may be compromised during the use of cloud computer
+software. Instances of data theft during a targeted attack may result in a user’s personal data
+being stolen, resulting in a privacy breach between the user and the provider of the cloud service
+(GeeksforGeeks, 2023a). The occurrence of a privacy breach can result in the mistrust of a user
+for a particular cloud service, and the data of the user to be reachable by users who should not
+have authorization (GeeksforGeeks, 2023a).
+Security issues can occur through the use of multi-tenancy for the cloud operation. Multi-
+tenancy is the use of software systems in such a way where the services used by multiple users
+are all accessed on a single server, resulting in more cost-effective, but less secure operation
+(GeeksforGeeks, 2023a). This can result in security concerns, as it allows for attackers to gain
+access to multiple tenants' data if they are to gain access to the one server (GeeksforGeeks,
+C. Reliability and Availability Issues
+The reliability and availability issues for cloud computing span to problems which can
+affect a wide range of people. In the context of cloud computing, reliability refers to how often
+failures occur, and availability refers to the downtime of the cloud service (Ooteghem, 2022).
+Issues in reliability can occur when cloud services are not accessible, when there are frequent
+***END OF PAGE 6***
+
+***START OF PAGE 7***
+interruptions during use, and if the cloud service is not secure (Ooteghem, 2022). Availability
+issues occur when the cloud services are suffering from service outages, resulting in the
+unavailability of the service to be accessed by users. The lack of availability of a cloud service
+could impact millions of people, as many cloud services are used worldwide on a daily basis,
+affecting average citizens, businesses, or government entities.
+D. Legal and Regulatory Challenges
+Cloud computing can face challenges in the aspects of legality and regulation. Due to the
+nature of cloud computing requiring the transferring and storing of data, the aspect of privacy
+concerns rise. The European Union created the 1995 Data Protection Directive in order to ensure
+the protection of personal data and the transfer of such data, resulting in the transfer of user data
+through international to only be permitted by US businesses granted permission (Khatri, 2022).
+The hosting of cloud computer services and the use of its data has resulted in many regulations
+being put in place, which could result in these cloud services requiring a higher cost by the end
+user in order to comply with the regulations which were put in place (GeeksforGeeks, 2022).

@@ -1,0 +1,27 @@
+OVERVIEW
+Some of the key characteristics of cloud computing include: being an OnDemand service,
+allowing for broad network access, scalability, and heightened security (Novkovic, 2017).
+Software available on the cloud can be accessed anywhere network access, making it highly
+portable and offering flexibility to those who use it. The security and ability to scale up or down
+at a moment’s notice previously discussed, leads into the OnDemand aspect of cloud computing.
+Paid services and needs can be altered simultaneously leaving less room for overpaying for
+services, which makes cloud computing highly adaptable.
+While these characteristics seem to be commonsensical, they were not always the
+industry standard. Companies previously had no choice but to have large centers to store their
+data. The history of cloud computing is rich in innovation, as consumer needs demanded better
+solutions to software storage. Cloud computing can be traced back to as early as 1960 when
+Joseph Carl Robnett Licklider worked on a network research project that strived to connect
+people and data worldwide (Pedamkar, 2023). In the 1990’s companies started to offer Virtual
+Private Network services (VPNs) which remain popular today and truly set the stage for the
+cloud computing take over. By 2006 massive tech companies such as Google and Amazon began
+using the term cloud computing and made their cloud platforms easily accessible (Regalado,
+There are several options for cloud computing models depending on user needs, as well
+as providers for these models. Some key players in the cloud computing scene include but are
+not limited to: Amazon Web Services, Microsoft Azure, Google cloud platform, Alibaba Cloud,
+and Oracle Cloud (Zhang, 2023). A cloud provider may or may not be required for some cloud
+computing models. The main four models we will explore in detail will be Public, Private,
+***END OF PAGE 2***
+
+***START OF PAGE 3***
+Hybrid and Community models. The different models suit a variety of factors which will also be
+explored.

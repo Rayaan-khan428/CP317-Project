@@ -20,7 +20,6 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/cloudcomputing.pdf"; // where PDF is located
-        String prettyJson;
 
         // Where results of pdf extraction will be output
         String outputFolder = System.getProperty("user.dir");
@@ -49,15 +48,15 @@ public class Main {
         System.out.println("Extracted Text:");
         System.out.println(extractedText);
 
-        try (FileWriter fileWriter = new FileWriter("/Users/rayaankhan/repos/CP317-Project/pdfextraction/src/output/result.txt")) {
-            fileWriter.write(extractedText);
-            System.out.println("String has been saved to 'result.txt' successfully.");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try (FileWriter fileWriter = new FileWriter("/Users/rayaankhan/repos/CP317-Project/pdfextraction/src/output/result.txt")) {
+//            fileWriter.write(extractedText);
+//            System.out.println("String has been saved to 'result.txt' successfully.");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         // parse text and break up into paragraphs and store in a json
-         TextSegmenter.divide(outputFolder);
+         TextSegmenter.divide(extractedText);
 
         // summarize every paragraph
 
