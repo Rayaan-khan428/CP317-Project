@@ -34,6 +34,8 @@ public class GUI implements ActionListener{
 	JPanel panelBodyLower = new JPanel();
 	
 	public GUI() {
+		fc.addChoosableFileFilter(new FileNameExtensionFilter("PDF Documents", "pdf"));
+		
 		Border borderCommon = BorderFactory.createEmptyBorder(0, 10, 10, 10);
 		Border borderBodyLower = BorderFactory.createEmptyBorder(70, 10, 10, 10);
 		
