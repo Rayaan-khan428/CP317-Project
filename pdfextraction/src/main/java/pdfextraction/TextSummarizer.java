@@ -1,64 +1,72 @@
 package pdfextraction;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
 import org.asynchttpclient.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 public class TextSummarizer {
 
-    public static void summarize(String text) throws InterruptedException {
+    public static void summarize(ArrayList<Slide> presentation) throws InterruptedException {
 
-        try {
-            AsyncHttpClient client = new DefaultAsyncHttpClient();
+        // Create a Gson object
+        Gson gson = new Gson();
 
-            String apiKey = "K2qeYNh4ziHhIpysVaBCc8AZAU3ygJsoMASBYj6K";
+        for (int i = 0; i <  presentation.size(); i++) {
 
-            String requestBody = String.format("{\"text\":\"%s\", \"length\":\"medium\", \"format\":\"bullets\", \"model\":\"summarize-xlarge\"}", text);
+            Response response = null;
+            try {
 
-            Request request = client.prepare("POST", "https://api.cohere.ai/v1/summarize")
-                    .setHeader("accept", "application/json")
-                    .setHeader("content-type", "application/json")
-                    .setHeader("authorization", "Bearer " + apiKey)
-                    .setBody(requestBody)
-                    .build();
+                AsyncHttpClient client = new DefaultAsyncHttpClient();
+                String apiKey = "q88H9vLvPMgp25ouFSDrRSb3vLL8zwRH9y3jXBXr";
 
-            Response response = client.executeRequest(request).get();
+                String text = presentation.get(i).getParagraph();
 
-            client.close();
+                String regex = "\\*{3}(?:END|START) OF PAGE \\d+\\*{3}";
+                String preSummarization = text.replaceAll(regex, "");
+                preSummarization = preSummarization.replaceAll("\\s+", " ").trim();
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+                String requestBody = String.format("{\"text\":\"%s\", \"length\":\"short\", \"format\":\"bullets\", \"model\":\"summarize-xlarge\"}", preSummarization);
 
-    }
+                Request request = client.prepare("POST", "https://api.cohere.ai/v1/summarize")
+                        .setHeader("accept", "application/json")
+                        .setHeader("content-type", "application/json")
+                        .setHeader("authorization", "Bearer " + apiKey)
+                        .setBody(requestBody)
+                        .build();
 
-    /**
-     * Method Name: readTxtFile
-     * Description: is given a file path, reads it and stores content into a variable that
-     * is then returned to where it was called from
-     * @return
-     */
-    public static String readTxtFile(String filePath) throws InterruptedException {
-        StringBuilder content = new StringBuilder();
+                // send the request and wait for response
+                response = client.executeRequest(request).get();
 
-        try {
-            File file = new File(filePath);
-            Scanner scanner = new Scanner(file);
+                // Parse the JSON string to a JsonObject
+                JsonObject jsonObject = gson.fromJson(response.getResponseBody(), JsonObject.class);
 
-            while (scanner.hasNextLine()) {
-                content.append(scanner.nextLine());
-                content.append("\n"); // Add a new line after each line read
+                // Extract the "summary" attribute
+                String summary = jsonObject.get("summary").getAsString();
+
+                summary = summary.replaceAll(regex, "");
+
+                // update presentation paragraph to bullet points
+                presentation.get(i).setParagraph(summary);
+
+                System.out.println("-----------------------Text Being Summarized----------------------");
+                System.out.println("PreSummarization: ");
+                System.out.println(preSummarization);
+                System.out.println("\nAfterSummarization: ");
+                System.out.println(summary);
+                System.out.println("\n");
+
+                client.close();
+
+            } catch (NullPointerException e) {
+                assert response != null;
+                System.out.println(response.getResponseBody());
+            } catch (Exception e) {
+                e.printStackTrace();
             }
 
-            scanner.close();
-        } catch (FileNotFoundException e) {
-            System.err.println("File not found: " + filePath);
-            e.printStackTrace();
         }
 
-        return content.toString();
     }
-
 }
 

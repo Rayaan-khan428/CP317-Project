@@ -7,15 +7,17 @@ public class Slide {
 	
 	public int SlideNum;
 	public int PageNum;
-	public String Title; 
+	public String Title;
+	public String Paragraph;
 	List<Integer> Image = new ArrayList<>();
 
 	
 	// Constructor 
-	public Slide(int SlideNum, int PageNum, String Title) {
+	public Slide(int SlideNum, int PageNum, String Title, String Paragraph) {
 		this.SlideNum = SlideNum;
 		this.PageNum = PageNum;
 		this.Title = Title;
+		this.Paragraph = Paragraph;
 	}
 	
 	// Setters and Getters my fav :)
@@ -35,11 +37,11 @@ public class Slide {
 	public void setPageNum(int PageNum) {
 		this.PageNum = PageNum;
 	}
-	
-	public String getTitle() {
-		return this.Title;
+
+	public void setParagraph(String Paragraph) {
+		this.Paragraph = Paragraph;
 	}
-	
+
 	public List<Integer> getImage() {
 		return this.Image;
 	}
@@ -51,5 +53,12 @@ public class Slide {
 	public int getPageNum() {
 		return this.PageNum;
 	}
-	
+
+	public String getTitle() {
+		return this.Title;
+	}
+
+	public String getParagraph() {
+		return this.Paragraph;
+	}
 }

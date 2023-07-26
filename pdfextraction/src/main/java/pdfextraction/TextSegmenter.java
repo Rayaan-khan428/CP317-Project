@@ -2,48 +2,51 @@ package pdfextraction;
 
 import java.util.ArrayList;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class TextSegmenter {
 
-    // Word count if dividing by paragraphs so there is enough info per slide if it divides by paragraph
+    // fall back variable in case paragraphs cannot be split by title
     private static final int MIN_WORDS_PER_SECTION = 50;
 
-    public static void divide(String extractedText) throws JsonProcessingException {
+    /**
+     * Divides the extracted text into subsections. Creates a slide class that stores all neccessary info
+     * that would be needed for each slide when we convert to a powerpoint
+     * @param extractedText
+     * @throws JsonProcessingException
+     */
+    public static ArrayList<Slide> divide(String extractedText) throws JsonProcessingException, InterruptedException {
 
         // Array of slide objects
         ArrayList<Slide> presentation = new ArrayList<>();
 
-        String inputFileLocation = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/src/output";
-
-        // Get file open and stuff
-        String inputFilePath = inputFileLocation + "//result.txt";
+        // keep track of section
         int sectionCount = 1;
 
-        // Page count is updated every time a new page is started
+        // keep track of pages, updated when new page is created
         int pageCount = 0;
 
+        // Not sure why this is needed but will keep for now
+        // holds the essay in a formatted parsable format
         StringBuilder text = new StringBuilder();
 
+        // breaks the massive string into individual lines by '\n' and stores as an index
         String[] allLines = extractedText.split("\\n");
 
-        System.out.println("Length of textSections: " + allLines.length);
+//        System.out.println("Length of textSections: " + allLines.length); // debugging
 
+        // for every line in the allLines array, append it to text and add a new line
         for (String allLine : allLines) {
             text.append(allLine).append("\n");
-            System.out.println(allLine);
+//            System.out.println(allLine);
         }
 
         // Use Java regex library to find numbers
@@ -54,23 +57,33 @@ public class TextSegmenter {
         Pattern LetPattern = Pattern.compile("(?m)(?<=\\n)[IVXLCDM]+\\.|(?<=\\n)[A-Z]\\.");
         Matcher LetMatcher = LetPattern.matcher(text.toString());
 
+        // A header was found (numbers present)
         if (NumMatcher.find()) {
             String[] sections = text.toString().split("(?m)(?<=\\n\\n|^)\\d+\\.?\\s*?\\s*");
-            segement(presentation, inputFileLocation, sectionCount, pageCount, sections);
+            segment(presentation, sectionCount, pageCount, sections);
         }
 
+        // A header was found (roman numerals)
         else if (LetMatcher.find()) {
             String[] sections = text.toString().split("(?m)(?<=\\n)[IVXLCDM]+\\.|(?<=\\n)[A-Z]\\.");
-            segement(presentation, inputFileLocation, sectionCount, pageCount, sections);
+            segment(presentation, sectionCount, pageCount, sections);
         }
+
         else {
+
             // If no sections are identified after blank lines, split the text into paragraphs
+
+            // splitting a multi-line string into an array of strings, using empty lines as the delimiters.
             String[] sections = text.toString().split("(?m)^\\s*$");
 
+            // sectionBuilder is where we store a sections text
             StringBuilder sectionBuilder = new StringBuilder();
             int wordCount = 0;
 
+            // for every string item...
             for (int i = 0; i < sections.length; i++) {
+
+                // remove leading and trailing white space
                 String section = sections[i].trim();
 
                 // Skip empty paragraphs
@@ -84,7 +97,7 @@ public class TextSegmenter {
                 // First line for title
                 String firstLine = lines[0];
 
-                // Strip of numbers and colons and periods
+                // Remove numbers and colons and periods leaving us with just the textual title
                 firstLine = firstLine.replaceAll("[0-9:.*]", "");
 
                 // Remove leading spaces from the first line
@@ -114,15 +127,18 @@ public class TextSegmenter {
                 // Check if the word count in the sectionBuilder meets the minimum requirement
                 if (wordCount >= MIN_WORDS_PER_SECTION) {
                     // Save the section into "sectionX.txt", where X is the section number (starting from 1)
-                    String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
-                    try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-                        writer.write(sectionBuilder.toString());
-                        // Create slide object and add to array
-                        presentation.add(new Slide(sectionCount, pageCount, firstLine));
-                        sectionCount += 1;
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+
+//                    String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
+//                    try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+//                        writer.write(sectionBuilder.toString());
+//                        // Create slide object and add to array
+//
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+
+                    presentation.add(new Slide(sectionCount, pageCount, firstLine, section));
+                    sectionCount += 1;
 
                     // Reset sectionBuilder and wordCount for the next section
                     sectionBuilder.setLength(0);
@@ -132,27 +148,33 @@ public class TextSegmenter {
 
             // Save the remaining text in sectionBuilder as the last section
             if (sectionBuilder.length() > 0) {
-                String outputFilePath = inputFileLocation + "//section" + sectionCount + ".txt";
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-                    writer.write(sectionBuilder.toString());
-                    sectionCount += 1;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
+                presentation.add(new Slide(sectionCount, pageCount, "--last section --", sectionBuilder.toString()));
+
+//                String outputFilePath = inputFileLocation + "//section" + sectionCount + ".txt";
+//                try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+//                    writer.write(sectionBuilder.toString());
+//                    sectionCount += 1;
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
             }
         }
-
-
 
         // Call slide to match images to slides
         matchImages(presentation);
 
-        // Display objects if you want to check titles and such
-        for (Slide slide : presentation) {
-            System.out.println("Slide Num: " + slide.getSlideNum() + ", Page Num: " + slide.getPageNum() + ", Slide Title: " + slide.getTitle());
-            System.out.println("Image index contained: " + slide.getImage());
 
-        }
+
+        // Display objects if you want to check titles and such
+//        for (Slide slide : presentation) {
+//            System.out.println("\n\n------------------------------------------------------------------------------------------");
+//            System.out.println("Slide Num: " + slide.getSlideNum() + "\nPage Num: " + slide.getPageNum() + "\nSlide Title: " + slide.getTitle() + "\n\nSlide Paragraph: \n" + slide.getParagraph());
+//            System.out.println("\nImage index contained: " + slide.getImage());
+//            System.out.println("------------------------------------------------------------------------------------------\n\n");
+//        }
+
+        return presentation;
 
     }
 
@@ -162,12 +184,11 @@ public class TextSegmenter {
      * and the page count within each section is determined based on the occurrence of "***START OF PAGE" lines.
      *
      * @param presentation      An ArrayList to store Slide objects representing each section in the presentation.
-     * @param inputFileLocation  The location or directory where the input files are stored.
      * @param sectionCount       An integer representing the starting section number.
      * @param pageCount          An integer representing the starting page count.
      * @param sections           A String array containing the content of each section in the presentation.
      */
-    private static void segement(ArrayList<Slide> presentation, String inputFileLocation, int sectionCount, int pageCount, String[] sections) throws JsonProcessingException {
+    private static void segment(ArrayList<Slide> presentation, int sectionCount, int pageCount, String[] sections) throws JsonProcessingException {
 
         for (int i = 0; i < sections.length; i++) {
 
@@ -204,21 +225,7 @@ public class TextSegmenter {
                 }
             }
 
-            // Save section into "sectionX.txt", where X is the section number (starting from 1)
-//            String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
-//            try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-//                writer.write(section);
-//
-//                // Create slide object and add to array
-//
-//
-//                sectionCount += 1;
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-
-            presentation.add(new Slide(sectionCount, pageCount, firstLine));
-            /////////
+            presentation.add(new Slide(sectionCount, pageCount, firstLine, section));
 
             // Use ObjectMapper to convert presentation to JSON
             ObjectMapper objectMapper = new ObjectMapper();

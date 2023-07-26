@@ -44,12 +44,12 @@ public class TextExtraction extends PDFStreamEngine {
         this.array = new ArrayList<>();
     }
 
-    public void runExtraction(PDDocument document) throws IOException {
+    public void runExtraction(PDDocument document, String projectRoot) throws IOException {
 
         SaveImagesInPdf(document);
         getNumImages();
         getPage(1);
-        ExtractText(document);
+        ExtractText(document, projectRoot);
 
     }
 
@@ -71,7 +71,7 @@ public class TextExtraction extends PDFStreamEngine {
      * @param document The PDDocument from which text needs to be extracted.
      * @throws IOException If an I/O error occurs while reading the document or writing the output.
      */
-    public void ExtractText(PDDocument document) throws IOException {
+    public void ExtractText(PDDocument document, String projectRoot) throws IOException {
 
         // Creating PDFTextStripper obj
         PDFTextStripper pdfStripper = new PDFTextStripper();
@@ -120,7 +120,7 @@ public class TextExtraction extends PDFStreamEngine {
         String json = gsonWithEscapeHtml.toJson(pdfContent);
 
         // Save the JSON string to a file or use it as needed
-        try (FileWriter fileWriter = new FileWriter("output.json")) {
+        try (FileWriter fileWriter = new FileWriter(projectRoot + "/output/parsedPDF.json")) {
             fileWriter.write(json);
             System.out.println("JSON data has been written to 'output.json' successfully.");
         } catch (IOException e) {
@@ -177,47 +177,6 @@ public class TextExtraction extends PDFStreamEngine {
     public static ArrayList<Integer> getImageArray() {
         return array;
     }
-
-    /**
-     * After each line has been extracted onlyText returns the concatenated text of all pages as a single string.
-     *
-     * @param document The PDDocument from which text needs to be extracted.
-     * @return The concatenated text of all pages.
-     * @throws IOException If an I/O error occurs while reading the document.
-     */
-//    public String concatenateAll(PDDocument document) throws IOException{
-//
-//        // Creating PDFTextStripper obj
-//        PDFTextStripper pdfStripper = new PDFTextStripper();
-//
-//        int totalPages = document.getNumberOfPages();
-//        String startAndEnd = ""; // define start and end page
-//        String pageText = ""; // store the actual text
-//
-//        List<String> paragraphs = new ArrayList<>();
-//
-//        for (int pageNumber = 1; pageNumber <= totalPages; pageNumber++) {
-//
-//            pdfStripper.setStartPage(pageNumber);
-//            pdfStripper.setEndPage(pageNumber);
-//
-//            startAndEnd += "***START OF PAGE " + pageNumber + "***\n";
-//
-//            pageText = pdfStripper.getText(document);
-//            paragraphs = detectLines(pageText);
-//
-//            for (String paragraph : paragraphs) {
-//                if(!junkTest(paragraph) && paragraph.length() > 3) {
-//                    startAndEnd += paragraph+"\n";
-//                }
-//            }
-//
-//            startAndEnd += "***END OF PAGE " + pageNumber + "***\n";
-//
-//        }
-//
-//        return startAndEnd;
-//    }
 
     /**
      * Helper Function for the Image extraction method

@@ -6,35 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/PowerPointGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/PowerPointGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Slide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/image_1.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/image_2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/image_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/result.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section22.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/presentation.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PowerPointGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/PowerPointGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Slide.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Slide.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextExtraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextExtraction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSegmenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSegmenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSummarizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSummarizer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,34 +58,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "experimental",
-    "last_opened_file_path": "/Users/rayaankhan/repos/CP317-Project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;experimental&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rayaankhan/repos/CP317-Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JSON"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JSON&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pdfextraction/src/output" />
@@ -131,7 +120,8 @@
       <workItem from="1690158818695" duration="1771000" />
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
-      <workItem from="1690163171598" duration="38232000" />
+      <workItem from="1690163171598" duration="44233000" />
+      <workItem from="1690355504272" duration="3218000" />
     </task>
     <servers />
   </component>
