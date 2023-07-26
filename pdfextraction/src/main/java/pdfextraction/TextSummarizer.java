@@ -18,7 +18,7 @@ public class TextSummarizer {
             try {
 
                 AsyncHttpClient client = new DefaultAsyncHttpClient();
-                String apiKey = "q88H9vLvPMgp25ouFSDrRSb3vLL8zwRH9y3jXBXr";
+                String apiKey = "";
 
                 String text = presentation.get(i).getParagraph();
 
