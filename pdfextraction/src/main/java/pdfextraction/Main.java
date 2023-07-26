@@ -45,8 +45,8 @@ public class Main {
         String extractedText = jsonObject.get("text").getAsString();
 
         // Print the content to the console
-        System.out.println("Extracted Text:");
-        System.out.println(extractedText);
+//        System.out.println("Extracted Text:");
+//        System.out.println(extractedText);
 
 //        try (FileWriter fileWriter = new FileWriter("/Users/rayaankhan/repos/CP317-Project/pdfextraction/src/output/result.txt")) {
 //            fileWriter.write(extractedText);

@@ -7,37 +7,31 @@
     <list default="true" id="a6031e6c-31e2-40f5-b55d-338a74a161d4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/Slide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextExtraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSegmenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section22.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section4.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/main/java/pdfextraction/TextSummarizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section11.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section13.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section14.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section15.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section15.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section16.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section16.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section17.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section17.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section18.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section18.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section7.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/src/output/section9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/src/output/section9.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Slide.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/Slide.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextExtraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextExtraction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSegmenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSegmenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSummarizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/pdfextraction/target/classes/pdfextraction/TextSummarizer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "experimental",
     "last_opened_file_path": "/Users/rayaankhan/repos/CP317-Project",
     "node.js.detected.package.eslint": "true",
@@ -133,7 +128,7 @@
       <workItem from="1690158818695" duration="1771000" />
       <workItem from="1690162153914" duration="33000" />
       <workItem from="1690162195769" duration="891000" />
-      <workItem from="1690163171598" duration="33143000" />
+      <workItem from="1690163171598" duration="36070000" />
     </task>
     <servers />
   </component>

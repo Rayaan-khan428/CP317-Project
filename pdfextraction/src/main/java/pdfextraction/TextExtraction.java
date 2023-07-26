@@ -35,7 +35,7 @@ public class TextExtraction extends PDFStreamEngine {
     // Used in naming images. Ex. image_1, image_2, etc. It is incremented when images are extracted
     private int imageNumber = 1;
     private int pageNum = 0;
-    private ArrayList<Integer> array;
+    private static ArrayList<Integer> array;
     private String outputFolder; // New instance variable to hold the output folder path
     // Constructor to set the output folder path
 
@@ -173,6 +173,7 @@ public class TextExtraction extends PDFStreamEngine {
         return array.get(imageNum-1);
     }
 
+    // Return array with image page numbers
     public static ArrayList<Integer> getImageArray() {
         return array;
     }

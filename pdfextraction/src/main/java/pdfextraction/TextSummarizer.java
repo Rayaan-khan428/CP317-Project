@@ -25,7 +25,6 @@ public class TextSummarizer {
 
             Response response = client.executeRequest(request).get();
 
-
             client.close();
 
         } catch (Exception e) {
