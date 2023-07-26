@@ -29,10 +29,10 @@ Slide.java notes:
 Slide.java Methods: 
 - Slide(int SlideNum, String Title) -> constructor that sets given values for slide number and title (temp by defualt)
 - setTitle(String Title) -> sets a title passed as a parameter for a given slide
-- setImage(String Image) -> sets string containing the index of images 
+- setImage(String Image) -> sets array containing image index 
 - setPageNum(int PageNum) -> sets the page number for a given section 
 - setSlideNum(int SlideNum) -> sets a slide number passed as a parameter for a given slide 
 - getTitle() -> returns the title of the given slide
-- getImage() -> returns the image string containing the index of images in the following format: Image Space Image Space
+- getImage() -> returns the image array containing the images
 - getSlideNum() -> returns the slide number of a given slide
 - getPageNum() -> returns the page number that a section was on (if it is across two it returns the higher page number)
