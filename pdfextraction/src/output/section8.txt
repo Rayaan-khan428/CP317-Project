@@ -1,2 +1,0 @@
-automated scaling: increase and decrease the number of nodes to meet the incoming
-demand or lack of at any given time.

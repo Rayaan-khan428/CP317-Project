@@ -1,7 +1,0 @@
-Medical imaging and diagnostic: cloud-based medical imaging platforms store and
-process large volumes of medical images, such as X-rays, MRIs, and CT scans. Cloud
-computing enables healthcare providers to share access to medical images securely,
-facilitating collaboration among radiologists and specials for accurate diagnoses and
-treatment planning (Galen Data, n.d.).
-Lastly, cloud computing has a profound impact on the government and public sector, helping
-to save tax-payer money and improve the services offered by the government.

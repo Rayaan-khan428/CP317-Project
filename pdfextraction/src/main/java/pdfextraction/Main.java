@@ -19,7 +19,7 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/cloudcomputing.pdf"; // where PDF is located
+        String inputFileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/sample_reports/Lizard_Research.pdf"; // where PDF is located
 
         // Where results of pdf extraction will be output
         String outputFolder = System.getProperty("user.dir");

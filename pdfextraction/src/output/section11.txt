@@ -1,4 +1,0 @@
-CLOUD COMPUTING USE CASES AND APPLICATIONS
-When it comes to business and enterprises, cloud computing offers great leaps in scalable
-and on-demand access to computing resources, cost savings and increased efficiency as spoken
-about in the previous section. However, we will explore some specific use cases/applications.

@@ -11,12 +11,17 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 public class TextSegmenter {
 
     // Word count if dividing by paragraphs so there is enough info per slide if it divides by paragraph
     private static final int MIN_WORDS_PER_SECTION = 50;
 
-    public static void divide(String extractedText) {
+    public static void divide(String extractedText) throws JsonProcessingException {
 
         // Array of slide objects
         ArrayList<Slide> presentation = new ArrayList<>();
@@ -137,14 +142,18 @@ public class TextSegmenter {
             }
         }
 
+
+
         // Call slide to match images to slides
-//        matchImages(presentation);
+        matchImages(presentation);
 
         // Display objects if you want to check titles and such
         for (Slide slide : presentation) {
             System.out.println("Slide Num: " + slide.getSlideNum() + ", Page Num: " + slide.getPageNum() + ", Slide Title: " + slide.getTitle());
             System.out.println("Image index contained: " + slide.getImage());
+
         }
+
     }
 
     /**
@@ -158,7 +167,7 @@ public class TextSegmenter {
      * @param pageCount          An integer representing the starting page count.
      * @param sections           A String array containing the content of each section in the presentation.
      */
-    private static void segement(ArrayList<Slide> presentation, String inputFileLocation, int sectionCount, int pageCount, String[] sections) {
+    private static void segement(ArrayList<Slide> presentation, String inputFileLocation, int sectionCount, int pageCount, String[] sections) throws JsonProcessingException {
 
         for (int i = 0; i < sections.length; i++) {
 
@@ -196,17 +205,34 @@ public class TextSegmenter {
             }
 
             // Save section into "sectionX.txt", where X is the section number (starting from 1)
-            String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-                writer.write(section);
+//            String outputFilePath = inputFileLocation + "//section" + (sectionCount) + ".txt";
+//            try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+//                writer.write(section);
+//
+//                // Create slide object and add to array
+//
+//
+//                sectionCount += 1;
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
-                // Create slide object and add to array
-                presentation.add(new Slide(sectionCount, pageCount, firstLine));
+            presentation.add(new Slide(sectionCount, pageCount, firstLine));
+            /////////
 
-                sectionCount += 1;
-            } catch (IOException e) {
+            // Use ObjectMapper to convert presentation to JSON
+            ObjectMapper objectMapper = new ObjectMapper();
+            String json = objectMapper.writeValueAsString(presentation);
+
+            // Save JSON to a file in the current directory
+            String fileName = "/Users/rayaankhan/repos/CP317-Project/pdfextraction/src/output/presentation.json";
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+                writer.write(json);
+            } catch (Exception e) {
+                // Handle any exceptions that may occur during file writing
                 e.printStackTrace();
             }
+
         }
     }
 
