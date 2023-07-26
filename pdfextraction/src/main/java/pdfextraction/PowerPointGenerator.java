@@ -1,6 +1,5 @@
 package pdfextraction;
 
-import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -12,17 +11,16 @@ import org.apache.pdfbox.io.IOUtils;
 import org.apache.poi.common.usermodel.PictureType;
 import org.apache.poi.sl.usermodel.PictureData;
 import org.apache.poi.xslf.usermodel.*;
-import org.openxmlformats.schemas.drawingml.x2006.main.*;
+
+import org.apache.poi.xslf.usermodel.SlideLayout;
+import org.apache.poi.xslf.usermodel.XMLSlideShow;
+import org.apache.poi.xslf.usermodel.XSLFSlide;
+import org.apache.poi.xslf.usermodel.XSLFSlideLayout;
+import org.apache.poi.xslf.usermodel.XSLFSlideMaster;
+import org.apache.poi.xslf.usermodel.XSLFTextShape;
 
 
-public class PowerPointGenerator {
-	   //enumeration holds the three types of possible scripts on a ppt
-	   enum Script {
-		   LAT, //Latin style script
-		   EA, //Asian style script
-		   CS //complex style script
-		  }
-	   
+public class PowerPointGenerator {   
 	/**
 	 * Method Name: create
 	 * Description: given inputFileLocation and presentation array of slides 
@@ -31,23 +29,30 @@ public class PowerPointGenerator {
 	 */
    public static void create(String inputFileLocation, ArrayList<Slide> presentation) throws IOException { //creates powerpoint in inputFileLocation
 	   //creating a new empty slide show
-      XMLSlideShow ppt = new XMLSlideShow();	
-      
+
+	   //BRANDON"S CODE
+		// Get the template folder path (project directory)
+		String template = System.getProperty("user.dir");
+		System.out.println(template);
+		template += "//src//templates//Pine design.pptx";
+
+		// Use template for PowerPoint
+		XMLSlideShow ppt = new XMLSlideShow(new FileInputStream(template));
+
+		// Delete all existing slides in template before use
+		for (int i = ppt.getSlides().size() - 1; i >= 0; i--) {
+		    ppt.removeSlide(i);
+		}
+	
     //load slide master info at index 0 this will allow you to select layout options
       XSLFSlideMaster slideOptions = ppt.getSlideMasters().get(0); 
       
-      //we first need to change the fonts of the current master theme
-      XSLFTheme theme = slideOptions.getTheme();
-      
-  //set font to Times New Roman
-      setFont(theme, Script.LAT, "Times New Roman");
-      
+            
     // from the layout options we wish to use TITLE layout for the first slide
       XSLFSlideLayout titleForm = slideOptions.getLayout(SlideLayout.TITLE);
     //now we have loaded the layout, we create a new slide with said layout
       XSLFSlide slide1 = ppt.createSlide(titleForm);
-      Color myColour = new Color(214, 249, 252);
-      slide1.getBackground().setFillColor(myColour);
+
     //add a title to the title slide from the first slide object in presentation array list 
       XSLFTextShape title1 = slide1.getPlaceholder(0);
       title1.setText(presentation.get(0).getTitle());
@@ -62,7 +67,6 @@ public class PowerPointGenerator {
     	  XSLFSlideLayout titleAndBody = slideOptions.getLayout(SlideLayout.TITLE_AND_CONTENT);
     	 //create new slide called midSlide with titleAndBody format
     	  XSLFSlide midSlide = ppt.createSlide(titleAndBody);
-          midSlide.getBackground().setFillColor(myColour);
 
     	 //set title and body of slide to text from that slide object/section.txt file
     	  XSLFTextShape slideTitle = midSlide.getPlaceholder(0);
@@ -124,74 +128,7 @@ public class PowerPointGenerator {
 	   
 	   return body;
    }
-   
-   /**
-    * Method Name: setFont
-    * Description: Sets the major and minor font to fontname in the theme 
-    * passed as theme.
-    * @return
-    */
-   static void setFont(XSLFTheme theme, Script scriptType, String fontName) {
-	   
-	   //load information from theme including the major and minor fonts
-	   CTOfficeStyleSheet styleSheet = theme.getXmlObject();
-	   CTBaseStyles themeElements = styleSheet.getThemeElements();
-	   CTFontScheme fontScheme = themeElements.getFontScheme();
-	   
-	   CTFontCollection fontMajor = fontScheme.getMajorFont();
-	   CTFontCollection fontMinor = fontScheme.getMinorFont();
-
-	   CTTextFont majorFont = null;
-	   CTTextFont minorFont = null;
-	   if (scriptType == Script.LAT) {
-	    majorFont = fontMajor.getLatin();
-	    majorFont.setTypeface(fontName);
-	    minorFont = fontMinor.getLatin();
-	    minorFont.setTypeface(fontName);
-	   } else if (scriptType == Script.EA) {
-		majorFont = fontMajor.getEa();
-		majorFont.setTypeface(fontName);
-		minorFont = fontMinor.getEa();
-		minorFont.setTypeface(fontName);
-	   } else if (scriptType == Script.CS) {
-	    majorFont = fontMajor.getCs();
-	    majorFont.setTypeface(fontName);
-	    minorFont = fontMinor.getCs();
-	    minorFont.setTypeface(fontName);
-	   }
-	  }
-   
-   
-   /**
-    * Method Name: setMinorFont
-    * Description: Sets the minor font to fontname in the theme 
-    * passed as theme.
-    * @return
-    */
-   static void setMinorFont(XSLFTheme theme, Script scriptType, String fontName) {
-	   
-	   //load information from theme including minor font
-	   CTOfficeStyleSheet styleSheet = theme.getXmlObject();
-	   CTBaseStyles themeElements = styleSheet.getThemeElements();
-	   CTFontScheme fontScheme = themeElements.getFontScheme();
-	   CTFontCollection fontCollection = fontScheme.getMinorFont();
-	   CTTextFont textFont = null;
-	   if (scriptType == Script.LAT) {
-	    textFont = fontCollection.getLatin();
-	    textFont.setTypeface(fontName);
-	   } else if (scriptType == Script.EA) {
-	    textFont = fontCollection.getEa();
-	    textFont.setTypeface(fontName);
-	   } else if (scriptType == Script.CS) {
-	    textFont = fontCollection.getCs();
-	    textFont.setTypeface(fontName);
-	   }
-	  }
-   
 }
-
-
-
 
 
 
