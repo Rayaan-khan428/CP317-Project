@@ -1,0 +1,40 @@
+CASE STUDIES AND SUCCESS STORIES
+A. Real-World Examples of Organizations Leveraging Cloud Computing
+In recent years, Cloud Computing has become an essential tool for businesses across all
+industries.  Companies have leveraged cloud computing to improve efficiency, reduce costs, and
+increase scalability.  Although there are many examples of companies successfully implementing
+cloud computing, we will look at two highly notable examples.
+General Electric doesn’t seem to be a company that could benefit from cloud computing
+given they are not directly involved in the tech industry.  However, they have done an excellent
+job leading the pack by starting its cloud-first application deployment strategy in 2014
+(Donnelly, 2017).  Through the use of Amazon Web Service (AWS), they have been able to
+refocus IT teams from maintenance and expanding data centers to more meaningful tasks
+including future innovation.
+Fitbit is the perfect company to use a cloud computing model; with their recent switch to
+Google Cloud for Healthcare in 2019, they proved exactly that (Google, 2022).  Given the
+business model of Fitbit, they require a large amount of storage space for user health information
+and security is a high priority.  This switch to cloud services has allowed for easier scalability,
+easy access and shareability for users as well as maintaining its security.
+B. Case Studies of Successful Cloud Migrations and Implementations
+Cloud migration and implementation vary greatly on a case-to-case basis and ultimately
+to be as successful as possible it needs to be tailored to your specific needs.  Now we will view
+some specific case studies of how companies were able to design their own cloud migrations to
+lead to success.  Acoustic is an excellent example of migrating in a way that fits your company's
+needs.
+Acoustic is a marketing technology company that wanted to make the switch to a cloud-
+based model through Amazon Web Service (AWS) but did not want to renew their current
+contract meaning they were left with a 10-month window (Boezeman, n.d.).  With the help of
+ClearScale, they were able to not only transfer everything over to the cloud in this time frame but
+reap massive benefits.  This switch allowed Acoustic to save millions of dollars, modernize and
+optimize its infrastructure as well as allow for faster process time to market.
+***END OF PAGE 11***
+
+***START OF PAGE 12***
+A second large company that was able to benefit from the switch to Cloud Computing
+greatly is Pandora.  Pandora is a worldwide industry-leading jewelry company with unique
+requirements.  Given the large cost of jewelry, a company like Pandora will endure large
+quantities of customers with few purchases per customer.  This means that customers will grow
+to have high expectations as it is a large and meaningful transaction.  In 14 months, they were
+able to decommission 2400 servers and make the full switch to Microsoft Azure’s Cloud service
+(Accenture, 2023).  This switch allowed for a massive save in cost, and an increase in simplicity
+allowing for easier and quicker IT decisions as well as increased agility for consumers.

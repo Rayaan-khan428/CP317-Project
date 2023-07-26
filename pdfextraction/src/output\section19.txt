@@ -1,0 +1,73 @@
+FUTURE TRENDS AND CHALLENGES
+A. Edge Computing and its Impact on Cloud Computing
+Edge computing is the processing of data as close to the origin source as possible in order
+to reduce latency and provide better bandwidth. The data being processed closer to the creation
+point allows for faster data analysis and lower latencies, resulting in a better user experience
+(IBM, n.d.-b).
+The differences between edge computing and cloud computing is that edge computing
+operates on a time sensitive basis, whereas cloud computing does not, meaning data processed
+***END OF PAGE 9***
+
+***START OF PAGE 10***
+through edge computing is processed at a lower signal latency (Arora, 2023). In cloud
+computing, data is stored and processed in centralized servers, allowing for higher processing
+power (Kaur, 2023). On the other hand, the infrastructure for edge computing is highly
+distributed, and typically processed on site at a low processing power (Kaur, 2023). Cloud
+computing allows for unlimited storage, reduced hardware costs and quick centralized services,
+while edge computing provides lower latency, better bandwidth, real-time computation, and
+better privacy (Kaur, 2023).
+There are challenges to both edge computing and cloud computing. Edge computing may
+suffer from reliability issues due to its decentralized nature, compatibility issues, and security
+issues for data that is processed outside of the edge servers (Kaur, 2023). Cloud computing may
+suffer from large data breaches/data losses due to the information being centralized, long
+downtimes, and a lack of data confidentiality (Kaur, 2023).
+Cloud computing can be seen used in applications such as an app on a smartphone, where
+edge computing can be seen used in things such as self-driving cars, where a reduced latency and
+fast response times are required (Kaur, 2023).
+B. Artificial Intelligence and Machine Learning in the Cloud
+Artificial intelligence and machine learning, a subset of artificial intelligence, are used in
+cloud computing in order to teach systems to solve tasks while improving on the solving of these
+tasks over time through the processing of data (Google, n.d.-d).
+Through the use of data, machine learning processes the data, identifying common
+patterns within the data and making decisions based off of these identified patterns (Google, n.d.-
+d). It allows for systems to learn a program’s tendencies and effectively achieves what is to be
+achieved over time.
+Machine learning is used in a variety of ways, including in services such as fraud
+prevention, digital marketing, security, customer service and sales optimization (Google, n.d.-d).
+C. Serverless computing and Function as a Service (FaaS)
+Serverless computing is the ability to create applications without the need of the creation
+of infrastructure, allowing for cloud services to be the primary infrastructure used to process the
+code (Serverless Computing and Applications | Microsoft Azure, n.d.). Benefits of serverless
+computing include efficient allocation of resources, scalability, quicker services, and the lack of
+need to maintain infrastructure (Serverless Computing and Applications | Microsoft Azure, n.d.).
+Through serverless computing, developers are able to focus on developing front-end code, while
+the back-end code is managed by the provider of the cloud service (IBM, n.d.-d).
+Technologies such as serverless Kubernetes allow for systems that have developers
+provide containers to a platform which is orchestrated in a manner where it is automatically
+scaled when met with spikes and dips in demand (Serverless Computing and Applications |
+Microsoft Azure, n.d.).
+Function as a Service (FaaS) is a service of cloud computing which lets users execute
+code without managing the infrastructure required for these services (IBM, n.d.-c). The
+difference between serverless computing and Function as a Service is the fact that Function as a
+Service is a subset of serverless computing (IBM, n.d.-c). FaaS focuses on the execution of code
+in response to an event, while serverless computing is broader and multi-faceted, focusing on
+things such as storage, databases, APIs, computation, or messaging services that are not visible to
+the end user (IBM, n.d.-c).
+***END OF PAGE 10***
+
+***START OF PAGE 11***
+D. Sustainability and Green Cloud Computing
+Sustainability in cloud computing, otherwise known as green cloud computing, is a term
+used in reference to the environmental impacts in regard to cloud computing. Green cloud
+computing is a set of goals put in place which aim to reduce carbon emissions and energy
+consumption by promoting the increase of biodegradable/recyclable products, reducing the use
+of unsafe materials, and increasing energy efficiency (Davis, 2023).
+The goals of green cloud computing are strived to be achieved through a variety of
+factors. The components which are found in electronics such as computers and phones contain
+materials which are hazardous to the environment; This makes it essential to dispose of
+electronics properly, and to increase the recyclability/biodegradability of future products.
+Energy efficiency can be increased through the optimization of the facilities which hold
+the cloud servers, and the optimization of the infrastructure (Davis, 2023). The facilities are often
+planned in a manner where the location, architecture, and layout of the building are created in
+such a way to be the most energy efficient as possible in order to reduce the heat of the servers,
+going to extents such as to be built underground or in the ocean (Davis, 2023).

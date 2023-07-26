@@ -1,0 +1,34 @@
+{
+  "documentInfo": {
+    "title": "My Document",
+    "author": "John Doe",
+    "createdDate": "2023-07-25"
+  },
+  "pages": [
+    {
+      "pageNumber": 1,
+      "paragraphs": [
+        {
+          "title": "Introduction",
+          "originalText": "This is the introduction paragraph...",
+          "summarizedText": "Summary of the introduction..."
+        },
+        {
+          "title": "Objective",
+          "originalText": "The objective of this document is...",
+          "summarizedText": "Summary of the objective..."
+        }
+      ]
+    },
+    {
+      "pageNumber": 2,
+      "paragraphs": [
+        {
+          "title": "Conclusion",
+          "originalText": "In conclusion, we have discussed...",
+          "summarizedText": "Summary of the conclusion..."
+        }
+      ]
+    }
+  ]
+}

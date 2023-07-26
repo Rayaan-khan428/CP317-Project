@@ -1,0 +1,4 @@
+Electronic Health Records (EHR): storing information on the cloud about patients makes
+it accessible for different healthcare professionals, helping to ensure a seamless data
+exchange, helping to improve coordination among departments and effectively reducing
+the risk of medical errors occurring.
